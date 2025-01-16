@@ -136,14 +136,14 @@ public class GameManagerScript : MonoBehaviour
                     Button button = (Button) buttons[i];
                     button.interactable = false;
                 }
-                opponentTurn();
+                dayOneOpponentTurn();
             }
             checkForWin();
             
         }
     }
 
-    void opponentTurn()
+    void dayOneOpponentTurn()
     {   
         timer2 += Time.deltaTime;
         if (timer2 >= 2f)
