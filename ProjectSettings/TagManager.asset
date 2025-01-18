@@ -8,6 +8,15 @@ TagManager:
   - Spawn 1
   - Board
   - GameManager
+  - Button 1 Text
+  - Button 2 Text
+  - Button 3 Text
+  - Button 4 Text
+  - Button 5 Text
+  - Button 6 Text
+  - Button 7 Text
+  - Button 8 Text
+  - Button 9 Text
   layers:
   - Default
   - TransparentFX
