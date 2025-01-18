@@ -17,6 +17,8 @@ TagManager:
   - Button 7 Text
   - Button 8 Text
   - Button 9 Text
+  - O
+  - X
   layers:
   - Default
   - TransparentFX
