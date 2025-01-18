@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Linq;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -20,8 +19,9 @@ public class GameManagerScript : MonoBehaviour
     public bool isPlayerTurn;
     public float timer;
     public bool cutsceneDone = false;
-    public GameObject x;
-    public GameObject o;
+    public Sprite xImage;
+    public Sprite oImage;
+    public Canvas canvas;
     public bool instantiated = false;
     public bool isX = false;
     public bool isO = false;
@@ -31,10 +31,15 @@ public class GameManagerScript : MonoBehaviour
     public ArrayList buttons;
     public bool buttonClicked = false;
     public float timer2 = 0;
+    public string winner;
+    public bool tie = false;
+    private List<GameObject> instantiatedImages = new List<GameObject>();
     void Start()
     {
         infoText.text = "Your shape is:";
         timer = 0;
+
+        winner = "";
 
         // Hide the buttons for the opening cutscene
         button1.gameObject.SetActive(false);
@@ -62,15 +67,15 @@ public class GameManagerScript : MonoBehaviour
         buttons.Add(button8);
         buttons.Add(button9);
 
+        foreach (Button btn in buttons)
+        {
+            btn.onClick.AddListener(() => HandleButtonClick(btn));
+        }
     }
 
     void Update()
     {
 
-        foreach (Button btn in buttons)
-        {
-            btn.onClick.AddListener(() => HandleButtonClick(btn));
-        }
         // Cutscene script 
         if (!cutsceneDone)
         {
@@ -78,19 +83,33 @@ public class GameManagerScript : MonoBehaviour
             if (timer >= 2 && !instantiated)
             {
                 timer = 0;
-                int randInt = Random.Range(0, 1);
+                int randInt = Random.Range(0, 2);
                 if (randInt == 0)
                 {
-                    var copy = Instantiate(x, new Vector2(0, 0), Quaternion.identity);
-                    Destroy(copy, 3.0f);
+                    GameObject x = new GameObject("X");
+                    x.transform.SetParent(canvas.transform, false);
+                    Image image = x.AddComponent<Image>();
+                    image.sprite = xImage;
+                    RectTransform rectTransform = x.GetComponent<RectTransform>();
+                    rectTransform.anchoredPosition = new Vector2(0,0);
+                    rectTransform.sizeDelta = new Vector2(200, 200);
+
+                    Destroy(x, 3.0f);
                     instantiated = true;
                     isX = true;
                     playerTurn = true;
                 }
                 else
                 {
-                    var copy = Instantiate(o, new Vector2(0, 0), Quaternion.identity);
-                    Destroy(copy, 3.0f);
+                    GameObject o = new GameObject("O");
+                    o.transform.SetParent(canvas.transform, false);
+                    Image image = o.AddComponent<Image>();
+                    image.sprite = oImage;
+                    RectTransform rectTransform = o.GetComponent<RectTransform>();
+                    rectTransform.anchoredPosition = new Vector2(0, 0);
+                    rectTransform.sizeDelta = new Vector2(200, 200);
+
+                    Destroy(o, 3.0f);
                     instantiated = true;
                     isO = true;
                     playerTurn = false;
@@ -119,7 +138,7 @@ public class GameManagerScript : MonoBehaviour
             button9.gameObject.SetActive(true);
         }
 
-        if (isX && !gameOver)
+        if (!gameOver && cutsceneDone)
         {
             if (playerTurn)
             {
@@ -141,6 +160,42 @@ public class GameManagerScript : MonoBehaviour
             checkForWin();
             
         }
+
+        if (gameOver)
+        {
+            button1.gameObject.SetActive(false);
+            button2.gameObject.SetActive(false);
+            button3.gameObject.SetActive(false);
+            button4.gameObject.SetActive(false);
+            button5.gameObject.SetActive(false);
+            button6.gameObject.SetActive(false);
+            button7.gameObject.SetActive(false);
+            button8.gameObject.SetActive(false);
+            button9.gameObject.SetActive(false);
+            board.SetActive(false);
+            infoText.gameObject.SetActive(true);
+
+            if(winner == "X")
+            {
+                infoText.text = "X won";
+                for (int i = 0; i < instantiatedImages.Count; i++)
+                {
+                    Destroy(instantiatedImages[i]);
+                }
+            }
+            else if (tie)
+            {
+                infoText.text = "It was a tie";
+            }
+            else
+            {
+                infoText.text = "O won";
+                for (int i = 0; i < instantiatedImages.Count; i++)
+                {
+                    Destroy(instantiatedImages[i]);
+                }
+            }
+        }
     }
 
     void dayOneOpponentTurn()
@@ -152,10 +207,30 @@ public class GameManagerScript : MonoBehaviour
             Button button = (Button) buttons[randomSquare];
             var text = button.GetComponentInChildren<TMP_Text>();
             int index = 0;
+
+            RectTransform buttonRect = button.GetComponent<RectTransform>();
+
+            Vector2 localPosition;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvas.GetComponent<RectTransform>(),
+                buttonRect.position,
+                canvas.worldCamera,
+                out localPosition);
+
             if (isX)
             {
-                text.text = "0";
+                text.text = "O";
                 button.interactable = false;
+
+                GameObject o = new GameObject("O " + button.name);
+                o.transform.SetParent(canvas.transform, false);
+                Image image = o.AddComponent<Image>();
+                image.sprite = oImage;
+                RectTransform rectTransform = o.GetComponent<RectTransform>();
+                rectTransform.anchoredPosition = localPosition;
+                rectTransform.sizeDelta = new Vector2(150, 150);
+
+                instantiatedImages.Add(o);
 
                 for (int i = 0; i < buttons.Count; i++)
                 {
@@ -171,6 +246,16 @@ public class GameManagerScript : MonoBehaviour
             {
                 text.text = "X";
                 button.interactable = false;
+
+                GameObject x = new GameObject("X " + button.name);
+                x.transform.SetParent(canvas.transform, false);
+                Image image = x.AddComponent<Image>();
+                image.sprite = xImage;
+                RectTransform rectTransform = x.GetComponent<RectTransform>();
+                rectTransform.anchoredPosition = localPosition;
+                rectTransform.sizeDelta = new Vector2(150, 150);
+
+                instantiatedImages.Add(x);
 
                 for (int i = 0; i < buttons.Count; i++)
                 {
@@ -188,7 +273,69 @@ public class GameManagerScript : MonoBehaviour
 
     void checkForWin()
     {
+        TMP_Text button1Text = button1.GetComponentInChildren<TMP_Text>();
+        TMP_Text button2Text = button2.GetComponentInChildren<TMP_Text>();
+        TMP_Text button3Text = button3.GetComponentInChildren<TMP_Text>();
+        TMP_Text button4Text = button4.GetComponentInChildren<TMP_Text>();
+        TMP_Text button5Text = button5.GetComponentInChildren<TMP_Text>();
+        TMP_Text button6Text = button6.GetComponentInChildren<TMP_Text>();
+        TMP_Text button7Text = button7.GetComponentInChildren<TMP_Text>();
+        TMP_Text button8Text = button8.GetComponentInChildren<TMP_Text>();
+        TMP_Text button9Text = button9.GetComponentInChildren<TMP_Text>();
 
+        // All X or O on the first row
+        if((button1Text.text == "X" || button1Text.text == "O") && button1Text.text == button2Text.text && button2Text.text == button3Text.text)
+        {
+            winner = button1Text.text;
+            gameOver = true;
+        }
+        // All X or O on the second row
+        if ((button4Text.text == "X" || button4Text.text == "O") && button4Text.text == button5Text.text && button5Text.text == button6Text.text)
+        {
+            winner = button4Text.text;
+            gameOver = true;
+        }
+        // All X or O on the third row
+        if ((button7Text.text == "X" || button7Text.text == "O") && button7Text.text == button8Text.text && button8Text.text == button9Text.text)
+        {
+            winner = button7Text.text;
+            gameOver = true;
+        }
+        // All X or O on the first column
+        if ((button1Text.text == "X" || button1Text.text == "O") && button1Text.text == button4Text.text && button4Text.text == button7Text.text)
+        {
+            winner = button1Text.text;
+            gameOver = true;
+        }
+        // All X or O on the second column
+        if ((button2Text.text == "X" || button2Text.text == "O") && button2Text.text == button5Text.text && button5Text.text == button8Text.text)
+        {
+            winner = button2Text.text;
+            gameOver = true;
+        }
+        // All X or O on the third column
+        if ((button3Text.text == "X" || button3Text.text == "O") && button3Text.text == button6Text.text && button6Text.text == button9Text.text)
+        {
+            winner = button3Text.text;
+            gameOver = true;
+        }
+        // All X or O diagonally down from left to right
+        if ((button1Text.text == "X" || button1Text.text == "O") && button1Text.text == button5Text.text && button5Text.text == button9Text.text)
+        {
+            winner = button3Text.text;
+            gameOver = true;
+        }
+        // All X or O diagonally up from left to right
+        if ((button7Text.text == "X" || button7Text.text == "O") && button7Text.text == button5Text.text && button5Text.text == button3Text.text)
+        {
+            winner = button7Text.text;
+            gameOver = true;
+        }
+        if(buttons.Count == 0)
+        {
+            gameOver = true;
+            tie = true;
+        }
     }
 
     void HandleButtonClick(Button clickedButton)
@@ -199,15 +346,45 @@ public class GameManagerScript : MonoBehaviour
             int index = 0;
             clickedButton.interactable = false;
 
-            if (isO)
+            RectTransform buttonRect = clickedButton.GetComponent<RectTransform>();
+
+            Vector2 localPosition;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvas.GetComponent<RectTransform>(),
+                buttonRect.position,
+                canvas.worldCamera,
+                out localPosition);
+
+            if (isX)
             {
                 var buttonText = clickedButton.GetComponentInChildren<TMP_Text>();
-                buttonText.text = "O";
+                buttonText.text = "X";
+
+                GameObject x = new GameObject("X " + clickedButton.name);
+                x.transform.SetParent(canvas.transform, false);
+                Image image = x.AddComponent<Image>();
+                image.sprite = xImage;
+                RectTransform rectTransform = x.GetComponent<RectTransform>();
+                rectTransform.anchoredPosition = localPosition ;
+                rectTransform.sizeDelta = new Vector2(150, 150);
+
+                instantiatedImages.Add(x);
             }
             else
             {
                 var buttonText = clickedButton.GetComponentInChildren<TMP_Text>();
-                buttonText.text = "X";
+                buttonText.text = "O";
+
+                GameObject o = new GameObject("O " + clickedButton.name);
+                o.transform.SetParent(canvas.transform, false);
+                Image image = o.AddComponent<Image>();
+                image.sprite = oImage;
+                RectTransform rectTransform = o.GetComponent<RectTransform>();
+                rectTransform.anchoredPosition = localPosition;
+                rectTransform.sizeDelta = new Vector2(150, 150);
+
+                instantiatedImages.Add(o);
+
             }
 
             for(int i  = 0; i < buttons.Count; i++)
@@ -222,4 +399,5 @@ public class GameManagerScript : MonoBehaviour
         }
         
     }
+
 }
