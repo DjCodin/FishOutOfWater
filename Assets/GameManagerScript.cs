@@ -172,27 +172,48 @@ public class GameManagerScript : MonoBehaviour
             button7.gameObject.SetActive(false);
             button8.gameObject.SetActive(false);
             button9.gameObject.SetActive(false);
-            board.SetActive(false);
             infoText.gameObject.SetActive(true);
 
             if(winner == "X")
             {
-                infoText.text = "X won";
-                for (int i = 0; i < instantiatedImages.Count; i++)
+                timer += Time.deltaTime;
+                if (timer >= 4f)
                 {
-                    Destroy(instantiatedImages[i]);
+                    timer = 0;
+                    board.SetActive(false);
+                    infoText.text = "X won";
+                    for (int i = 0; i < instantiatedImages.Count; i++)
+                    {
+                        Destroy(instantiatedImages[i]);
+                    }
                 }
             }
             else if (tie)
             {
-                infoText.text = "It was a tie";
+                timer += Time.deltaTime;
+                if (timer >= 4f)
+                {
+                    timer = 0;
+                    board.SetActive(false);
+                    infoText.text = "It was a tie";
+                    for (int i = 0; i < instantiatedImages.Count; i++)
+                    {
+                        Destroy(instantiatedImages[i]);
+                    }
+                }
             }
             else
             {
-                infoText.text = "O won";
-                for (int i = 0; i < instantiatedImages.Count; i++)
+                timer += Time.deltaTime;
+                if (timer >= 4f)
                 {
-                    Destroy(instantiatedImages[i]);
+                    timer = 0;
+                    board.SetActive(false);
+                    infoText.text = "O won";
+                    for (int i = 0; i < instantiatedImages.Count; i++)
+                    {
+                        Destroy(instantiatedImages[i]);
+                    }
                 }
             }
         }
@@ -288,53 +309,62 @@ public class GameManagerScript : MonoBehaviour
         {
             winner = button1Text.text;
             gameOver = true;
+            timer = 0;
         }
         // All X or O on the second row
         if ((button4Text.text == "X" || button4Text.text == "O") && button4Text.text == button5Text.text && button5Text.text == button6Text.text)
         {
             winner = button4Text.text;
             gameOver = true;
+            timer = 0;
         }
         // All X or O on the third row
         if ((button7Text.text == "X" || button7Text.text == "O") && button7Text.text == button8Text.text && button8Text.text == button9Text.text)
         {
             winner = button7Text.text;
             gameOver = true;
+            timer = 0;
         }
         // All X or O on the first column
         if ((button1Text.text == "X" || button1Text.text == "O") && button1Text.text == button4Text.text && button4Text.text == button7Text.text)
         {
             winner = button1Text.text;
             gameOver = true;
+            timer = 0;
         }
         // All X or O on the second column
         if ((button2Text.text == "X" || button2Text.text == "O") && button2Text.text == button5Text.text && button5Text.text == button8Text.text)
         {
             winner = button2Text.text;
             gameOver = true;
+            timer = 0;
         }
         // All X or O on the third column
         if ((button3Text.text == "X" || button3Text.text == "O") && button3Text.text == button6Text.text && button6Text.text == button9Text.text)
         {
             winner = button3Text.text;
             gameOver = true;
+            timer = 0;
         }
         // All X or O diagonally down from left to right
         if ((button1Text.text == "X" || button1Text.text == "O") && button1Text.text == button5Text.text && button5Text.text == button9Text.text)
         {
             winner = button3Text.text;
             gameOver = true;
+            timer = 0;
         }
         // All X or O diagonally up from left to right
         if ((button7Text.text == "X" || button7Text.text == "O") && button7Text.text == button5Text.text && button5Text.text == button3Text.text)
         {
             winner = button7Text.text;
             gameOver = true;
+            timer = 0;
         }
         if(buttons.Count == 0)
         {
             gameOver = true;
             tie = true;
+            timer = 0;
         }
     }
 
