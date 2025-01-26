@@ -19,6 +19,10 @@ TagManager:
   - Button 9 Text
   - O
   - X
+  - Background
+  - Win
+  - Lose
+  - Tie
   layers:
   - Default
   - TransparentFX

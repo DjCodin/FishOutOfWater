@@ -34,8 +34,22 @@ public class GameManagerScript : MonoBehaviour
     public string winner;
     public bool tie = false;
     private List<GameObject> instantiatedImages = new List<GameObject>();
+    public GameObject winSound;
+    public GameObject loseSound;
+    public GameObject tieSound;
+    public GameObject background;
+    public bool endScene = false;
+    public bool endSceneAudioPlayed = false;
     void Start()
     {
+        // Background without tic tac toe board
+        background = GameObject.FindGameObjectWithTag("Background");
+
+        // Gets the 3 gameobjects where the sounds are stored
+        winSound =  GameObject.FindGameObjectWithTag("Win");
+        loseSound = GameObject.FindGameObjectWithTag("Lose");
+        tieSound = GameObject.FindGameObjectWithTag("Tie");
+
         infoText.text = "Your shape is:";
         timer = 0;
 
@@ -67,6 +81,7 @@ public class GameManagerScript : MonoBehaviour
         buttons.Add(button8);
         buttons.Add(button9);
 
+        // Adds a listener to each button (waits for an event to occur and then runs a script accordingly)
         foreach (Button btn in buttons)
         {
             btn.onClick.AddListener(() => HandleButtonClick(btn));
@@ -80,20 +95,29 @@ public class GameManagerScript : MonoBehaviour
         if (!cutsceneDone)
         {
             timer += Time.deltaTime;
+            // Waits for timer to be at least 2 seconds before showing the player whether they are X or O
             if (timer >= 2 && !instantiated)
             {
                 timer = 0;
+
+                // Generates a random integer  from 0 (inclusive) to 2 (exclusive). 0 = X, 1 = O
                 int randInt = Random.Range(0, 2);
                 if (randInt == 0)
                 {
+                    // Instantiates a new GameObject "X"
                     GameObject x = new GameObject("X");
+                    // Sets the parent to be the Canvas, and sets the transform to be based on the canvas
                     x.transform.SetParent(canvas.transform, false);
+                    // Adds an Image component
                     Image image = x.AddComponent<Image>();
+                    // Adds the X image to the GameObject
                     image.sprite = xImage;
+                    // Gets the RectTransform of the GameObject and sets the coordinates to be (0,0), and the size to be 200x200 pixels
                     RectTransform rectTransform = x.GetComponent<RectTransform>();
                     rectTransform.anchoredPosition = new Vector2(0,0);
                     rectTransform.sizeDelta = new Vector2(200, 200);
 
+                    // After 3 seconds, destroys the "X" GameObject and sets the appropriate conditions for the game
                     Destroy(x, 3.0f);
                     instantiated = true;
                     isX = true;
@@ -101,14 +125,20 @@ public class GameManagerScript : MonoBehaviour
                 }
                 else
                 {
+                    // Instantiates a new GameObject "O"
                     GameObject o = new GameObject("O");
+                    // Sets the parent to be the Canvas, and sets the transform to be based on the canvas
                     o.transform.SetParent(canvas.transform, false);
+                    // Adds an Image component
                     Image image = o.AddComponent<Image>();
+                    // Adds the O image to the GameObject
                     image.sprite = oImage;
+                    // Gets the RectTransform of the GameObject and sets the coordinates to be (0,0), and the size to be 200x200 pixels
                     RectTransform rectTransform = o.GetComponent<RectTransform>();
                     rectTransform.anchoredPosition = new Vector2(0, 0);
                     rectTransform.sizeDelta = new Vector2(200, 200);
 
+                    // After 3 seconds, destroys the "O" GameObject and sets the appropriate conditions for the game
                     Destroy(o, 3.0f);
                     instantiated = true;
                     isO = true;
@@ -118,6 +148,8 @@ public class GameManagerScript : MonoBehaviour
             }
             if (timer >= 3.0f)
             {
+
+                // Once the timer exceeds 3 seconds, starts the game and changes the backdrop to the tic tac toe board
                 cutsceneDone = true;
                 infoText.text = "";
                 infoText.gameObject.SetActive(false);
@@ -136,12 +168,16 @@ public class GameManagerScript : MonoBehaviour
             button7.gameObject.SetActive(true);
             button8.gameObject.SetActive(true);
             button9.gameObject.SetActive(true);
+            background.SetActive(false);
         }
 
+        // Runs while the game is in progress
         if (!gameOver && cutsceneDone)
         {
+            // Runs if it is the player's turn
             if (playerTurn)
             {
+                // Makes all buttons that aren't occupied interactable
                 for (int i = 0; i < buttons.Count; i++)
                 {
                     Button button = (Button)buttons[i];
@@ -150,19 +186,24 @@ public class GameManagerScript : MonoBehaviour
             }
             if(!playerTurn)
             {
+                // Makes all buttons that aren't occupied not interactable
                 for(int i = 0; i < buttons.Count; i++)
                 {
                     Button button = (Button) buttons[i];
                     button.interactable = false;
                 }
+                // Calls the day 1 opponent 
                 dayOneOpponentTurn();
             }
+
+            // After each turn check for a win
             checkForWin();
             
         }
-
+        // Runs once the game is over
         if (gameOver)
         {
+            // Removes all the buttons from the scene
             button1.gameObject.SetActive(false);
             button2.gameObject.SetActive(false);
             button3.gameObject.SetActive(false);
@@ -174,41 +215,84 @@ public class GameManagerScript : MonoBehaviour
             button9.gameObject.SetActive(false);
             infoText.gameObject.SetActive(true);
 
-            if(winner == "X")
+            // If the winner is X and the end scene is plapying this runs
+            if(winner == "X" && endScene)
             {
+                // If the player is X, plays a winning sound
+                if (isX && !endSceneAudioPlayed)
+                {
+                    winSound.GetComponent<AudioSource>().Play();
+                    endSceneAudioPlayed = true;
+                }
+                // If the player is O, plays a losing sound
+                else if (!endSceneAudioPlayed)
+                {
+                    loseSound.GetComponent<AudioSource>().Play();
+                    endSceneAudioPlayed = true;
+                }
                 timer += Time.deltaTime;
+                // Destroys all instantiated X and O objects once the timer is at least 4 seconds. Changes the background to the 
+                // board without the tic tac toe 
                 if (timer >= 4f)
                 {
                     timer = 0;
                     board.SetActive(false);
+                    background.SetActive(true);
                     infoText.text = "X won";
                     for (int i = 0; i < instantiatedImages.Count; i++)
                     {
                         Destroy(instantiatedImages[i]);
                     }
+                    endScene = false; 
                 }
             }
-            else if (tie)
+            // If it is a tie and the end scene is plapying this runs
+            else if (tie && endScene)
             {
                 timer += Time.deltaTime;
+                // Plays a sound for a tie 
+                if (!endSceneAudioPlayed)
+                {
+                    tieSound.GetComponent<AudioSource>().Play();
+                    endSceneAudioPlayed = true;
+                }
+                // Destroys all instantiated X and O objects once the timer is at least 4 seconds. Changes the background to the 
+                // board without the tic tac toe 
                 if (timer >= 4f)
                 {
                     timer = 0;
                     board.SetActive(false);
                     infoText.text = "It was a tie";
+                    background.SetActive(true);
                     for (int i = 0; i < instantiatedImages.Count; i++)
                     {
                         Destroy(instantiatedImages[i]);
                     }
                 }
             }
-            else
+            // If O wins and the end scene is plapying this runs
+            else if (winner == "O" && endScene)
             {
                 timer += Time.deltaTime;
+                // If the player is O, plays a winning sound
+                if (isO && !endSceneAudioPlayed)
+                {
+                    winSound.GetComponent<AudioSource>().Play();
+                    endSceneAudioPlayed = true;
+                }
+                // If the player is X, plays a losing sound
+                else if (!endSceneAudioPlayed)
+                {
+                    loseSound.GetComponent<AudioSource>().Play();
+                    endSceneAudioPlayed = true;
+                }
+                // Destroys all instantiated X and O objects once the timer is at least 4 seconds. Changes the background to the 
+                // board without the tic tac toe 
                 if (timer >= 4f)
                 {
                     timer = 0;
                     board.SetActive(false);
+                    background.SetActive(true);
                     infoText.text = "O won";
                     for (int i = 0; i < instantiatedImages.Count; i++)
                     {
@@ -219,81 +303,102 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
+    // Function for the opponent behavior
     void dayOneOpponentTurn()
     {   
         timer2 += Time.deltaTime;
+        // Waits 2 seconds from player turn to run 
         if (timer2 >= 2f)
         {
+            // Picks a random unoccupied square to put the X or O on
             int randomSquare = Random.Range(0, buttons.Count);
+            // Stores the random square in a local Button variable 
             Button button = (Button) buttons[randomSquare];
+            // Stores the TMP_Text component in the button's child in a var
             var text = button.GetComponentInChildren<TMP_Text>();
-            int index = 0;
 
+            // Gets the RectTransform of the selected button
             RectTransform buttonRect = button.GetComponent<RectTransform>();
 
+            // Declares a variable localPosition to store the resulting position in the local coordinate space of the canvas
             Vector2 localPosition;
+
+            // Converts a point in screen space  to a local point relative to a specific UI element's RectTransform
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                // Specifies the rectangle (UI element) into which the screen position will be converted
                 canvas.GetComponent<RectTransform>(),
+                // Provides the position of the button in screen space
                 buttonRect.position,
+                // Specifies the camera responsible for rendering the canvas
                 canvas.worldCamera,
+                // Stores the calculated local position in the canvas's coordinate space
                 out localPosition);
 
+            // Runs if the player is X
             if (isX)
             {
+                // Text of the randomly selected button becomes "O"
                 text.text = "O";
+                // Make the button non-interactable
                 button.interactable = false;
 
+
+                // Instantiates a new GameObject "O" + the name of the randomly selected button's GameObject 
                 GameObject o = new GameObject("O " + button.name);
+                // Sets the parent to be the Canvas, and sets the transform to be based on the canvas
                 o.transform.SetParent(canvas.transform, false);
+                // Adds an Image component
                 Image image = o.AddComponent<Image>();
+                // Adds the O image to the GameObject 
                 image.sprite = oImage;
+                // Gets the RectTransform of the GameObject and sets the coordinates to be (0,0), and the size to be 200x200 pixels
                 RectTransform rectTransform = o.GetComponent<RectTransform>();
                 rectTransform.anchoredPosition = localPosition;
                 rectTransform.sizeDelta = new Vector2(150, 150);
 
+                // Adds the O GameObject to the list of instantiated button GameObjects 
                 instantiatedImages.Add(o);
 
-                for (int i = 0; i < buttons.Count; i++)
-                {
-                    if (object.ReferenceEquals(buttons[i], button))
-                    {
-                        index = i;
-                    }
-                }
-                buttons.RemoveAt(index);
+                // Remove the randomly selected button from the ArrayList of buttons that do not have an X or O
+                buttons.RemoveAt(randomSquare);
                 playerTurn = true;
             }
+            // Runs if the player is O
             else
             {
+                // Text of the randomly selected button becomes "X" + the name of the randomly selected button's GameObject 
                 text.text = "X";
+                // Makes the button non-interactable
                 button.interactable = false;
 
+                // Instantiates a new GameObject "X"
                 GameObject x = new GameObject("X " + button.name);
+                // Sets the parent to be the Canvas, and sets the transform to be based on the canvas
                 x.transform.SetParent(canvas.transform, false);
+                // Adds an Image component
                 Image image = x.AddComponent<Image>();
+                // Adds the X image to the GameObject 
                 image.sprite = xImage;
+                // Gets the RectTransform of the GameObject and sets the coordinates to be (0,0), and the size to be 200x200 pixels
                 RectTransform rectTransform = x.GetComponent<RectTransform>();
                 rectTransform.anchoredPosition = localPosition;
                 rectTransform.sizeDelta = new Vector2(150, 150);
 
+                // Adds the O GameObject to the list of instantiated button GameObjects 
                 instantiatedImages.Add(x);
 
-                for (int i = 0; i < buttons.Count; i++)
-                {
-                    if (object.ReferenceEquals(buttons[i], button))
-                    {
-                        index = i;
-                    }
-                }
-                buttons.RemoveAt(index);
+                // Remove the randomly selected button from the ArrayList of buttons that do not have an X or O
+                buttons.RemoveAt(randomSquare);
                 playerTurn = true;  
             }
             timer2 = 0;
         }  
     }
 
+    // Win checking method. The invisible buttons have text on them once they are occupied, either and X or O
     void checkForWin()
     {
+        // Instantiate the text components of each button 
         TMP_Text button1Text = button1.GetComponentInChildren<TMP_Text>();
         TMP_Text button2Text = button2.GetComponentInChildren<TMP_Text>();
         TMP_Text button3Text = button3.GetComponentInChildren<TMP_Text>();
@@ -309,6 +414,7 @@ public class GameManagerScript : MonoBehaviour
         {
             winner = button1Text.text;
             gameOver = true;
+            endScene = true;
             timer = 0;
         }
         // All X or O on the second row
@@ -316,6 +422,7 @@ public class GameManagerScript : MonoBehaviour
         {
             winner = button4Text.text;
             gameOver = true;
+            endScene = true;
             timer = 0;
         }
         // All X or O on the third row
@@ -323,6 +430,7 @@ public class GameManagerScript : MonoBehaviour
         {
             winner = button7Text.text;
             gameOver = true;
+            endScene = true;
             timer = 0;
         }
         // All X or O on the first column
@@ -330,6 +438,7 @@ public class GameManagerScript : MonoBehaviour
         {
             winner = button1Text.text;
             gameOver = true;
+            endScene = true;
             timer = 0;
         }
         // All X or O on the second column
@@ -337,6 +446,7 @@ public class GameManagerScript : MonoBehaviour
         {
             winner = button2Text.text;
             gameOver = true;
+            endScene = true;
             timer = 0;
         }
         // All X or O on the third column
@@ -344,6 +454,7 @@ public class GameManagerScript : MonoBehaviour
         {
             winner = button3Text.text;
             gameOver = true;
+            endScene = true;
             timer = 0;
         }
         // All X or O diagonally down from left to right
@@ -351,6 +462,7 @@ public class GameManagerScript : MonoBehaviour
         {
             winner = button3Text.text;
             gameOver = true;
+            endScene = true;
             timer = 0;
         }
         // All X or O diagonally up from left to right
@@ -358,33 +470,45 @@ public class GameManagerScript : MonoBehaviour
         {
             winner = button7Text.text;
             gameOver = true;
+            endScene = true;
             timer = 0;
         }
         if(buttons.Count == 0)
         {
             gameOver = true;
             tie = true;
+            endScene = true;
             timer = 0;
         }
     }
 
+    // Function that runs once the player selects an open spot 
     void HandleButtonClick(Button clickedButton)
     {
-        // Make the clicked button not interactable
+        // Make the clicked button not interactable 
         if (buttons.Contains(clickedButton))
         {
+            // Intiailizes an local int variable to get the index of the clicked button
             int index = 0;
             clickedButton.interactable = false;
 
+            // Gets the RectTransform of the selected button
             RectTransform buttonRect = clickedButton.GetComponent<RectTransform>();
 
+            // Declares a variable localPosition to store the resulting position in the local coordinate space of the canvas
             Vector2 localPosition;
+            // Converts a point in screen space  to a local point relative to a specific UI element's RectTransform
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvas.GetComponent<RectTransform>(),
-                buttonRect.position,
-                canvas.worldCamera,
-                out localPosition);
+            // Specifies the rectangle (UI element) into which the screen position will be converted
+            canvas.GetComponent<RectTransform>(),
+            // Provides the position of the button in screen space
+            buttonRect.position,
+            // Specifies the camera responsible for rendering the canvas
+            canvas.worldCamera,
+            // Stores the calculated local position in the canvas's coordinate space
+            out localPosition);
 
+            // Runs if the player is X
             if (isX)
             {
                 var buttonText = clickedButton.GetComponentInChildren<TMP_Text>();
@@ -400,6 +524,7 @@ public class GameManagerScript : MonoBehaviour
 
                 instantiatedImages.Add(x);
             }
+            // Runs if player is O
             else
             {
                 var buttonText = clickedButton.GetComponentInChildren<TMP_Text>();
@@ -416,7 +541,8 @@ public class GameManagerScript : MonoBehaviour
                 instantiatedImages.Add(o);
 
             }
-
+            
+            // Finds the button in buttons that is the clicked button and then removes that button
             for(int i  = 0; i < buttons.Count; i++)
             {
                 if (object.ReferenceEquals(buttons[i], clickedButton))
