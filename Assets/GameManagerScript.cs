@@ -156,7 +156,7 @@ public class GameManagerScript : MonoBehaviour
                 board.SetActive(true);
             }
         }
-        if (cutsceneDone)
+        if (cutsceneDone && !gameOver)
         {
             // Show the buttons after the cutscene finishes
             button1.gameObject.SetActive(true);
@@ -268,6 +268,7 @@ public class GameManagerScript : MonoBehaviour
                     {
                         Destroy(instantiatedImages[i]);
                     }
+                    endScene = false;
                 }
             }
             // If O wins and the end scene is plapying this runs
@@ -298,6 +299,7 @@ public class GameManagerScript : MonoBehaviour
                     {
                         Destroy(instantiatedImages[i]);
                     }
+                    endScene = false;
                 }
             }
         }
