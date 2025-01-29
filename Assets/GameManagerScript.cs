@@ -462,7 +462,7 @@ public class GameManagerScript : MonoBehaviour
         // All X or O diagonally down from left to right
         if ((button1Text.text == "X" || button1Text.text == "O") && button1Text.text == button5Text.text && button5Text.text == button9Text.text)
         {
-            winner = button3Text.text;
+            winner = button1Text.text;
             gameOver = true;
             endScene = true;
             timer = 0;
