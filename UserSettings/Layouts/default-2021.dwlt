@@ -751,9 +751,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a05e0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 92f9ffffd6f9ffff2afbffff
+      m_ExpandedIDs: 2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1264,10 +1264,16 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 6a5e0000
     m_LastClickedID: 24170
     m_ExpandedIDs: 00000000585e000000ca9a3bffffff7f
 >>>>>>> d28a5ee (Changed stuff)
+=======
+    m_SelectedIDs: 545d0000
+    m_LastClickedID: 23892
+    m_ExpandedIDs: 00000000285d000000ca9a3bffffff7f
+>>>>>>> 133d724 (commit)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1298,6 +1304,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 
 =======
     m_ExpandedIDs: 00000000845e000000ca9a3bffffff7f
@@ -1308,6 +1315,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000585e0000
 >>>>>>> d28a5ee (Changed stuff)
+=======
+    m_ExpandedIDs: 00000000285d0000
+>>>>>>> 133d724 (commit)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1334,7 +1344,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
