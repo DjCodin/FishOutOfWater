@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class GameManagerScript : MonoBehaviour
+public class TicTacToeGameManagerScript : MonoBehaviour
 {
     public Button button1;
     public Button button2;
