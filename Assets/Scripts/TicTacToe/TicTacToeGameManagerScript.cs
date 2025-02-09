@@ -33,7 +33,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     public float timer2 = 0;
     public string winner;
     public bool tie = false;
-    private List<GameObject> instantiatedImages = new List<GameObject>();
+    public List<GameObject> instantiatedImages = new List<GameObject>();
     public GameObject winSound;
     public GameObject loseSound;
     public GameObject tieSound;
@@ -188,6 +188,9 @@ public class TicTacToeGameManagerScript : MonoBehaviour
         // Runs while the game is in progress
         if (!gameOver && cutsceneDone)
         {
+
+            GameObject dayTwoOpponent = GameObject.FindGameObjectWithTag("Day Two Opponent");
+            DayTwoOpponent dayTwoOpponentScript = dayTwoOpponent.GetComponent<DayTwoOpponent>();
             // Runs if it is the player's turn on day 1
             if (playerTurn)
             {
@@ -213,8 +216,6 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 }
                 else if (gameDaySO.GameDay == 1)
                 {
-                    GameObject dayTwoOpponent = GameObject.FindGameObjectWithTag("Day Two Opponent");
-                    DayTwoOpponent dayTwoOpponentScript = dayTwoOpponent.GetComponent<DayTwoOpponent>();
                     dayTwoOpponentScript.dayTwoOpponentTurn();
                 }
             }

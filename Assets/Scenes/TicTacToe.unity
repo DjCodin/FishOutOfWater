@@ -2493,6 +2493,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ticTacToeGMScript: {fileID: 0}
   timer: 0
+  canvas: {fileID: 219104137}
+  xImage: {fileID: 21300000, guid: c6fe4f478f367d2449a3892b502c3bdb, type: 3}
+  oImage: {fileID: 21300000, guid: f504189a125632f4aa183769bff519aa, type: 3}
+  randRow: 0
+  randCol: 0
 --- !u!4 &1574623291
 Transform:
   m_ObjectHideFlags: 0
@@ -3525,7 +3530,7 @@ GameObject:
   - component: {fileID: 2101147447}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: Tic Tac Toe Game Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3568,13 +3573,14 @@ MonoBehaviour:
   timer2: 0
   winner: 
   tie: 0
+  instantiatedImages: []
   winSound: {fileID: 0}
   loseSound: {fileID: 0}
   tieSound: {fileID: 0}
   background: {fileID: 0}
   endScene: 0
   endSceneAudioPlayed: 0
-  gameDaySO: {fileID: 0}
+  gameDaySO: {fileID: 11400000, guid: 4303664a7420bef4d88df5135802deb7, type: 2}
   lastClickedButton: {fileID: 0}
 --- !u!4 &2101147448
 Transform:
