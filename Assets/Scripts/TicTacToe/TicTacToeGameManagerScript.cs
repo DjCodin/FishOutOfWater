@@ -40,6 +40,11 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     public GameObject background;
     public bool endScene = false;
     public bool endSceneAudioPlayed = false;
+    [SerializeField]
+    private GameDataSO gameDaySO;
+    public Button[,] buttonMap;
+    public Button lastClickedButton;
+    
     void Start()
     {
         // Background without tic tac toe board
@@ -69,7 +74,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
         // Hide the buttons
         board.SetActive(false);
 
-        // Create arraylist with all the buttons
+        // Create arraylist with all the buttons that have no x or o
         buttons = new ArrayList();
         buttons.Add(button1);
         buttons.Add(button2);
@@ -80,6 +85,15 @@ public class TicTacToeGameManagerScript : MonoBehaviour
         buttons.Add(button7);
         buttons.Add(button8);
         buttons.Add(button9);
+
+        buttonMap = new Button[5, 5]
+        {
+            {null, null, null, null, null},
+            {null, button1, button2, button3, null},
+            {null, button4, button5, button6, null},
+            {null, button7, button8, button9, null},
+            {null, null, null, null, null}
+        };
 
         // Adds a listener to each button (waits for an event to occur and then runs a script accordingly)
         foreach (Button btn in buttons)
@@ -174,7 +188,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
         // Runs while the game is in progress
         if (!gameOver && cutsceneDone)
         {
-            // Runs if it is the player's turn
+            // Runs if it is the player's turn on day 1
             if (playerTurn)
             {
                 // Makes all buttons that aren't occupied interactable
@@ -193,7 +207,16 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                     button.interactable = false;
                 }
                 // Calls the day 1 opponent 
-                dayOneOpponentTurn();
+                if (gameDaySO.GameDay == 0)
+                {
+                    dayOneOpponentTurn();
+                }
+                else if (gameDaySO.GameDay == 1)
+                {
+                    GameObject dayTwoOpponent = GameObject.FindGameObjectWithTag("Day Two Opponent");
+                    DayTwoOpponent dayTwoOpponentScript = dayTwoOpponent.GetComponent<DayTwoOpponent>();
+                    dayTwoOpponentScript.dayTwoOpponentTurn();
+                }
             }
 
             // After each turn check for a win
@@ -411,6 +434,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
         TMP_Text button8Text = button8.GetComponentInChildren<TMP_Text>();
         TMP_Text button9Text = button9.GetComponentInChildren<TMP_Text>();
 
+
         // All X or O on the first row
         if((button1Text.text == "X" || button1Text.text == "O") && button1Text.text == button2Text.text && button2Text.text == button3Text.text)
         {
@@ -487,9 +511,24 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     // Function that runs once the player selects an open spot 
     void HandleButtonClick(Button clickedButton)
     {
+        lastClickedButton = clickedButton;
         // Make the clicked button not interactable 
         if (buttons.Contains(clickedButton))
         {
+            // For day 2. sets a clicked button to null
+            if (gameDaySO.GameDay == 1)
+            {
+                for (int i = 0; i < buttonMap.Length; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        if (clickedButton == buttonMap[i, j])
+                        {
+                            buttonMap[i, j] = null;
+                        }
+                    }
+                }
+            }
             // Intiailizes an local int variable to get the index of the clicked button
             int index = 0;
             clickedButton.interactable = false;
