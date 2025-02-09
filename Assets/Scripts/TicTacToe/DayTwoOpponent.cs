@@ -13,6 +13,10 @@ public class DayTwoOpponent : MonoBehaviour
     private bool opponentMove = false;
     private Button button;
     public Canvas canvas;
+    public Sprite xImage;
+    public Sprite oImage;
+    public int randRow;
+    public int randCol;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +27,7 @@ public class DayTwoOpponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void dayTwoOpponentTurn()
@@ -32,10 +36,11 @@ public class DayTwoOpponent : MonoBehaviour
         if (timer >= 2f)
         {
             opponentMove = true;
+            timer = 0;
         }
-        timer = 0;
+        
 
-        for (int i = 1; i < ticTacToeGMScript.buttonMap.Length - 1; i++)
+        for (int i = 1; i < 4; i++)
         {
             for (int j = 1; j < 4; j++)
             {
@@ -43,6 +48,7 @@ public class DayTwoOpponent : MonoBehaviour
                 {
                     row = i;
                     col = j;
+                    ticTacToeGMScript.buttonMap[i, j] = null;
                 }
             }
         }
@@ -51,27 +57,38 @@ public class DayTwoOpponent : MonoBehaviour
         {
             // if the button is at the center
 
-            int randCol = Random.Range(-1, 1);
-            int randRow = Random.Range(-1, 1);
+            randCol = Random.Range(-1, 2);
+            randRow = Random.Range(-1, 2);
             if (ticTacToeGMScript.buttonMap[row + 1, col + 1] == null && 
                 ticTacToeGMScript.buttonMap[row + 1, col + 0] == null &&
                 ticTacToeGMScript.buttonMap[row + 0, col + 1] == null &&
                 ticTacToeGMScript.buttonMap[row - 1, col + 0] == null &&
                 ticTacToeGMScript.buttonMap[row - 1, col - 1] == null &&
                 ticTacToeGMScript.buttonMap[row + 1, col - 1] == null &&
-                ticTacToeGMScript.buttonMap[row - 1, col + 1] == null)
+                ticTacToeGMScript.buttonMap[row - 1, col + 1] == null &&
+                ticTacToeGMScript.buttonMap[row + 0, col - 1] == null)
             {
                 button = (Button) ticTacToeGMScript.buttons[Random.Range(0, ticTacToeGMScript.buttons.Count - 1)];
+                for (int k = 1; k < 4; k++)
+                {
+                    for (int l = 1; l < 4; l ++)
+                    {
+                        if (button == ticTacToeGMScript.buttonMap[k, l])
+                        {
+                            ticTacToeGMScript.buttonMap[k, l] = null;
+                        }
+                    }
+                }
                 selectSpace();
                 opponentMove = false;
-                ticTacToeGMScript.playerTurn = true;
             }
-            else if (ticTacToeGMScript.buttonMap[row + randRow, col + randCol] != null)
+            else if (row + randRow > 0 && row + randRow < 4 && col + randCol > 0 && col + randCol < 4 && ticTacToeGMScript.buttonMap[row + randRow, col + randCol] != null)
             {
-                button = 0;
+                button = ticTacToeGMScript.buttonMap[row + randRow, col + randCol];
                 opponentMove = false;
+                ticTacToeGMScript.buttonMap[row + randRow, col + randCol] = null;
                 selectSpace();
-                ticTacToeGMScript.playerTurn = true;
+               
             }
 
         }
@@ -79,6 +96,8 @@ public class DayTwoOpponent : MonoBehaviour
 
     void selectSpace()
     {
+
+        int index = ticTacToeGMScript.buttons.IndexOf(button);
         var text = button.GetComponentInChildren<TMP_Text>();
 
         // Gets the RectTransform of the selected button
@@ -121,11 +140,11 @@ public class DayTwoOpponent : MonoBehaviour
             rectTransform.sizeDelta = new Vector2(150, 150);
 
             // Adds the O GameObject to the list of instantiated button GameObjects 
-            instantiatedImages.Add(o);
+            ticTacToeGMScript.instantiatedImages.Add(o);
 
             // Remove the randomly selected button from the ArrayList of buttons that do not have an X or O
-            buttons.RemoveAt(randomSquare);
-            playerTurn = true;
+            ticTacToeGMScript.buttons.RemoveAt(index);
+            ticTacToeGMScript.playerTurn = true;
         }
         // Runs if the player is O
         else
@@ -149,11 +168,11 @@ public class DayTwoOpponent : MonoBehaviour
             rectTransform.sizeDelta = new Vector2(150, 150);
 
             // Adds the O GameObject to the list of instantiated button GameObjects 
-            instantiatedImages.Add(x);
+            ticTacToeGMScript.instantiatedImages.Add(x);
 
             // Remove the randomly selected button from the ArrayList of buttons that do not have an X or O
-            buttons.RemoveAt(randomSquare);
-            playerTurn = true;
+            ticTacToeGMScript.buttons.RemoveAt(index);
+            ticTacToeGMScript.playerTurn = true;
         }
     }
 }

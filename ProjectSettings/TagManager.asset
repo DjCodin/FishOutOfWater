@@ -23,8 +23,8 @@ TagManager:
   - Win
   - Lose
   - Tie
-  - TIc Tac Toe Game Manager
   - Day Two Opponent
+  - Tic Tac Toe Game Manager
   layers:
   - Default
   - TransparentFX
