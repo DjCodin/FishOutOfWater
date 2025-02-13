@@ -106,7 +106,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown("R"))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("MainScene");
         }
@@ -342,6 +342,10 @@ public class TicTacToeGameManagerScript : MonoBehaviour
         // Waits 2 seconds from player turn to run 
         if (timer2 >= 2f)
         {
+
+            GameObject click = GameObject.FindGameObjectWithTag("ClickSound");
+            AudioSource clickSound = click.GetComponent<AudioSource>();
+            clickSound.Play();
             // Picks a random unoccupied square to put the X or O on
             int randomSquare = Random.Range(0, buttons.Count);
             // Stores the random square in a local Button variable 
@@ -556,6 +560,9 @@ public class TicTacToeGameManagerScript : MonoBehaviour
             // Stores the calculated local position in the canvas's coordinate space
             out localPosition);
 
+            GameObject click = GameObject.FindGameObjectWithTag("ClickSound");
+            AudioSource clickSound = click.GetComponent<AudioSource>();
+            clickSound.Play();
             // Runs if the player is X
             if (isX)
             {
