@@ -1416,6 +1416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ticTacToeButton: {fileID: 1074462442}
+  mathClassButton: {fileID: 881285199}
 --- !u!1 &1966569036
 GameObject:
   m_ObjectHideFlags: 0

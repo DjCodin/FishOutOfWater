@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TicTacToeGameManagerScript : MonoBehaviour
 {
@@ -104,6 +105,11 @@ public class TicTacToeGameManagerScript : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetKeyDown("R"))
+        {
+            SceneManager.LoadScene("MainScene");
+        }
 
         // Cutscene script 
         if (!cutsceneDone)
