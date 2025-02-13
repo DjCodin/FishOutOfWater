@@ -3,7 +3,28 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Spawns
+  - Spawn 1
+  - Board
+  - GameManager
+  - Button 1 Text
+  - Button 2 Text
+  - Button 3 Text
+  - Button 4 Text
+  - Button 5 Text
+  - Button 6 Text
+  - Button 7 Text
+  - Button 8 Text
+  - Button 9 Text
+  - O
+  - X
+  - Background
+  - Win
+  - Lose
+  - Tie
+  - Day Two Opponent
+  - Tic Tac Toe Game Manager
   layers:
   - Default
   - TransparentFX
