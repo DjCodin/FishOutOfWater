@@ -25,6 +25,7 @@ TagManager:
   - Tie
   - Day Two Opponent
   - Tic Tac Toe Game Manager
+  - ClickSound
   layers:
   - Default
   - TransparentFX
