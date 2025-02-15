@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TicTacToe.unity
     guid: 61540dc89d8a7d1459530f1bbccdd5f8
+  - enabled: 1
+    path: Assets/Scenes/MathClass.unity
+    guid: 4524fbbdbd50341eaa9a0af9bcf89750
   m_configObjects: {}

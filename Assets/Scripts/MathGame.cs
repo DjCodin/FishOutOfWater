@@ -1,6 +1,10 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 
 
 public class MathGame : MonoBehaviour
@@ -74,6 +78,11 @@ public class MathGame : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("MainScene");
+        }
+        
         if (gameActive)
         {
             timeRemaining -= Time.deltaTime;
