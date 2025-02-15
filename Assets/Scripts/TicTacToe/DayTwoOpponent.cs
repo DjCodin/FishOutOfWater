@@ -32,6 +32,7 @@ public class DayTwoOpponent : MonoBehaviour
 
     public void dayTwoOpponentTurn()
     {
+        
         timer += Time.deltaTime;
         if (timer >= 2f)
         {
@@ -116,7 +117,9 @@ public class DayTwoOpponent : MonoBehaviour
             canvas.worldCamera,
             // Stores the calculated local position in the canvas's coordinate space
             out localPosition);
-
+        GameObject click = GameObject.FindGameObjectWithTag("ClickSound");
+        AudioSource clickSound = click.GetComponent<AudioSource>();
+        clickSound.Play();
         // Runs if the player is X
         if (ticTacToeGMScript.isX)
         {
