@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class GMScript : MonoBehaviour
 {
@@ -93,6 +94,11 @@ public class GMScript : MonoBehaviour
     public void endGame()
     {
         score = 200 * percentCompleted;
+
+    }
+    public void colorCheck()
+    {
+       // Checks to see if the color can be changed and matches with the color required for said change. 
 
     }
 }
