@@ -216,11 +216,11 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                     button.interactable = false;
                 }
                 // Calls the day 1 opponent 
-                if (gameDaySO.GameDay == 0)
+                if (gameDaySO.GameDay == 1)
                 {
                     dayOneOpponentTurn();
                 }
-                else if (gameDaySO.GameDay == 1)
+                else if (gameDaySO.GameDay == 1 || gameDaySO.GameDay == 2)
                 {
                     dayTwoOpponentScript.dayTwoOpponentTurn();
                 }
