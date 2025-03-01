@@ -18,7 +18,7 @@ public class GMScript : MonoBehaviour
     public Button brownButton;
     public Button blackButton;
     public Button eraserButton;
-    public Dictionary<int, string> colors;
+    public Dictionary<string, int> colors;
     public float time;
     public int score;
     public int percentCompleted;
@@ -26,8 +26,13 @@ public class GMScript : MonoBehaviour
     public Dictionary<string, string []> meshColors;
     public int level;
     public Vector2 mouseDrag;
-
+    
     public Button button1;
+
+    public int iteration;
+    public int max = 0;
+
+    public string currentColor;
 
 
     // Start is called before the first frame update
@@ -37,17 +42,17 @@ public class GMScript : MonoBehaviour
         level = 1;
         if (level == 3) { time = 60f; }
         score = 0;
-        colors = new Dictionary<int, string>();
+        colors = new Dictionary<string, int>();
         meshColors = new Dictionary<string, string []> ();
         addColorPairs();
         percentCompleted = 0;
         gameHasEnded = false;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (!gameHasEnded)
         {
 
@@ -64,9 +69,21 @@ public class GMScript : MonoBehaviour
             blackButton.interactable = true;
             eraserButton.interactable = true;
         }
+        if (level == 1)
+        {
+            max = 33;
+        }
+        else if (level == 2)
+        {
+            max = 67;
+        
+        }    
 
+            
+            
         if (level == 3)
         {
+            max = 100;
             time -= Time.deltaTime;
             if (time < 0)
             {
@@ -74,31 +91,35 @@ public class GMScript : MonoBehaviour
             }
         }
         
-        if (gameHasEnded)
+        if (gameHasEnded || percentCompleted >= max)
         {
             endGame();
         }
     }
     public void addColorPairs()
     {
-        colors.Add(0, "White");
-        colors.Add(1, "Red");
-        colors.Add(2, "Orange");
-        colors.Add(3, "Yellow");
-        colors.Add(4, "Green");
-        colors.Add(5, "Blue");
-        colors.Add(6, "Purple");
-        colors.Add(7, "Brown");
-        colors.Add(8, "Black");
+        colors.Add("White", 0);
+        colors.Add("Red", 1);
+        colors.Add("Orange", 2);
+        colors.Add("Yellow", 3);
+        colors.Add("Green", 4);
+        colors.Add("Blue", 5);
+        colors.Add("Purple", 6);
+        colors.Add("Brown", 7);
+        colors.Add("Black", 8);
+        List<string> keys = new List<string>(colors.Keys);
     }
     public void endGame()
     {
         score = 200 * percentCompleted;
+        iteration += 1;
 
     }
-    public void colorCheck()
+    public void colorCheck(string clicked)
     {
+
+    }
        // Checks to see if the color can be changed and matches with the color required for said change. 
 
-    }
+
 }

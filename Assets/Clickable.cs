@@ -9,7 +9,7 @@ public class Clickable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.GetComponent<Image>().alphaHitTestMinimumThreshold = alphaThreshold;
+        
     }
 
     // Update is called once per frame
