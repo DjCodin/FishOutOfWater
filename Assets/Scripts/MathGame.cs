@@ -102,7 +102,7 @@ public class MathGame : MonoBehaviour
         currentLevel = level;
         score = 0;
         totalQuestions = 0;
-        timeRemaining = 15f;
+        timeRemaining = 60f;
         gameActive = true;
 
 
