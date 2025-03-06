@@ -19,8 +19,18 @@ MonoBehaviour:
     width: 1300
     height: 768
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Scene
   m_RootView: {fileID: 2}
+=======
+<<<<<<< Updated upstream
+  m_Title: Project
+  m_RootView: {fileID: 6}
+=======
+  m_Title: Game
+  m_RootView: {fileID: 2}
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
@@ -120,6 +130,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 30
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -244,6 +255,25 @@ MonoBehaviour:
 =======
   controlID: 47
 >>>>>>> Stashed changes
+=======
+<<<<<<< Updated upstream
+    y: 0
+    width: 1172.8
+    height: 512.8
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 86
+--- !u!114 &11
+=======
+    y: 30
+    width: 1536
+    height: 866.8
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 47
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,11 +298,15 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   controlID: 80
 =======
   controlID: 48
 >>>>>>> Stashed changes
+=======
+  controlID: 48
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,18 +325,25 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
     y: 0
     width: 1129.6
     height: 513.6
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   controlID: 81
 =======
   controlID: 49
 >>>>>>> Stashed changes
+=======
+  controlID: 49
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -329,6 +370,7 @@ MonoBehaviour:
   - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 0
+<<<<<<< HEAD
 =======
 >>>>>>> b393a2b (Test)
 --- !u!114 &9
@@ -446,6 +488,10 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
+=======
+--- !u!114 &9
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -462,17 +508,60 @@ MonoBehaviour:
     serializedVersion: 2
     x: 216
     y: 0
+<<<<<<< HEAD
     width: 678.5
     height: 423
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 14}
+=======
+<<<<<<< Updated upstream
+    width: 882.4
+    height: 512.8
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+=======
+    width: 850.39996
+    height: 513.6
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 513.6
+    width: 1129.6
+    height: 353.2
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+>>>>>>> Stashed changes
+  m_ActualView: {fileID: 15}
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 12}
   - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 1
+<<<<<<< HEAD
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -501,6 +590,10 @@ MonoBehaviour:
   - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 1
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -516,6 +609,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 894.5
     y: 0
     width: 405.5
@@ -527,6 +621,20 @@ MonoBehaviour:
   - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
+=======
+    x: 1129.6
+    y: 0
+    width: 406.40002
+    height: 866.8
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -547,6 +655,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -635,12 +744,29 @@ MonoBehaviour:
     width: 676.5
     height: 402
 >>>>>>> 3e4dad5 (usersettings change)
+=======
+<<<<<<< Updated upstream
+    x: 0
+    y: 586.4
+    width: 1171.8
+    height: 333
+=======
+    x: 279.2
+    y: 73.6
+    width: 848.39996
+    height: 492.59998
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -1388,9 +1514,20 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 99
     width: 271.5
     height: 450.5
+=======
+    y: 73.6
+<<<<<<< Updated upstream
+    width: 289.4
+    height: 491.8
+=======
+    width: 278.2
+    height: 492.59998
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1401,7 +1538,15 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: f8f5ffff9ef6fffff2f6ffff66f7ffff28f8ffff7ef8ffffd8f9ffff2cfbffff36600000
+=======
+<<<<<<< Updated upstream
+      m_ExpandedIDs: aae4ffff18e6ffff76f1ffff6ef5ffffc8f7fffffef7ffffa2f8ffffe2f8ffff2cfbffffc063000070640000d47b0000
+=======
+      m_ExpandedIDs: 20b5ffff68b5ffffd2b7ffff7ebaffffaac3ffffecc5ffffcec7ffff10c9ffff6ac9ffff42caffff58cbffff4c9f0000
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1447,10 +1592,22 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 216
     y: 83
     width: 676.5
     height: 402
+=======
+    x: 290.4
+    y: 73.6
+<<<<<<< Updated upstream
+    width: 880.4
+    height: 491.8
+=======
+    width: 848.39996
+    height: 492.59998
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1708,9 +1865,21 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 1005.1518, y: 585.47595, z: -15.81697}
     speed: 2
     m_Value: {x: 1005.1518, y: 585.47595, z: -15.81697}
+=======
+<<<<<<< Updated upstream
+    m_Target: {x: 440.2, y: 235.4, z: 0.22927085}
+    speed: 2
+    m_Value: {x: 440.2, y: 235.4, z: 0.22927085}
+=======
+    m_Target: {x: 339.3551, y: 243.20847, z: 2.0602689}
+    speed: 2
+    m_Value: {x: 339.3551, y: 243.20847, z: 2.0602689}
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1761,9 +1930,21 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 608.61926
     speed: 2
     m_Value: 608.61926
+=======
+<<<<<<< Updated upstream
+    m_Target: 505.06244
+    speed: 2
+    m_Value: 505.06244
+=======
+    m_Target: 279.3055
+    speed: 2
+    m_Value: 279.3055
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1809,10 +1990,24 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 246.5
     y: 83
     width: 750
     height: 450.5
+=======
+<<<<<<< Updated upstream
+    x: 290.4
+    y: 73.6
+    width: 880.4
+    height: 491.8
+=======
+    x: 0
+    y: 587.2
+    width: 1128.6
+    height: 332.2
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1820,9 +2015,13 @@ MonoBehaviour:
     m_OverlaysVisible: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 >>>>>>> b393a2b (Test)
+=======
+<<<<<<< Updated upstream
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_SerializedViewNames: []
   m_SerializedViewValues: []
   m_PlayModeViewName: GameView
@@ -2031,6 +2230,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 --- !u!114 &17
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 5f166e1 (Update 1/18 1)
@@ -2130,6 +2330,11 @@ MonoBehaviour:
 =======
     m_NameFilter: 
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
+=======
+=======
+  m_SearchFilter:
+    m_NameFilter: 
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -2145,6 +2350,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     - Assets/Scripts/GameData
 =======
@@ -2153,11 +2359,15 @@ MonoBehaviour:
 =======
     - Assets/Scenes
 >>>>>>> 3e4dad5 (usersettings change)
+=======
+    - Assets/Scripts
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
   - Assets/Scripts/GameData
@@ -2261,6 +2471,18 @@ MonoBehaviour:
     m_LastClickedID: 25082
     m_ExpandedIDs: 000000003a61000000ca9a3bffffff7f
 >>>>>>> 3e4dad5 (usersettings change)
+=======
+  - Assets/Scripts
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\Studio 416\FishOutOfWater
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: da8c0000
+    m_LastClickedID: 36058
+    m_ExpandedIDs: 00000000a889000000ca9a3bffffff7f
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2278,6 +2500,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 10}
 =======
       m_ClientGUIView: {fileID: 13}
@@ -2285,6 +2508,9 @@ MonoBehaviour:
 =======
       m_ClientGUIView: {fileID: 10}
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
+=======
+      m_ClientGUIView: {fileID: 10}
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -2296,6 +2522,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2345,6 +2572,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 000000003a61000000ca9a3bffffff7f
 >>>>>>> 3e4dad5 (usersettings change)
+=======
+    m_ExpandedIDs: 
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2369,6 +2599,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2406,6 +2637,12 @@ MonoBehaviour:
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300002e650000ca9000007cac000086ac000022960000b8040100
 >>>>>>> 3e4dad5 (usersettings change)
+=======
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2423,6 +2660,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 10}
 =======
       m_ClientGUIView: {fileID: 0}
@@ -2430,6 +2668,9 @@ MonoBehaviour:
 =======
       m_ClientGUIView: {fileID: 0}
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
+=======
+      m_ClientGUIView: {fileID: 10}
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -2441,6 +2682,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &16
@@ -2461,6 +2703,10 @@ MonoBehaviour:
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
 --- !u!114 &17
 >>>>>>> 6f19cda (added Dialogue box)
+=======
+--- !u!114 &16
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2481,14 +2727,27 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 506
     width: 893.5
     height: 274
+=======
+<<<<<<< Updated upstream
+    y: 586.4
+    width: 1171.8
+    height: 333
+=======
+    y: 587.2
+    width: 1128.6
+    height: 332.2
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2542,6 +2801,11 @@ MonoBehaviour:
     m_SubElements: []
 --- !u!114 &19
 >>>>>>> 6f19cda (added Dialogue box)
+=======
+<<<<<<< Updated upstream
+=======
+--- !u!114 &17
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2561,6 +2825,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2597,6 +2862,12 @@ MonoBehaviour:
     width: 404.5
     height: 697
 >>>>>>> eb0c654 (Just connected all the scenes together)
+=======
+    x: 1129.6
+    y: 73.6
+    width: 405.40002
+    height: 845.8
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2617,6 +2888,7 @@ MonoBehaviour:
   m_PreviewWindow: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 =======
 >>>>>>> 5f166e1 (Update 1/18 1)
@@ -2624,3 +2896,6 @@ MonoBehaviour:
 >>>>>>> b393a2b (Test)
 =======
 >>>>>>> 78252ea (cubes)
+=======
+>>>>>>> Stashed changes
+>>>>>>> 827d6bf (sadfgfdeswdfgfdew)
