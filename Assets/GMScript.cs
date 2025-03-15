@@ -19,11 +19,12 @@ public class GMScript : MonoBehaviour
     public Button blackButton;
     public Button eraserButton;
     public Dictionary<string, int> colors;
+    public List<string> keys;
     public float time;
     public int score;
     public int percentCompleted;
     public bool gameHasEnded;
-    public Dictionary<string, string []> meshColors;
+    public Dictionary<string, int []> meshColors;
     public int level;
     public Vector2 mouseDrag;
     
@@ -43,10 +44,14 @@ public class GMScript : MonoBehaviour
         if (level == 3) { time = 60f; }
         score = 0;
         colors = new Dictionary<string, int>();
-        meshColors = new Dictionary<string, string []> ();
+        meshColors = new Dictionary<string, int []> ();
         addColorPairs();
         percentCompleted = 0;
         gameHasEnded = false;
+        for(int index = 0; index < keys.Count; index++)
+        {
+            Debug.Log(keys[index]);
+        }
     }
 
     // Update is called once per frame
@@ -107,7 +112,9 @@ public class GMScript : MonoBehaviour
         colors.Add("Purple", 6);
         colors.Add("Brown", 7);
         colors.Add("Black", 8);
-        List<string> keys = new List<string>(colors.Keys);
+
+        
+        keys = new List<string>(colors.Keys);
     }
     public void endGame()
     {
@@ -115,11 +122,35 @@ public class GMScript : MonoBehaviour
         iteration += 1;
 
     }
-    public void colorCheck(string clicked)
+    public void colorCheck(string clicked, string current)
     {
+         
+        
+        // Checks to see if the color can be changed and matches with the color required for said change.
 
     }
-       // Checks to see if the color can be changed and matches with the color required for said change. 
+     public string setColorScope(string clicked)
+    {
+        if(clicked == "redButton")
+        {
+            currentColor = "Red";
+        } else if (clicked == "blueButton")
+        {
+            currentColor = "Blue";
+        } else if (clicked == "orangeButton")
+        {
+            currentColor = "Orange";
+        } else if (clicked == "whiteButton")
+        {
+            currentColor = "White";
+        } else if (clicked == "greenButton")
+        {
+            currentColor = "Green";
+        }
+        Debug.Log(currentColor);
+        return currentColor;
+    }
+
 
 
 }
