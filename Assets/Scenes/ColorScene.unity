@@ -1408,7 +1408,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 38abf6fe11ee77446bbf7b7d703770ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1429,7 +1429,7 @@ Transform:
   m_GameObject: {fileID: 587997143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3094, y: 0.7362, z: 0}
-  m_LocalScale: {x: 0.30369583, y: 0.20196001, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3061,6 +3061,7 @@ MonoBehaviour:
   brownButton: {fileID: 1508665716}
   blackButton: {fileID: 1151055446}
   eraserButton: {fileID: 298229534}
+  keys: []
   time: 0
   score: 0
   percentCompleted: 0
@@ -3070,6 +3071,7 @@ MonoBehaviour:
   button1: {fileID: 0}
   iteration: 0
   max: 0
+  currentColor: 
 --- !u!4 &1501496628
 Transform:
   m_ObjectHideFlags: 0
@@ -3833,7 +3835,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1924871675}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1501496626}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1924871675
 MonoBehaviour:
   m_ObjectHideFlags: 0
