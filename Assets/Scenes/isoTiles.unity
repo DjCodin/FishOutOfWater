@@ -950,16 +950,48 @@ MonoBehaviour:
     dialogueLines:
     - character:
         name: Classmate
-        icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
-      line: Hello, im new here
-    - character:
-        name: Person
         icon: {fileID: 21300000, guid: f38c96be720b34148990833d95d60e31, type: 3}
-      line: And?
+      line: " I\u2019-- n-ver se-n you b-fore. Are y-u n-w?"
     - character:
         name: Shelldon
         icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
-      line: uh i just wanted to say hi
+      line: Yes, I new.
+    - character:
+        name: Micah
+        icon: {fileID: 21300000, guid: f38c96be720b34148990833d95d60e31, type: 3}
+      line: "Oh we-l, I\u2019m Micah. Wh-t\u2019s y-urs?"
+    - character:
+        name: Shelldon
+        icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
+      line: Uh oh, Shelldon!
+    - character:
+        name: Micah
+        icon: {fileID: 21300000, guid: f38c96be720b34148990833d95d60e31, type: 3}
+      line: H-w Uniq-e. Whe-re did y-u mo-e fr-m?
+    - character:
+        name: Shelldon
+        icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
+      line: (What uniq-e?) Oh yes. The ocean
+    - character:
+        name: Shelldon
+        icon: {fileID: 21300000, guid: 1ece3be08d6264ff4a735b1eed781773, type: 3}
+      line: "Clas-, let\u2019s beg-n"
+    - character:
+        name: Micah
+        icon: {fileID: 21300000, guid: f38c96be720b34148990833d95d60e31, type: 3}
+      line: Hmm, a-right Shelldon fr-m the ocean, we sh-uld ta-k mo-e at lunc-.
+    - character:
+        name: Shelldon
+        icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
+      line: Lunch? Food, right?
+    - character:
+        name: Micah
+        icon: {fileID: 21300000, guid: f38c96be720b34148990833d95d60e31, type: 3}
+      line: Ye-h obvi-us-y. Wh-t else is lun-h for?
+    - character:
+        name: Shelldon
+        icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
+      line: Ok, talk at food time.
 --- !u!61 &1755628621
 BoxCollider2D:
   m_ObjectHideFlags: 0
