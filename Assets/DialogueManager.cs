@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
 	public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea;
     public GameObject dialogueBox; 
-
+	public AudioSource dialogueMusic;
     private Queue<DialogueLine> lines;
     
 	public bool isDialogueActive = false;
@@ -39,9 +39,10 @@ public class DialogueManager : MonoBehaviour
 
 		foreach (DialogueLine dialogueLine in dialogue.dialogueLines)
 		{
+			dialogueMusic.Play();
 			lines.Enqueue(dialogueLine);
 		}
-
+		
 		DisplayNextDialogueLine();
 	}
 
@@ -50,6 +51,7 @@ public class DialogueManager : MonoBehaviour
 		if (lines.Count == 0)
 		{
 			EndDialogue();
+			dialogueMusic.Stop();
 			return;
 		}
 
@@ -59,7 +61,7 @@ public class DialogueManager : MonoBehaviour
 		characterName.text = currentLine.character.name;
 
 		StopAllCoroutines();
-
+		dialogueMusic.Play();
 		StartCoroutine(TypeSentence(currentLine));
 	}
 
@@ -75,6 +77,7 @@ public class DialogueManager : MonoBehaviour
 
 	void EndDialogue()
 	{
+		dialogueMusic.Stop();
 		isDialogueActive = false;
         dialogueBox.SetActive(isDialogueActive);
 	}
