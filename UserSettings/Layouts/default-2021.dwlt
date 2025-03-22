@@ -15,6 +15,13 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+    y: 42
+    width: 1280
+    height: 710
+  m_ShowMode: 4
+  m_Title: Console
+=======
     y: 43.2
     width: 1536
     height: 820.8
@@ -43,6 +50,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
+    width: 1280
+    height: 660
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 113
+=======
     width: 1536
     height: 770.8
   m_MinSize: {x: 503, y: 321}
@@ -70,6 +85,7 @@ MonoBehaviour:
     height: 770.8
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> Everett_Branch
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -92,6 +108,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 242
+    height: 391
+=======
     width: 290.4
     height: 456
   m_MinSize: {x: 201, y: 221}
@@ -148,6 +168,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 1280
+    height: 710
+=======
     width: 1536
     height: 820.8
   m_MinSize: {x: 875, y: 371}
@@ -173,7 +197,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1536
+    width: 1280
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -196,6 +220,7 @@ MonoBehaviour:
     x: 0
     y: 800.8
     width: 1536
+>>>>>>> Everett_Branch
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -480,6 +505,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+    y: 72
+    width: 241
+    height: 370
+=======
     y: 73.6
     width: 289.4
     height: 435
@@ -491,23 +521,28 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+      m_SelectedIDs: d85d0000
+      m_LastClickedID: 24024
+      m_ExpandedIDs: 2cfbffff
+=======
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 1afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Sketch
+        m_OriginalName: Sketch
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 23910
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 0}
       m_SearchString: 
@@ -537,6 +572,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 242
+    y: 72
+    width: 733.5
+    height: 370
+=======
     x: 290.4
     y: 73.6
     width: 881.19995
@@ -551,7 +592,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -100, y: -25.600006}
+      snapOffsetDelta: {x: -98, y: -26}
       snapCorner: 3
       id: Tool Settings
       index: 0
