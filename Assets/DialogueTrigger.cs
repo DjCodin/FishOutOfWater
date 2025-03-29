@@ -25,6 +25,7 @@ public class Dialogue
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    public bool collidedIcon;
 
     public void TriggerDialogue()
     {
@@ -35,8 +36,16 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            Debug.Log("Touched");
+            collidedIcon = true;
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I) && collidedIcon)
+        {
             TriggerDialogue();
         }
     }
+
 }
