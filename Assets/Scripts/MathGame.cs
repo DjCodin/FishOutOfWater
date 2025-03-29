@@ -18,6 +18,7 @@ public class MathGame : MonoBehaviour
     private float timeRemaining = 60f;
     private bool gameActive = true;
 
+
     void Start()
     {
         scoreText = scoreObject.GetComponent<TextMeshProUGUI>();

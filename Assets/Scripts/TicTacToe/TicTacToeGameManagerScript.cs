@@ -45,6 +45,8 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     private GameDataSO gameDaySO;
     public Button[,] buttonMap;
     public Button lastClickedButton;
+    public TMP_Text tTTscore;
+    public int score;
     
     void Start()
     {
@@ -58,6 +60,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
 
         infoText.text = "Your shape is:";
         timer = 0;
+        tTTscore.text = "Score : " + score;
 
         winner = "";
 
@@ -105,7 +108,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
 
     void Update()
     {
-
+        tTTscore.text = "Score : " + score;
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("MainScene");

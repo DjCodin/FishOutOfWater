@@ -33,4 +33,14 @@ public class GameDataSO : ScriptableObject
         get { return socialScore;  }
         set { socialScore = value; }
     }
+
+
+    /* Outline for academic point system : 
+     * Highest point order when completed - 
+     * Math (1.15x)
+     * TicTacToe (1.1x)
+     * Coloring(1x)
+     */
+
+
 }

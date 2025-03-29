@@ -34,12 +34,12 @@ public class GMScript : MonoBehaviour
     public int max = 0;
 
     public string currentColor;
-
+    public TMP_Text scoreText;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
         level = 1;
         if (level == 3) { time = 60f; }
         score = 0;
@@ -57,12 +57,12 @@ public class GMScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        scoreText.text = "Score : " + score;
         if (!gameHasEnded)
         {
 
 
-
+            
             whiteButton.interactable = true;
             redButton.interactable = true;
             orangeButton.interactable = true;
