@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class playerMovement :MonoBehaviour
 {
@@ -9,20 +11,62 @@ public class playerMovement :MonoBehaviour
     private Rigidbody2D rb;
     private float speedX;
     private float speedY;
+    private bool iconActive = false;
+    public bool compInteract = false;
+    public DialogueTrigger dialogueTrigger;
+    public GameObject interactableIcons; 
 
     void Start ()
     {
+        dialogueTrigger = FindObjectOfType<DialogueTrigger>();
         rb = GetComponent<Rigidbody2D>();
+        interactableIcons.SetActive(iconActive);
     }
 
     void Update ()
     {
         speedX = Input.GetAxisRaw("Horizontal");
         speedY = Input.GetAxisRaw("Vertical");
+
+        if (iconActive)
+        {
+            interactableIcons.SetActive(true);
+        }
+        else{
+      
+            interactableIcons.SetActive(false);
+        }
+
+        if(compInteract && Input.GetKeyDown(KeyCode.I)){
+            SceneManager.LoadScene("MathClass");
+        }
     }
 
     void FixedUpdate ()
     {
         rb.velocity = new Vector2(speedX * moveSpeed, speedY * moveSpeed);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Computer" || collision.tag == "Person")
+        {
+            iconActive = true;
+            Debug.Log("Touched");
+        }
+        if(collision.tag == "Computer")
+        {
+            compInteract = true;
+            Debug.Log("comp Touched");
+        }
+       
+    }
+
+    private void OnTriggerExit2D(Collider2D collision){
+        if(collision.tag != "Computer" || collision.tag != "Person")
+        {
+            iconActive = false;
+            Debug.Log("Touched");
+        }
+    }  
 }
