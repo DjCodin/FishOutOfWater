@@ -80,7 +80,7 @@ public class MathGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("isoTiles");
         }
         
         if (gameActive)
@@ -147,12 +147,14 @@ public class MathGame : MonoBehaviour
         }
     }
 
+    
+
     void GenerateQuestion()
     {
-        int num1, num2;
-        char[] operators = { '+', '-', '*', '/' };
+        int num1, num2, x;
+        char[] operators = { '+', '-', '*' };
         char selectedOperator = operators[Random.Range(0, operators.Length)];
-
+        bool isSolveForX = Random.value > 0.5f; // 50% chance to ask for x
 
         switch (currentLevel)
         {
@@ -161,49 +163,75 @@ public class MathGame : MonoBehaviour
                 num2 = Random.Range(1, 10);
                 break;
             case 2:
-                num1 = Random.Range(10, 50);
-                num2 = Random.Range(10, 50);
+                num1 = Random.Range(10, 20);
+                num2 = Random.Range(10, 20);
                 break;
             case 3:
-                num1 = Random.Range(50, 100);
-                num2 = Random.Range(50, 100);
+                num1 = Random.Range(1, 20);
+                num2 = Random.Range(1, 20);
                 break;
             default:
                 num1 = 1; num2 = 1;
                 break;
         }
 
-
-        if (selectedOperator == '/')
+        if (isSolveForX)
         {
-            num2 = Random.Range(1, num1); 
-            num1 = num2 * Random.Range(1, 10); 
+            x = num1; // Let x be the first number
+            correctAnswer = x;
+
+            switch (selectedOperator)
+            {
+                case '+':
+                    questionText.text = $"x + {num2} = {x + num2}";
+                    break;
+                case '-':
+                    questionText.text = $"x - {num2} = {x - num2}";
+                    break;
+                case '*':
+                    questionText.text = $"x * {num2} = {x * num2}";
+                    break;
+            }
+        }
+        else
+        {
+            correctAnswer = selectedOperator switch
+            {
+                '+' => num1 + num2,
+                '-' => num1 - num2,
+                '*' => num1 * num2,
+                _ => num1 + num2
+            };
+
+            questionText.text = $"{num1} {selectedOperator} {num2} = ?";
         }
 
-
-        correctAnswer = selectedOperator switch
-        {
-            '+' => num1 + num2,
-            '-' => num1 - num2,
-            '*' => num1 * num2,
-            '/' => num1 / num2,
-            _ => num1 + num2
-        };
-
-
-        questionText.text = num1 + " " + selectedOperator + " " + num2 + " = ?";
         totalQuestions++;
 
+        HashSet<int> answerChoices = new HashSet<int> { correctAnswer };
 
-        int correctPosition = Random.Range(0, answerButtons.Length);
+        while (answerChoices.Count < answerButtons.Length)
+        {
+            int randomAnswer = Random.Range(correctAnswer - 10, correctAnswer + 10);
+            if (randomAnswer != correctAnswer) 
+            {
+                answerChoices.Add(randomAnswer);
+            }
+        }
+
+        // Convert HashSet to List and shuffle
+        List<int> shuffledAnswers = new List<int>(answerChoices);
+        shuffledAnswers.Sort((a, b) => Random.Range(-1, 2)); // Random shuffle
+
         for (int i = 0; i < answerButtons.Length; i++)
         {
-            int answer = (i == correctPosition) ? correctAnswer : Random.Range(correctAnswer - 10, correctAnswer + 10);
+            int answer = shuffledAnswers[i];
             answerButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = answer.ToString();
             answerButtons[i].onClick.RemoveAllListeners();
             answerButtons[i].onClick.AddListener(() => AnswerSelected(answer));
         }
     }
+
 
 
     void AnswerSelected(int selectedAnswer)
@@ -227,5 +255,6 @@ public class MathGame : MonoBehaviour
         {
             button.gameObject.SetActive(false);
         }
+
     }
 }

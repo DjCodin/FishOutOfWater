@@ -8,18 +8,18 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 129
-    y: 100
-    width: 1101
-    height: 847
+    x: 0
+    y: 53
+    width: 1300
+    height: 768
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1101
-    height: 847
+    width: 1300
+    height: 768
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1101
+    width: 1300
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 827
-    width: 1101
+    y: 748
+    width: 1300
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -121,6 +121,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 1536
     height: 866.8
@@ -360,10 +361,14 @@ MonoBehaviour:
     width: 1101
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
     height: 797
+=======
+    width: 1300
+    height: 718
+>>>>>>> eb0c654 (Just connected all the scenes together)
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 16470
+  controlID: 14529
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -383,12 +388,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 747.5
-    height: 797
+    width: 894.5
+    height: 718
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 16471
+  controlID: 14530
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -408,12 +413,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 747.5
-    height: 467.5
+    width: 894.5
+    height: 421
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 16472
+  controlID: 14531
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -431,8 +436,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 185.5
-    height: 467.5
+    width: 216
+    height: 421
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -455,10 +460,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 185.5
+    x: 216
     y: 0
-    width: 562
-    height: 467.5
+    width: 678.5
+    height: 421
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -478,24 +483,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: TimelineWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 467.5
-    width: 747.5
-    height: 329.5
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 16}
+    y: 421
+    width: 894.5
+    height: 297
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -511,10 +516,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 747.5
+    x: 894.5
     y: 0
-    width: 353.5
-    height: 797
+    width: 405.5
+    height: 718
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
@@ -542,6 +547,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     x: 272.5
@@ -616,6 +622,12 @@ MonoBehaviour:
     width: 560
     height: 446.5
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
+=======
+    x: 216
+    y: 83
+    width: 676.5
+    height: 400
+>>>>>>> eb0c654 (Just connected all the scenes together)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -744,7 +756,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 560, y: 425.5}
+  m_TargetSize: {x: 676.5, y: 379}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -759,10 +771,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -140
-    m_HBaseRangeMax: 140
-    m_VBaseRangeMin: -106.375
-    m_VBaseRangeMax: 106.375
+    m_HBaseRangeMin: -169.125
+    m_HBaseRangeMax: 169.125
+    m_VBaseRangeMin: -94.75
+    m_VBaseRangeMax: 94.75
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -771,7 +783,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -780,23 +792,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 560
-      height: 425.5
+      width: 676.5
+      height: 379
     m_Scale: {x: 2, y: 2}
-    m_Translation: {x: 280, y: 212.75}
+    m_Translation: {x: 338.25, y: 189.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -140
-      y: -106.375
-      width: 280
-      height: 212.75
+      x: -169.125
+      y: -94.75
+      width: 338.25
+      height: 189.5
     m_MinimalGUI: 1
   m_defaultScale: 2
-  m_LastWindowPixelSize: {x: 1120, y: 893}
+  m_LastWindowPixelSize: {x: 1353, y: 800}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -855,10 +867,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 129
-    y: 130
-    width: 184.5
-    height: 446.5
+    x: 0
+    y: 83
+    width: 215
+    height: 400
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -867,9 +879,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 24630000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 4ea2ffffe8adffff38b3ffff5ab4ffffa0b6ffff36dfffff6ce0ffff94e1ffffa4e1ffffb6e1ffffc0e1ffffb2e2ffff18ecffff1aedffffa0eeffff50efffff9eefffffd8f0ffff8cf1ffff4af2ffffecf2ffffb2f3ffff64f4ffffb2f4ffff64f5ffff14f7ffffc8f7ffff3ef9ffff10fbffff546000005a9f0000c29f0000eea300006ea7000080a70000b4b70000
+      m_ExpandedIDs: c8a6ffff4aaeffff10b1ffffa2b1ffff38b2ffff22b3ffff40b4ffff02b5ffff8ab5ffff54b6ffff8eb7ffffd6f1ffff68f7ffff60faffffa2930000da930000de93000000b1000054b1000000b4000054b40000c2b8000016b900004eb900007abd0000cebd000000be000006be000004c70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1428,10 +1440,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 314.5
-    y: 130
-    width: 560
-    height: 446.5
+    x: 216
+    y: 83
+    width: 676.5
+    height: 400
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1689,9 +1701,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.4930086, y: 1.7563488, z: -9.94857}
+    m_Target: {x: 343.09232, y: 229.75833, z: 0.92985415}
     speed: 2
-    m_Value: {x: 5.491148, y: 1.7553321, z: -9.948555}
+    m_Value: {x: 343.09232, y: 229.75833, z: 0.92985415}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1742,9 +1754,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.0633502
+    m_Target: 299.39212
     speed: 2
-    m_Value: 2.061804
+    m_Value: 299.39212
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2079,6 +2091,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 554.5
     width: 1098.5
     height: 304.5
@@ -2087,6 +2100,11 @@ MonoBehaviour:
     width: 746.5
     height: 308.5
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
+=======
+    y: 504
+    width: 893.5
+    height: 276
+>>>>>>> eb0c654 (Just connected all the scenes together)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2110,6 +2128,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
@@ -2140,13 +2159,16 @@ MonoBehaviour:
     m_OriginalText: player
 =======
     - Assets/Scenes
+=======
+    - Assets/Fonts
+>>>>>>> eb0c654 (Just connected all the scenes together)
     m_Globs: []
     m_OriginalText: 
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Fonts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/dcherfil/Desktop/Dj_GameDev/FishOutOfWater
 <<<<<<< HEAD
@@ -2199,11 +2221,18 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 13.997192}
     m_SelectedIDs: 62620000
     m_LastClickedID: 25186
     m_ExpandedIDs: 000000003e620000406200004262000000ca9a3bffffff7f
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
+=======
+    scrollPos: {x: 0, y: 59.997253}
+    m_SelectedIDs: 2c5e0000
+    m_LastClickedID: 24108
+    m_ExpandedIDs: 00000000245e000000ca9a3bffffff7f
+>>>>>>> eb0c654 (Just connected all the scenes together)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2248,6 +2277,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 
 =======
     m_ExpandedIDs: 00000000845e000000ca9a3bffffff7f
@@ -2280,6 +2310,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 000000003e620000406200004262000000ca9a3bffffff7f
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
+=======
+    m_ExpandedIDs: 00000000245e000000ca9a3bffffff7f
+>>>>>>> eb0c654 (Just connected all the scenes together)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2306,6 +2339,7 @@ MonoBehaviour:
   m_ListAreaState:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     m_SelectedInstanceIDs: f05d0000
     m_LastClickedInstanceID: 24048
@@ -2327,6 +2361,12 @@ MonoBehaviour:
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300002e650000ca9000007cac000086ac0000
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
+=======
+    m_SelectedInstanceIDs: 04c70000
+    m_LastClickedInstanceID: 50948
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300002e650000ca9000007cac000086ac000022960000
+>>>>>>> eb0c654 (Just connected all the scenes together)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2401,10 +2441,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 275
-    y: 550.5
-    width: 746.5
-    height: 308.5
+    x: 0
+    y: 504
+    width: 893.5
+    height: 276
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2443,10 +2483,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 275
-    y: 550.5
-    width: 746.5
-    height: 308.5
+    x: 0
+    y: 504
+    width: 893.5
+    height: 276
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2459,7 +2499,7 @@ MonoBehaviour:
     m_IsLocked: 0
   m_SequenceHierarchy: {fileID: 0}
   m_SequencePath:
-    m_SelectionRoot: 0
+    m_SelectionRoot: 50948
     m_SubElements: []
 --- !u!114 &19
 >>>>>>> 6f19cda (added Dialogue box)
@@ -2482,6 +2522,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2511,6 +2552,12 @@ MonoBehaviour:
 >>>>>>> 5918af0 (added a interact icon and moves to the math class)
     height: 776
 >>>>>>> 78252ea (cubes)
+=======
+    x: 894.5
+    y: 83
+    width: 404.5
+    height: 697
+>>>>>>> eb0c654 (Just connected all the scenes together)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
