@@ -16,12 +16,15 @@ public class SceneChanges : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("isoTiles");
         }
         
     }
 
     public void backToMenu(){
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("isoTiles");
+    }
+    public void ticTakToe(){
+        SceneManager.LoadScene("TicTacToe");
     }
 }
