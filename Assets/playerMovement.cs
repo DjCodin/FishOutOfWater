@@ -1,6 +1,8 @@
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
@@ -14,7 +16,11 @@ public class playerMovement :MonoBehaviour
     private bool iconActive = false;
     public bool compInteract = false;
     public DialogueTrigger dialogueTrigger;
-    public GameObject interactableIcons; 
+    public GameObject interactableIcons;
+    public GameObject computerPrompt;
+    public Button yesButton;
+    public Button noButton;
+    
 
     void Start ()
     {
@@ -38,7 +44,9 @@ public class playerMovement :MonoBehaviour
         }
 
         if(compInteract && Input.GetKeyDown(KeyCode.I)){
-            SceneManager.LoadScene("MathClass");
+            computerPrompt.SetActive(true);
+            yesButton.onClick.AddListener(() => {SceneManager.LoadScene("MathClass");});
+            noButton.onClick.AddListener(() => {computerPrompt.SetActive(false);});
         }
     }
 
