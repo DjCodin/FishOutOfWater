@@ -26,8 +26,13 @@ TagManager:
   - Day Two Opponent
   - Tic Tac Toe Game Manager
   - ClickSound
+<<<<<<< HEAD
   - Computer
   - Person
+=======
+  - A
+  - ATiles
+>>>>>>> ca597a6 (Day 1 of the coloring)
   layers:
   - Default
   - TransparentFX
