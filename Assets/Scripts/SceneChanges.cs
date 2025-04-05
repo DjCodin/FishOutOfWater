@@ -24,6 +24,11 @@ public class SceneChanges : MonoBehaviour
     public void backToMenu(){
         SceneManager.LoadScene("isoTiles");
     }
+
+    public void skipScene(){
+        SceneManager.LoadScene("isoTiles");
+    }
+
     public void ticTakToe(){
         SceneManager.LoadScene("TicTacToe");
     }
