@@ -39,6 +39,13 @@ public class DialogueTrigger : MonoBehaviour
             collidedIcon = true;
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.tag != "Player")
+        {
+            collidedIcon = false;
+        }
+    }
 
     void Update()
     {
