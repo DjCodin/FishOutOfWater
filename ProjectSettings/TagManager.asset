@@ -32,7 +32,14 @@ TagManager:
 =======
   - A
   - ATiles
+<<<<<<< HEAD
 >>>>>>> ca597a6 (Day 1 of the coloring)
+=======
+  - BTiles
+  - B
+  - C
+  - CTiles
+>>>>>>> 34ef8dc (Coloring)
   layers:
   - Default
   - TransparentFX
