@@ -28,6 +28,10 @@ TagManager:
   - ClickSound
   - A
   - ATiles
+  - BTiles
+  - B
+  - C
+  - CTiles
   layers:
   - Default
   - TransparentFX

@@ -35,7 +35,7 @@ public class GMScript : MonoBehaviour
         colorDict[green] = RGB(166, 216, 42);
         colorDict[red] = RGB(250, 96, 90);
         colorDict[turquoise] = RGB(144, 243, 244);
-        colorDict[yellow] = RGB(144, 243, 244);
+        colorDict[yellow] = RGB(254, 239, 102);
         buttons.Add(blue);
         buttons.Add(brown);
         buttons.Add(pink);
@@ -49,18 +49,61 @@ public class GMScript : MonoBehaviour
         {
             btn.onClick.AddListener(() => HandleButtonClick(btn));
         }
-        GameObject[] objectsWithTagA = GameObject.FindGameObjectsWithTag("A");
-        GameObject aTile = GameObject.FindGameObjectWithTag("ATiles");
+
+        // Tiles
+        GameObject[] objectsWithTagA = GameObject.FindGameObjectsWithTag("ATiles");
+        // Outline
+        GameObject aTile = GameObject.FindGameObjectWithTag("A");
+        // Tiles
+        GameObject[] objectsWithTagB = GameObject.FindGameObjectsWithTag("BTiles");
+        // Outline
+        GameObject bTile = GameObject.FindGameObjectWithTag("B");
+        // Tiles
+        GameObject[] objectsWithTagC = GameObject.FindGameObjectsWithTag("CTiles");
+        // Outline
+        GameObject cTile = GameObject.FindGameObjectWithTag("C");
         aTile.SetActive(false);
+        bTile.SetActive(false);
+        cTile.SetActive(false);
         foreach (GameObject obj in objectsWithTagA)
         {
             obj.SetActive(false);
         }
+        foreach (GameObject obj in objectsWithTagB)
+        {
+            obj.SetActive(false);
+        }
+        foreach (GameObject obj in objectsWithTagC)
+        {
+            obj.SetActive(false);
+        }
 
-        if (gameDaySO.GameDay == 0)
+        if (gameDaySO.GameDay == 1)
         {
             aTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagA)
+            {
+                obj.SetActive(true);
+                var image = obj.GetComponent<SpriteRenderer>();
+                image.color = new Color(1f, 1f, 1f, 0f);
+            }
+        }
+
+        if (gameDaySO.GameDay == 1)
+        {
+            bTile.SetActive(true);
+            foreach (GameObject obj in objectsWithTagB)
+            {
+                obj.SetActive(true);
+                var image = obj.GetComponent<SpriteRenderer>();
+                image.color = new Color(1f, 1f, 1f, 0f);
+            }
+        }
+
+        if (gameDaySO.GameDay == 0)
+        {
+            cTile.SetActive(true);
+            foreach (GameObject obj in objectsWithTagC)
             {
                 obj.SetActive(true);
                 var image = obj.GetComponent<SpriteRenderer>();
