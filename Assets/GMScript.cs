@@ -78,7 +78,7 @@ public class GMScript : MonoBehaviour
             obj.SetActive(false);
         }
 
-        if (gameDaySO.GameDay == 1)
+        if (gameDaySO.GameDay == 0)
         {
             aTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagA)
@@ -100,7 +100,7 @@ public class GMScript : MonoBehaviour
             }
         }
 
-        if (gameDaySO.GameDay == 0)
+        if (gameDaySO.GameDay == 2)
         {
             cTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagC)
