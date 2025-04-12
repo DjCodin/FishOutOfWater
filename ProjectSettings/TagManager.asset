@@ -40,10 +40,14 @@ TagManager:
   - C
   - CTiles
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 34ef8dc (Coloring)
 =======
   - tictactoe
 >>>>>>> eb43741 (added a recess map)
+=======
+  - SpeechBubble
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
   layers:
   - Default
   - TransparentFX

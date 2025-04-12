@@ -52,6 +52,7 @@ MonoBehaviour:
 >>>>>>> 4adb726 (Attempting to store button colors as variables.)
   m_ShowMode: 4
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Title: Console
   m_RootView: {fileID: 6}
 <<<<<<< HEAD
@@ -60,6 +61,9 @@ MonoBehaviour:
 =======
 =======
   m_Title: Scene
+=======
+  m_Title: Console
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
   m_RootView: {fileID: 2}
 >>>>>>> ca597a6 (Day 1 of the coloring)
   m_MinSize: {x: 875, y: 300}
@@ -366,7 +370,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 18370
+  controlID: 36612
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -406,11 +410,15 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 17
 >>>>>>> b40a2c7 (fixing coloring game)
 --- !u!114 &10
 =======
   controlID: 18346
+=======
+  controlID: 36646
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
 --- !u!114 &7
 >>>>>>> ca597a6 (Day 1 of the coloring)
 MonoBehaviour:
@@ -511,11 +519,15 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 67
 --- !u!114 &11
 >>>>>>> b74cff8 (My settings)
 =======
   controlID: 18347
+=======
+  controlID: 36647
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -892,7 +904,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -901,14 +913,21 @@ MonoBehaviour:
     y: 456
     width: 1173.6
     height: 314.8
+<<<<<<< HEAD
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 15}
 >>>>>>> 827d6bf (sadfgfdeswdfgfdew)
+=======
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
   - {fileID: 15}
+<<<<<<< HEAD
   m_Selected: 0
   m_LastSelected: 1
 <<<<<<< HEAD
@@ -956,6 +975,11 @@ MonoBehaviour:
 >>>>>>> 4adb726 (Attempting to store button colors as variables.)
 =======
 >>>>>>> ca597a6 (Day 1 of the coloring)
+=======
+  - {fileID: 16}
+  m_Selected: 1
+  m_LastSelected: 0
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1037,6 +1061,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1154,6 +1179,12 @@ MonoBehaviour:
     height: 492.59998
 >>>>>>> Stashed changes
 >>>>>>> 827d6bf (sadfgfdeswdfgfdew)
+=======
+    x: 290.4
+    y: 73.6
+    width: 881.19995
+    height: 435
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1934,7 +1965,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 881.19995, y: 414}
+  m_TargetSize: {x: 1101.5, y: 517.5}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1949,10 +1980,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -352.47998
-    m_HBaseRangeMax: 352.47998
-    m_VBaseRangeMin: -165.6
-    m_VBaseRangeMax: 165.6
+    m_HBaseRangeMin: -440.6
+    m_HBaseRangeMax: 440.6
+    m_VBaseRangeMin: -207
+    m_VBaseRangeMax: 207
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1972,7 +2003,7 @@ MonoBehaviour:
       y: 21
       width: 881.19995
       height: 414
-    m_Scale: {x: 1.2467921, y: 1.2467921}
+    m_Scale: {x: 0.99999994, y: 0.99999994}
     m_Translation: {x: 440.59998, y: 207}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -1980,16 +2011,16 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -353.3869
-      y: -166.02608
-      width: 706.7738
-      height: 332.05215
+      x: -440.6
+      y: -207.00002
+      width: 881.2
+      height: 414.00003
     m_MinimalGUI: 1
-  m_defaultScale: 1
+  m_defaultScale: 0.99999994
   m_LastWindowPixelSize: {x: 1101.5, y: 543.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 --- !u!114 &13
@@ -2047,6 +2078,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2081,6 +2113,12 @@ MonoBehaviour:
       m_LastClickedID: 24872
       m_ExpandedIDs: 92a3ffffd6ebffff12f9ffff98f9ffff2afbffffa05d000088600000fc60000012610000
 >>>>>>> ca597a6 (Day 1 of the coloring)
+=======
+      scrollPos: {x: 0, y: 34}
+      m_SelectedIDs: b8920000
+      m_LastClickedID: 37560
+      m_ExpandedIDs: 6669ffff18dcffff60ebffffa0f9ffff2afbffff22610000d6910000
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2437,6 +2475,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 1005.1518, y: 585.47595, z: -15.81697}
     speed: 2
     m_Value: {x: 1005.1518, y: 585.47595, z: -15.81697}
@@ -2476,6 +2515,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 3.874968, y: 1.472744, z: -0.020314941}
 >>>>>>> 535fffa (User settings)
+=======
+    m_Target: {x: 472.33688, y: 158.6849, z: 3.177375}
+    speed: 2
+    m_Value: {x: 472.33688, y: 158.6849, z: 3.177375}
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2532,6 +2576,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 608.61926
     speed: 2
     m_Value: 608.61926
@@ -2571,6 +2616,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 2.6313
 >>>>>>> 535fffa (User settings)
+=======
+    m_Target: 243.05539
+    speed: 2
+    m_Value: 243.05539
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -3113,6 +3163,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     - Assets/Scripts/GameData
 =======
@@ -3127,11 +3178,15 @@ MonoBehaviour:
 =======
     - Assets/Images/ImageCutouts/A Cutouts
 >>>>>>> ca597a6 (Day 1 of the coloring)
+=======
+    - Assets/Images
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3245,12 +3300,17 @@ MonoBehaviour:
 =======
   - Assets/Images/ImageCutouts/A Cutouts
   m_LastFoldersGridSize: -1
+=======
+  - Assets/Images
+  m_LastFoldersGridSize: 64
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
   m_LastProjectPath: C:\Users\evere\FishOutOfWater
 >>>>>>> ca597a6 (Day 1 of the coloring)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_SelectedIDs: da8c0000
     m_LastClickedID: 36058
@@ -3266,6 +3326,11 @@ MonoBehaviour:
     m_LastClickedID: 25024
     m_ExpandedIDs: 00000000a861000000ca9a3bffffff7f
 >>>>>>> 535fffa (User settings)
+=======
+    m_SelectedIDs: 7a600000
+    m_LastClickedID: 24698
+    m_ExpandedIDs: 000000006660000000ca9a3bffffff7f
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3309,6 +3374,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3370,6 +3436,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000a861000000ca9a3bffffff7f
 >>>>>>> 535fffa (User settings)
+=======
+    m_ExpandedIDs: 000000006660000000ca9a3bffffff7f
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3394,6 +3463,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3445,6 +3515,12 @@ MonoBehaviour:
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300004481000050810000be5d0000aa5e0000
 >>>>>>> ca597a6 (Day 1 of the coloring)
+=======
+    m_SelectedInstanceIDs: b8920000
+    m_LastClickedInstanceID: 37560
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300004481000050810000be5d0000aa5e0000ce7200006a8e0000
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

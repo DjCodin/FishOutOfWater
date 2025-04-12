@@ -24,7 +24,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 107
+=======
+  controlID: 28233
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -197,7 +201,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< HEAD
   controlID: 108
+=======
+  controlID: 28234
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +231,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 109
+=======
+  controlID: 28235
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,10 +303,17 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 00620000
       m_LastClickedID: 0
       m_ExpandedIDs: 2ef9ffff10fbffff
+=======
+      scrollPos: {x: 0, y: 34}
+      m_SelectedIDs: b8920000
+      m_LastClickedID: 37560
+      m_ExpandedIDs: 6669ffff18dcffff60ebffffa0f9ffff2afbffff22610000d6910000
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -645,9 +664,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 3.874968, y: 1.472744, z: -0.020314941}
     speed: 2
     m_Value: {x: 3.874968, y: 1.472744, z: -0.020314941}
+=======
+    m_Target: {x: 448.73486, y: 147.65674, z: 2.0949361}
+    speed: 2
+    m_Value: {x: 448.73486, y: 147.65674, z: 2.0949361}
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -698,9 +723,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 2.6313
     speed: 2
     m_Value: 2.6313
+=======
+    m_Target: 351.30008
+    speed: 2
+    m_Value: 351.30008
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -835,12 +866,17 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scenes
+=======
+    - Assets/Images
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/dcherfil/Desktop/Dj_GameDev/FishOutOfWater
@@ -851,6 +887,18 @@ MonoBehaviour:
     m_SelectedIDs: c0610000
     m_LastClickedID: 25024
     m_ExpandedIDs: 00000000a861000000ca9a3bffffff7f
+=======
+  - Assets/Images
+  m_LastFoldersGridSize: 64
+  m_LastProjectPath: C:\Users\evere\FishOutOfWater
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 7a600000
+    m_LastClickedID: 24698
+    m_ExpandedIDs: 000000006660000000ca9a3bffffff7f
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -878,7 +926,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a8610000
+=======
+    m_ExpandedIDs: 000000006660000000ca9a3bffffff7f
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -903,6 +955,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 00620000
     m_LastClickedInstanceID: 25088
     m_HadKeyboardFocusLastEvent: 1
@@ -919,6 +972,12 @@ MonoBehaviour:
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300004481000050810000be5d0000aa5e0000ce720000
 >>>>>>> 34ef8dc (Coloring)
+=======
+    m_SelectedInstanceIDs: b8920000
+    m_LastClickedInstanceID: 37560
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300004481000050810000be5d0000aa5e0000ce7200006a8e0000
+>>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
