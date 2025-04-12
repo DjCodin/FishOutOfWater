@@ -28,6 +28,12 @@ TagManager:
   - ClickSound
   - Computer
   - Person
+  - A
+  - ATiles
+  - BTiles
+  - B
+  - C
+  - CTiles
   layers:
   - Default
   - TransparentFX
