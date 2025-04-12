@@ -21,6 +21,9 @@ public class MathGame : MonoBehaviour
     public Button goBackButton;
     public Button mainMenuButton;
     private Button[] answerButtons;
+    private int wrongAnswers = 0;
+    public GameDataSO gameData;
+	public UIManager uiManager;
 
     private TextMeshProUGUI questionText;
     private TextMeshProUGUI scoreText;
@@ -99,6 +102,7 @@ public class MathGame : MonoBehaviour
 
     void StartLevel(int level)
     {
+        wrongAnswers = 0;
         currentLevel = level;
         score = 0;
         totalQuestions = 0;
@@ -240,17 +244,54 @@ public class MathGame : MonoBehaviour
         {
             score++;
         }
+        else{
+            wrongAnswers++;
+            if(wrongAnswers >= 3){
+                RestartLevel();
+                return;
+            }
+        }
         GenerateQuestion();
     }
+
+    void RestartLevel()
+    {
+        questionText.text = "Too many wrong answers! Restarting...";
+        StartCoroutine(RestartLevelAfterDelay(2f)); // Optional delay before restart
+    }
+
+    IEnumerator RestartLevelAfterDelay(float delay)
+    {
+        foreach (Button button in answerButtons)
+        {
+            button.gameObject.SetActive(false);
+        }
+
+        yield return new WaitForSeconds(delay);
+        StartLevel(currentLevel);
+    }
+
 
 
     void GameOver()
     {
         questionText.text = "Time's up!";
         scoreText.text = "Score: " + score + "/" + totalQuestions;
-        if (currentLevel == 1 && score >= 5) level1Completed = true;
-        if (currentLevel == 2 && score >= 5) level2Completed = true;
-        if (currentLevel == 3 && score >= 5) level3Completed = true;
+        if (currentLevel == 1 && score >= 5){
+            level1Completed = true;
+            gameData.AddSocialPoints(5);
+		    uiManager.UpdatePointsUI();
+        } 
+        if (currentLevel == 2 && score >= 5){
+            level2Completed = true;
+            gameData.AddSocialPoints(5);
+		    uiManager.UpdatePointsUI();
+        }
+        if (currentLevel == 3 && score >= 5){
+            level3Completed = true;
+            gameData.AddSocialPoints(5);
+		    uiManager.UpdatePointsUI();
+        }
         foreach (Button button in answerButtons)
         {
             button.gameObject.SetActive(false);

@@ -34,6 +34,7 @@ TagManager:
   - B
   - C
   - CTiles
+  - tictactoe
   layers:
   - Default
   - TransparentFX

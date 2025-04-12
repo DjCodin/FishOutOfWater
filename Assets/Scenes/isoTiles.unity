@@ -2632,7 +2632,7 @@ MonoBehaviour:
       line: " I\u2019-- n-ver se-n you b-fore. Are y-u n-w?"
     - character:
         name: Shelldon
-        icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
+        icon: {fileID: 21300000, guid: df503ea0d1a24443e88c736620b50830, type: 3}
       line: Yes, I new.
     - character:
         name: Micah
@@ -2640,7 +2640,7 @@ MonoBehaviour:
       line: "Oh we-l, I\u2019m Micah. Wh-t\u2019s y-urs?"
     - character:
         name: Shelldon
-        icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
+        icon: {fileID: 21300000, guid: df503ea0d1a24443e88c736620b50830, type: 3}
       line: Uh oh, Shelldon!
     - character:
         name: Micah
@@ -2648,10 +2648,10 @@ MonoBehaviour:
       line: H-w Uniq-e. Whe-re did y-u mo-e fr-m?
     - character:
         name: Shelldon
-        icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
+        icon: {fileID: 21300000, guid: df503ea0d1a24443e88c736620b50830, type: 3}
       line: (What uniq-e?) Oh yes. The ocean
     - character:
-        name: Shelldon
+        name: Teacher
         icon: {fileID: 21300000, guid: 1ece3be08d6264ff4a735b1eed781773, type: 3}
       line: "Clas-, let\u2019s beg-n"
     - character:
@@ -2660,7 +2660,7 @@ MonoBehaviour:
       line: Hmm, a-right Shelldon fr-m the ocean, we sh-uld ta-k mo-e at lunc-.
     - character:
         name: Shelldon
-        icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
+        icon: {fileID: 21300000, guid: df503ea0d1a24443e88c736620b50830, type: 3}
       line: Lunch? Food, right?
     - character:
         name: Micah
@@ -2668,7 +2668,7 @@ MonoBehaviour:
       line: Ye-h obvi-us-y. Wh-t else is lun-h for?
     - character:
         name: Shelldon
-        icon: {fileID: 21300000, guid: 26e428f55fc204744bf884f0a5747a62, type: 3}
+        icon: {fileID: 21300000, guid: df503ea0d1a24443e88c736620b50830, type: 3}
       line: Ok, talk at food time.
   collidedIcon: 0
 --- !u!61 &1755628621
