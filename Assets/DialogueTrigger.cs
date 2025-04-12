@@ -41,10 +41,11 @@ public class DialogueTrigger : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.tag != "Player")
-        {
-            collidedIcon = false;
-        }
+        
+        collidedIcon = false;
+        Debug.Log("Not Touched");
+        
+        
     }
 
     void Update()

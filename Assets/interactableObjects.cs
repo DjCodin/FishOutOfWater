@@ -18,4 +18,11 @@ public class interactableObjects : MonoBehaviour
             Debug.Log("Touched");
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
+        Debug.Log("Not Touched");
+        
+    }
 }

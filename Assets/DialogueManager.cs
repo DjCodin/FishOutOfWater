@@ -7,7 +7,8 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
-
+	public GameDataSO gameData;
+	public UIManager uiManager;
 	public Image characterIcon;
 	public TextMeshProUGUI characterName;
     public TextMeshProUGUI dialogueArea;
@@ -15,6 +16,7 @@ public class DialogueManager : MonoBehaviour
 	public AudioSource dialogueMusic;
 	public AudioSource backGroundMusic;
     private Queue<DialogueLine> lines;
+
     
 	public bool isDialogueActive = false;
 
@@ -32,6 +34,8 @@ public class DialogueManager : MonoBehaviour
 
 	public void StartDialogue(Dialogue dialogue)
 	{
+		gameData.AddSocialPoints(5);
+		uiManager.UpdatePointsUI();
 		isDialogueActive = true;
 
 		dialogueBox.SetActive(isDialogueActive);

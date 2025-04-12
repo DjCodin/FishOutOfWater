@@ -71,10 +71,10 @@ public class playerMovement :MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D collision){
-        if(collision.tag != "Computer" || collision.tag != "Person")
-        {
-            iconActive = false;
-            Debug.Log("Touched");
-        }
+        
+        iconActive = false;
+        compInteract = false;
+           
+        
     }  
 }
