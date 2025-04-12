@@ -21,6 +21,7 @@ public class GMScript : MonoBehaviour
     public Button green;
     [SerializeField]
     private GameDataSO gameDaySO;
+    public AudioSource click;
 
     // Start is called before the first frame update
     void Start()
@@ -109,7 +110,7 @@ public class GMScript : MonoBehaviour
                 var image = obj.GetComponent<SpriteRenderer>();
                 image.color = new Color(1f, 1f, 1f, 0f);
             }
-        }
+        }   
     }
 
     // Update is called once per frame
@@ -126,6 +127,7 @@ public class GMScript : MonoBehaviour
                 if (spriteRenderer != null)
                 {
                     spriteRenderer.color = currentColor;
+                    GetComponent<AudioSource>().Play();
                 }
             }
         }
@@ -134,6 +136,7 @@ public class GMScript : MonoBehaviour
     void HandleButtonClick(Button clickedButton)
     {
         currentColor = colorDict[clickedButton];
+        GetComponent<AudioSource>().Play();
     }
 
     Color RGB(int r, int g, int b)

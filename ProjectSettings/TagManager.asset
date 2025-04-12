@@ -32,6 +32,7 @@ TagManager:
   - B
   - C
   - CTiles
+  - SpeechBubble
   layers:
   - Default
   - TransparentFX

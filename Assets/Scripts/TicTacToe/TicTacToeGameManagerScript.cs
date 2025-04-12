@@ -45,7 +45,29 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     private GameDataSO gameDaySO;
     public Button[,] buttonMap;
     public Button lastClickedButton;
-    
+    public TMP_Text dialogueText;
+    public AudioSource dialogueSound;
+    public bool dialogueDone = false;
+    public GameObject leo;
+    public TMP_Text talkingText;
+    public bool speaking = false;
+    public int dialogueNum = 1;
+    public float timer3 = 0;
+    public GameObject dialogueBox;
+    public int i = 0;
+    private bool dialogueSoundPlayed = false;
+    public Button nextDialogue;
+    public float textDelay = .05f;
+    public GameObject shelldon;
+    public string dayOneDialogue1 = "I know you said you played Tic Tac Toe, but I will explain the rules again just in case you don’t remember.";
+    public string dayOneDialogue2 = "You will play as O and I will play as X. We will take turns placing our assigned symbols on a 3 by 3 board. You must get 3 in a row to win. Did you get that?";
+    public string dayOneDialogue3 = "Yeah, I get it. Let’s start now.";
+    public string dayOneDialogue4 = "Ok, good luck to you.";
+    public string dayTwoDialogue1 = "Hey Shelldon, since this is your second time playing with me, I won’t be going as easy on you. Think you can still do it?";
+    public string dayTwoDialogue2 = "Of course, just see.";
+    public string dayThreeDialogue1 = "You are very experienced now, Shelldon, so I will put my all into playing against you in Tic Tac Toe. Good luck trying to beat me today.";
+    public string dayThreeDialogue2 = "Don’t worry, I believe I can do it. Let’s play and see.";
+    public bool lastDialogue = false;
     void Start()
     {
         // Background without tic tac toe board
@@ -55,11 +77,16 @@ public class TicTacToeGameManagerScript : MonoBehaviour
         winSound =  GameObject.FindGameObjectWithTag("Win");
         loseSound = GameObject.FindGameObjectWithTag("Lose");
         tieSound = GameObject.FindGameObjectWithTag("Tie");
-
-        infoText.text = "Your shape is:";
+        GameObject click = GameObject.FindGameObjectWithTag("ClickSound");
+        AudioSource clickSound = click.GetComponent<AudioSource>();
         timer = 0;
+        dialogueText.gameObject.SetActive(true);
+        talkingText.gameObject.SetActive(true);
+        dialogueBox.SetActive(true);
+        dialogueText.text = "";
 
         winner = "";
+        talkingText.text = "";
 
         // Hide the buttons for the opening cutscene
         button1.gameObject.SetActive(false);
@@ -101,19 +128,271 @@ public class TicTacToeGameManagerScript : MonoBehaviour
         {
             btn.onClick.AddListener(() => HandleButtonClick(btn));
         }
+
+        nextDialogue.onClick.AddListener(() => NextDialogue(nextDialogue));
     }
 
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene("MainScene");
-        }
+        
 
-        // Cutscene script 
-        if (!cutsceneDone)
+        // dialogue done is false at start
+        if (gameDaySO.GameDay == 1 && !dialogueDone)
         {
+            dialogueBox.SetActive(true);
+            if (dialogueNum == 1)
+            {
+                timer3 += Time.deltaTime;
+                leo.SetActive(true);
+                shelldon.SetActive(false);
+                talkingText.text = "Leo";
+
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayOneDialogue1.ToCharArray();
+                
+                if (timer3 > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogueText.text += dialogueArr[i].ToString();
+                    i++;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(true);
+                }
+
+            }
+            if (dialogueNum == 2)
+            {
+                timer3 += Time.deltaTime;
+                leo.SetActive(true);
+                shelldon.SetActive(false);
+                talkingText.text = "Leo";
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayOneDialogue2.ToCharArray();
+
+                if (timer3 > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogueText.text += dialogueArr[i].ToString();
+                    i++;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(true);
+                }
+
+            }
+            if (dialogueNum == 3)
+            {
+                timer3 += Time.deltaTime;
+                leo.SetActive(false);
+                shelldon.SetActive(true);
+                talkingText.text = "Shelldon";
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayOneDialogue3.ToCharArray();
+
+                if (timer3 > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogueText.text += dialogueArr[i].ToString();
+                    i++;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    nextDialogue.gameObject.SetActive(true);
+                }
+            }
+            if (dialogueNum == 4)
+            {
+                timer3 += Time.deltaTime;
+                leo.SetActive(true);
+                shelldon.SetActive(false);
+                talkingText.text = "Leo";
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayOneDialogue4.ToCharArray();
+
+                if (timer3 > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogueText.text += dialogueArr[i].ToString();
+                    i++;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    nextDialogue.gameObject.SetActive(true);
+                    lastDialogue = true;
+                }
+            }
+
+        }
+        if (gameDaySO.GameDay == 1 && !dialogueDone)
+        {
+            if (dialogueNum == 1)
+            {
+                timer3 += Time.deltaTime;
+                leo.SetActive(true);
+                shelldon.SetActive(false);
+                talkingText.text = "Leo";
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayTwoDialogue1.ToCharArray();
+
+                if (timer3 > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogueText.text += dialogueArr[i].ToString();
+                    i++;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(true);
+                }
+            }
+            if (dialogueNum == 2)
+            {
+                timer3 += Time.deltaTime;
+                leo.SetActive(false);
+                shelldon.SetActive(true);
+                talkingText.text = "Shelldon";
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayTwoDialogue2.ToCharArray();
+
+                if (timer3 > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogueText.text += dialogueArr[i].ToString();
+                    i++;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer3 = 0;
+                    lastDialogue = true;
+                    nextDialogue.gameObject.SetActive(true);
+                }
+            }
+        }
+        if (gameDaySO.GameDay == 0 && !dialogueDone)
+        {
+            if (dialogueNum == 1)
+            {
+                timer3 += Time.deltaTime;
+                leo.SetActive(true);
+                shelldon.SetActive(false);
+                talkingText.text = "Leo";
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayThreeDialogue1.ToCharArray();
+
+                if (timer3 > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogueText.text += dialogueArr[i].ToString();
+                    i++;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(true);
+                }
+            }
+            if (dialogueNum == 2)
+            {
+                timer3 += Time.deltaTime;
+                leo.SetActive(false);
+                shelldon.SetActive(true);
+                talkingText.text = "Shelldon";
+
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayThreeDialogue2.ToCharArray();
+
+                if (timer3 > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogueText.text += dialogueArr[i].ToString();
+                    i++;
+                    timer3 = 0;
+                    nextDialogue.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer3 = 0;
+                    lastDialogue = true;
+                    nextDialogue.gameObject.SetActive(true);
+                }
+            }
+        }
+       
+
+        // Cutscene script cutscene done is set to false
+        if (!cutsceneDone && dialogueDone)
+        {
+            dialogueText.text = "";
+            infoText.text = "Your shape is";
             timer += Time.deltaTime;
             // Waits for timer to be at least 2 seconds before showing the player whether they are X or O
             if (timer >= 2 && !instantiated)
@@ -126,6 +405,9 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 {
                     // Instantiates a new GameObject "X"
                     GameObject x = new GameObject("X");
+                    GameObject click = GameObject.FindGameObjectWithTag("ClickSound");
+                    AudioSource clickSound = click.GetComponent<AudioSource>();
+                    clickSound.Play();
                     // Sets the parent to be the Canvas, and sets the transform to be based on the canvas
                     x.transform.SetParent(canvas.transform, false);
                     // Adds an Image component
@@ -147,6 +429,9 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 {
                     // Instantiates a new GameObject "O"
                     GameObject o = new GameObject("O");
+                    GameObject click = GameObject.FindGameObjectWithTag("ClickSound");
+                    AudioSource clickSound = click.GetComponent<AudioSource>();
+                    clickSound.Play();
                     // Sets the parent to be the Canvas, and sets the transform to be based on the canvas
                     o.transform.SetParent(canvas.transform, false);
                     // Adds an Image component
@@ -216,7 +501,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                     button.interactable = false;
                 }
                 // Calls the day 1 opponent 
-                if (gameDaySO.GameDay == 1)
+                if (gameDaySO.GameDay == 0)
                 {
                     dayOneOpponentTurn();
                 }
@@ -268,7 +553,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                     timer = 0;
                     board.SetActive(false);
                     background.SetActive(true);
-                    infoText.text = "X won";
+                    infoText.text = "X won!";
                     for (int i = 0; i < instantiatedImages.Count; i++)
                     {
                         Destroy(instantiatedImages[i]);
@@ -292,7 +577,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 {
                     timer = 0;
                     board.SetActive(false);
-                    infoText.text = "It was a tie";
+                    infoText.text = "It was a tie!";
                     background.SetActive(true);
                     for (int i = 0; i < instantiatedImages.Count; i++)
                     {
@@ -324,7 +609,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                     timer = 0;
                     board.SetActive(false);
                     background.SetActive(true);
-                    infoText.text = "O won";
+                    infoText.text = "O won!";
                     for (int i = 0; i < instantiatedImages.Count; i++)
                     {
                         Destroy(instantiatedImages[i]);
@@ -609,6 +894,25 @@ public class TicTacToeGameManagerScript : MonoBehaviour
             buttons.RemoveAt(index);
         }
         
+    }
+    
+    void NextDialogue(Button btn)
+    {
+        if (!speaking)
+        {
+            dialogueNum++;
+            dialogueText.text = "";
+            dialogueSoundPlayed = false;
+            btn.gameObject.SetActive(false);
+            if (lastDialogue)
+            {
+                dialogueDone = true;
+                leo.SetActive(false);
+                dialogueBox.SetActive(false);
+                shelldon.SetActive(false);
+                dialogueText.gameObject.SetActive(false);
+            }
+        }
     }
 
 }
