@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameDay: 0
   academicPoints: 0
-  socialPoints: 10
+  socialPoints: 5

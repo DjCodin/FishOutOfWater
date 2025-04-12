@@ -39,7 +39,11 @@ TagManager:
   - B
   - C
   - CTiles
+<<<<<<< HEAD
 >>>>>>> 34ef8dc (Coloring)
+=======
+  - tictactoe
+>>>>>>> eb43741 (added a recess map)
   layers:
   - Default
   - TransparentFX

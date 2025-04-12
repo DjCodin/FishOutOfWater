@@ -15,11 +15,15 @@ public class playerMovement :MonoBehaviour
     private float speedY;
     private bool iconActive = false;
     public bool compInteract = false;
+    public bool tictacInteract = false;
+
     public DialogueTrigger dialogueTrigger;
     public GameObject interactableIcons;
     public GameObject computerPrompt;
     public Button yesButton;
     public Button noButton;
+    public TMP_Text promptQuestion;
+
     
 
     void Start ()
@@ -45,7 +49,15 @@ public class playerMovement :MonoBehaviour
 
         if(compInteract && Input.GetKeyDown(KeyCode.I)){
             computerPrompt.SetActive(true);
+            promptQuestion.text = "Do you want to start math class now?";
             yesButton.onClick.AddListener(() => {SceneManager.LoadScene("MathClass");});
+            noButton.onClick.AddListener(() => {computerPrompt.SetActive(false);});
+        }
+
+        if(tictacInteract && Input.GetKeyDown(KeyCode.I)){
+            computerPrompt.SetActive(true);
+            promptQuestion.text = "Do you want to start playing TicTacToe?";
+            yesButton.onClick.AddListener(() => {SceneManager.LoadScene("TicTacToe");});
             noButton.onClick.AddListener(() => {computerPrompt.SetActive(false);});
         }
     }
@@ -57,7 +69,7 @@ public class playerMovement :MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Computer" || collision.tag == "Person")
+        if(collision.tag == "Computer" || collision.tag == "Person" || collision.tag == "tictactoe")
         {
             iconActive = true;
             Debug.Log("Touched");
@@ -67,6 +79,11 @@ public class playerMovement :MonoBehaviour
             compInteract = true;
             Debug.Log("comp Touched");
         }
+        if(collision.tag == "tictactoe")
+        {
+            tictacInteract = true;
+            Debug.Log("tictactoe Touched");
+        }
        
     }
 
@@ -74,6 +91,7 @@ public class playerMovement :MonoBehaviour
         
         iconActive = false;
         compInteract = false;
+        tictacInteract = false;
            
         
     }  
