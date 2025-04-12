@@ -35,6 +35,8 @@ public class GMScript : MonoBehaviour
 
     public string currentColor;
     public TMP_Text scoreText;
+    public GameDataSO scoreSO;
+
 
     // Start is called before the first frame update
     void Start()
@@ -120,7 +122,7 @@ public class GMScript : MonoBehaviour
     {
         score = 200 * percentCompleted;
         iteration += 1;
-
+        scoreSO.AcademicScores += score;
     }
     public void colorCheck(string clicked, string current)
     {

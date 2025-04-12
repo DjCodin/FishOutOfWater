@@ -47,7 +47,8 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     public Button lastClickedButton;
     public TMP_Text tTTscore;
     public int score;
-    
+    public GameDataSO gammeScoreSO;
+
     void Start()
     {
         // Background without tic tac toe board

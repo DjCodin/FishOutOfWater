@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 67885effe15fcf34590b6f26de3a88ab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - whiteButton: {instanceID: 0}
+  - redButton: {instanceID: 0}
+  - orangeButton: {instanceID: 0}
+  - yellowButton: {instanceID: 0}
+  - greenButton: {instanceID: 0}
+  - blueButton: {instanceID: 0}
+  - purpleButton: {instanceID: 0}
+  - brownButton: {instanceID: 0}
+  - blackButton: {instanceID: 0}
+  - eraserButton: {instanceID: 0}
+  - button1: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - scoreSO: {fileID: 11400000, guid: 4303664a7420bef4d88df5135802deb7, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

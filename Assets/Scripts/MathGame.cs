@@ -18,6 +18,8 @@ public class MathGame : MonoBehaviour
     private float timeRemaining = 60f;
     private bool gameActive = true;
 
+    [SerializeField]
+    private GameDataSO scores;
 
     void Start()
     {
@@ -112,7 +114,7 @@ public class MathGame : MonoBehaviour
         if (selectedAnswer == correctAnswer)
         {
             Debug.Log("Correct!");
-            score ++;
+            score++;
         }
         else
         {
@@ -134,5 +136,6 @@ public class MathGame : MonoBehaviour
             if (button != null)
                 button.gameObject.SetActive(false);
         }
+        scores.AcademicScores += (int)((score * 150) * 1.15);
     }
 }

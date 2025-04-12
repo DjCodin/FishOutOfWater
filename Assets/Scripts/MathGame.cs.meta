@@ -3,7 +3,11 @@ guid: 78be18cda937341b9a19ce900dd3a506
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - questionObject: {instanceID: 0}
+  - timerObject: {instanceID: 0}
+  - scoreObject: {instanceID: 0}
+  - scores: {fileID: 11400000, guid: 4303664a7420bef4d88df5135802deb7, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
