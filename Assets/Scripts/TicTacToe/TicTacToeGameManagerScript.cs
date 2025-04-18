@@ -135,10 +135,8 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     void Update()
     {
 
-        
-
         // dialogue done is false at start
-        if (gameDaySO.GameDay == 1 && !dialogueDone)
+        if (gameDaySO.GameDay == 0 && !dialogueDone)
         {
             dialogueBox.SetActive(true);
             if (dialogueNum == 1)
@@ -323,7 +321,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 }
             }
         }
-        if (gameDaySO.GameDay == 0 && !dialogueDone)
+        if (gameDaySO.GameDay == 2 && !dialogueDone)
         {
             if (dialogueNum == 1)
             {

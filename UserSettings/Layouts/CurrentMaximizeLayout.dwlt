@@ -25,10 +25,14 @@ MonoBehaviour:
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 107
 =======
   controlID: 28233
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
+=======
+  controlID: 15
+>>>>>>> ea4afb1 (Added dialogue for coloring)
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -121,7 +125,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -202,10 +206,14 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 108
 =======
   controlID: 28234
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
+=======
+  controlID: 16
+>>>>>>> ea4afb1 (Added dialogue for coloring)
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -232,10 +240,14 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 109
 =======
   controlID: 28235
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
+=======
+  controlID: 17
+>>>>>>> ea4afb1 (Added dialogue for coloring)
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -304,6 +316,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
 <<<<<<< HEAD
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 00620000
       m_LastClickedID: 0
@@ -314,6 +327,12 @@ MonoBehaviour:
       m_LastClickedID: 37560
       m_ExpandedIDs: 6669ffff18dcffff60ebffffa0f9ffff2afbffff22610000d6910000
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
+=======
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 4a5f0000
+      m_LastClickedID: 24394
+      m_ExpandedIDs: b0efffff2afbffff785e0000
+>>>>>>> ea4afb1 (Added dialogue for coloring)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -412,12 +431,17 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
       snapOffset: {x: -101, y: -26}
       snapOffsetDelta: {x: 0, y: 0}
 =======
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: -100, y: -25.600006}
 >>>>>>> ca597a6 (Day 1 of the coloring)
+=======
+      snapOffset: {x: -101, y: -26}
+      snapOffsetDelta: {x: 0, y: 0}
+>>>>>>> ea4afb1 (Added dialogue for coloring)
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -665,6 +689,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 3.874968, y: 1.472744, z: -0.020314941}
     speed: 2
     m_Value: {x: 3.874968, y: 1.472744, z: -0.020314941}
@@ -673,6 +698,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 448.73486, y: 147.65674, z: 2.0949361}
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
+=======
+    m_Target: {x: 0.9591471, y: -1.0140952, z: 5.8204937}
+    speed: 2
+    m_Value: {x: 0.9591471, y: -1.0140952, z: 5.8204937}
+>>>>>>> ea4afb1 (Added dialogue for coloring)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -724,6 +754,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 2.6313
     speed: 2
     m_Value: 2.6313
@@ -732,6 +763,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 351.30008
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
+=======
+    m_Target: 5.421086
+    speed: 2
+    m_Value: 5.421086
+>>>>>>> ea4afb1 (Added dialogue for coloring)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -894,11 +930,18 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 7a600000
     m_LastClickedID: 24698
     m_ExpandedIDs: 000000006660000000ca9a3bffffff7f
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
+=======
+    scrollPos: {x: 0, y: 14.200012}
+    m_SelectedIDs: b8600000
+    m_LastClickedID: 24760
+    m_ExpandedIDs: 00000000a460000000ca9a3bffffff7f
+>>>>>>> ea4afb1 (Added dialogue for coloring)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -927,10 +970,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a8610000
 =======
     m_ExpandedIDs: 000000006660000000ca9a3bffffff7f
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
+=======
+    m_ExpandedIDs: 00000000a4600000
+>>>>>>> ea4afb1 (Added dialogue for coloring)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -956,6 +1003,7 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 00620000
     m_LastClickedInstanceID: 25088
     m_HadKeyboardFocusLastEvent: 1
@@ -975,6 +1023,10 @@ MonoBehaviour:
 =======
     m_SelectedInstanceIDs: b8920000
     m_LastClickedInstanceID: 37560
+=======
+    m_SelectedInstanceIDs: 4a5f0000
+    m_LastClickedInstanceID: 24394
+>>>>>>> ea4afb1 (Added dialogue for coloring)
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300004481000050810000be5d0000aa5e0000ce7200006a8e0000
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
