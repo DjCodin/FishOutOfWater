@@ -35,6 +35,7 @@ TagManager:
   - C
   - CTiles
   - tictactoe
+  - SpeechBubble
   layers:
   - Default
   - TransparentFX

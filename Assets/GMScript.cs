@@ -21,10 +21,42 @@ public class GMScript : MonoBehaviour
     public Button green;
     [SerializeField]
     private GameDataSO gameDaySO;
-
+    public AudioSource click;
+    private bool dialogueFinished = false;
+    private bool stuffSpawned = false;
+    public GameObject dialogueBox;
+    public TMP_Text dialogue;
+    public TMP_Text personSpeaking;
+    public GameObject shelldon;
+    public GameObject micah;
+    public Button skipFish;
+    private int dialogueNum = 1;
+    private float timer = 0;
+    public AudioSource dialogueSound;
+    public bool dialogueSoundPlayed = false;
+    public bool speaking = false;
+    public int i = 0;
+    public float textDelay = .05f;
+    public bool lastDialogue = false;
+    public GameObject[] objectsWithTagA;
+    public GameObject aTile;
+    public GameObject[] objectsWithTagB;
+    public GameObject bTile;
+    public GameObject[] objectsWithTagC;
+    public GameObject cTile;
+    public string micahText = "Micah";
+    public string shelldonText = "Shelldon";
+    public string dayOneDialogue1 = "Hello Shelldon, let me explain to you your assignment for today. Today your job is to color your drawing in accordance with the number it is assigned. Each number represents a color and you paint the part with that number its assigned color. ";
+    public string dayOneDialogue2 = "Each day, you will color in one of three sections of your drawing. By the third day, you will have a fully colored drawing. Does all of that make sense to you?";
+    public string dayOneDialogue3 = "Yes, I can’t wait to start.";
+    public string dayOneDialogue4 = "Alright, I will leave you to it now.";
+    public string dayTwoDialogue1 = "You wonderfully finished coloring yesterday’s section of the drawing. Today, you will be painting a new section of the drawing. How does that sound?";
+    public string dayTwoDialogue2 = "It sounds good. I will make this section just as beautiful as yesterday’s section.";
+    public string dayThreeDialogue1 = "Shelldon, today you will work on coloring the last section of your drawing. After today, you will have a completed drawing, so work hard to finish it. You got this!";
+    public string dayThreeDialogue2 = "Ok, I can’t wait to see how this drawing turns out.";
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         colorDict = new Dictionary<Button, Color>();
         buttons = new ArrayList();
         currentColor = Color.white;
@@ -51,17 +83,17 @@ public class GMScript : MonoBehaviour
         }
 
         // Tiles
-        GameObject[] objectsWithTagA = GameObject.FindGameObjectsWithTag("ATiles");
+        objectsWithTagA = GameObject.FindGameObjectsWithTag("ATiles");
         // Outline
-        GameObject aTile = GameObject.FindGameObjectWithTag("A");
+        aTile = GameObject.FindGameObjectWithTag("A");
         // Tiles
-        GameObject[] objectsWithTagB = GameObject.FindGameObjectsWithTag("BTiles");
+        objectsWithTagB = GameObject.FindGameObjectsWithTag("BTiles");
         // Outline
-        GameObject bTile = GameObject.FindGameObjectWithTag("B");
+        bTile = GameObject.FindGameObjectWithTag("B");
         // Tiles
-        GameObject[] objectsWithTagC = GameObject.FindGameObjectsWithTag("CTiles");
+        objectsWithTagC = GameObject.FindGameObjectsWithTag("CTiles");
         // Outline
-        GameObject cTile = GameObject.FindGameObjectWithTag("C");
+        cTile = GameObject.FindGameObjectWithTag("C");
         aTile.SetActive(false);
         bTile.SetActive(false);
         cTile.SetActive(false);
@@ -76,6 +108,317 @@ public class GMScript : MonoBehaviour
         foreach (GameObject obj in objectsWithTagC)
         {
             obj.SetActive(false);
+        }
+        foreach (Button btn in buttons)
+        {
+            btn.gameObject.SetActive(false);
+        }
+
+        skipFish.onClick.AddListener(() => SkipFish(skipFish));
+        dialogue.text = "";
+        personSpeaking.text = "";
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (gameDaySO.GameDay == 0 &&!dialogueFinished)
+        {
+            if(dialogueNum == 1)
+            {
+                timer += Time.deltaTime;
+                micah.SetActive(true);
+                shelldon.SetActive(false);
+                personSpeaking.text = micahText;
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayOneDialogue1.ToCharArray();
+
+                if (timer > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogue.text += dialogueArr[i].ToString();
+                    i++;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(true);
+                }
+            }
+            if (dialogueNum == 2)
+            {
+                timer += Time.deltaTime;
+                micah.SetActive(true);
+                shelldon.SetActive(false);
+                personSpeaking.text = micahText;
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayOneDialogue2.ToCharArray();
+
+                if (timer > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogue.text += dialogueArr[i].ToString();
+                    i++;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(true);
+                }
+            }
+            if (dialogueNum == 3)
+            {
+                timer += Time.deltaTime;
+                micah.SetActive(false);
+                shelldon.SetActive(true);
+                personSpeaking.text = shelldonText;
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayOneDialogue3.ToCharArray();
+
+                if (timer > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogue.text += dialogueArr[i].ToString();
+                    i++;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(true);
+                }
+            }
+            if (dialogueNum == 4)
+            {
+                timer += Time.deltaTime;
+                micah.SetActive(true);
+                shelldon.SetActive(false);
+                personSpeaking.text = micahText;
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayOneDialogue4.ToCharArray();
+
+                if (timer > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogue.text += dialogueArr[i].ToString();
+                    i++;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(true);
+                    lastDialogue = true;
+                }
+            }
+        }
+        if (gameDaySO.GameDay == 1 && !dialogueFinished)
+        {
+            if (dialogueNum == 1)
+            {
+                timer += Time.deltaTime;
+                micah.SetActive(true);
+                shelldon.SetActive(false);
+                personSpeaking.text = micahText;
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayTwoDialogue1.ToCharArray();
+
+                if (timer > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogue.text += dialogueArr[i].ToString();
+                    i++;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(true);
+                }
+            }
+            if (dialogueNum == 2)
+            {
+                timer += Time.deltaTime;
+                micah.SetActive(false);
+                shelldon.SetActive(true);
+                personSpeaking.text = shelldonText;
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayTwoDialogue2.ToCharArray();
+
+                if (timer > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogue.text += dialogueArr[i].ToString();
+                    i++;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(true);
+                    lastDialogue = true;
+                }
+            }
+            
+        }
+        if (gameDaySO.GameDay == 2 && !dialogueFinished)
+        {
+            if (dialogueNum == 1)
+            {
+                timer += Time.deltaTime;
+                micah.SetActive(true);
+                shelldon.SetActive(false);
+                personSpeaking.text = micahText;
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayThreeDialogue1.ToCharArray();
+
+                if (timer > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogue.text += dialogueArr[i].ToString();
+                    i++;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(true);
+                }
+            }
+            if (dialogueNum == 2)
+            {
+                timer += Time.deltaTime;
+                micah.SetActive(false);
+                shelldon.SetActive(true);
+                personSpeaking.text = shelldonText;
+                if (!dialogueSoundPlayed)
+                {
+                    dialogueSound.Play();
+                    dialogueSoundPlayed = true;
+                    speaking = true;
+                }
+                char[] dialogueArr = dayThreeDialogue2.ToCharArray();
+
+                if (timer > textDelay && dialogueArr.Length > i && speaking)
+                {
+                    dialogue.text += dialogueArr[i].ToString();
+                    i++;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(false);
+                }
+                if (i >= dialogueArr.Length)
+                {
+                    i = 0;
+                    speaking = false;
+                    timer = 0;
+                    skipFish.gameObject.SetActive(true);
+                    lastDialogue = true;
+                }
+            }
+
+        }
+
+
+        if (dialogueFinished && !stuffSpawned)
+        {
+            spawn();
+            stuffSpawned = true;
+        }
+
+
+        if (Input.GetMouseButton(0) && dialogueFinished)
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+
+            if (hit.collider != null && hit.collider is PolygonCollider2D)
+            {
+                SpriteRenderer spriteRenderer = hit.collider.GetComponent<SpriteRenderer>();
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.color = currentColor;
+                    GetComponent<AudioSource>().Play();
+                }
+            }
+        }
+    }
+
+    void HandleButtonClick(Button clickedButton)
+    {
+        currentColor = colorDict[clickedButton];
+        GetComponent<AudioSource>().Play();
+    }
+
+    Color RGB(int r, int g, int b)
+    {
+        return new Color(r / 255f, g / 255f, b / 255f);
+    }
+
+    void spawn()
+    {
+        dialogue.gameObject.SetActive(false);
+        dialogueBox.SetActive(false);
+        micah.SetActive(false);
+        shelldon.SetActive(false);
+        personSpeaking.gameObject.SetActive(false);
+        skipFish.gameObject.SetActive(false);
+
+        foreach(Button btn in buttons)
+        {
+            btn.gameObject.SetActive(true);
         }
 
         if (gameDaySO.GameDay == 0)
@@ -112,32 +455,24 @@ public class GMScript : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void SkipFish(Button btn)
     {
-        if (Input.GetMouseButton(0))
+        if (!speaking)
         {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
-
-            if (hit.collider != null && hit.collider is PolygonCollider2D)
+            dialogueNum++;
+            dialogue.text = "";
+            dialogueSoundPlayed = false;
+            btn.gameObject.SetActive(false);
+            if (lastDialogue)
             {
-                SpriteRenderer spriteRenderer = hit.collider.GetComponent<SpriteRenderer>();
-                if (spriteRenderer != null)
-                {
-                    spriteRenderer.color = currentColor;
-                }
+                dialogueFinished = true;
+                micah.SetActive(false);
+                dialogueBox.SetActive(false);
+                shelldon.SetActive(false);
+                dialogue.gameObject.SetActive(false);
+                personSpeaking.gameObject.SetActive(false);
             }
         }
     }
 
-    void HandleButtonClick(Button clickedButton)
-    {
-        currentColor = colorDict[clickedButton];
-    }
-
-    Color RGB(int r, int g, int b)
-    {
-        return new Color(r / 255f, g / 255f, b / 255f);
-    }
 }
