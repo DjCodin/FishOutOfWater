@@ -46,7 +46,7 @@ public class GMScript : MonoBehaviour
     public GameObject cTile;
     public string micahText = "Micah";
     public string shelldonText = "Shelldon";
-    public string dayOneDialogue1 = "Hello Shelldon, let me explain to you your assignment for today. Today your job is to color your drawing in accordance with the number it is assigned. Each number represents a color and you paint the part with that number its assigned color. ";
+    public string dayOneDialogue1 = "Hello Shelldon, let me explain to you your assignment for today.Today your job is to color your drawing by coloring within the lines.";
     public string dayOneDialogue2 = "Each day, you will color in one of three sections of your drawing. By the third day, you will have a fully colored drawing. Does all of that make sense to you?";
     public string dayOneDialogue3 = "Yes, I can’t wait to start.";
     public string dayOneDialogue4 = "Alright, I will leave you to it now.";
@@ -54,6 +54,14 @@ public class GMScript : MonoBehaviour
     public string dayTwoDialogue2 = "It sounds good. I will make this section just as beautiful as yesterday’s section.";
     public string dayThreeDialogue1 = "Shelldon, today you will work on coloring the last section of your drawing. After today, you will have a completed drawing, so work hard to finish it. You got this!";
     public string dayThreeDialogue2 = "Ok, I can’t wait to see how this drawing turns out.";
+    public GameDataSO gameData;
+    public UIManager uiManager;
+    public Dictionary<GameObject, Color> filledDict  = new Dictionary<GameObject, Color>();
+    public int filledNum = 0;
+    public TMP_Text filledText;
+    public int numTiles = 0;
+    public AudioSource music;
+    public Button finishButton;
     // Start is called before the first frame update
     void Start()
     { 
@@ -117,7 +125,8 @@ public class GMScript : MonoBehaviour
         skipFish.onClick.AddListener(() => SkipFish(skipFish));
         dialogue.text = "";
         personSpeaking.text = "";
-
+        filledText.gameObject.SetActive(false);
+        finishButton.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -376,8 +385,12 @@ public class GMScript : MonoBehaviour
         {
             spawn();
             stuffSpawned = true;
+            filledText.gameObject.SetActive(true);
+            music.loop = true;
+            music.Play();
         }
 
+        filledText.text = filledNum + "/" + numTiles + " Tiles Colored";
 
         if (Input.GetMouseButton(0) && dialogueFinished)
         {
@@ -386,6 +399,14 @@ public class GMScript : MonoBehaviour
 
             if (hit.collider != null && hit.collider is PolygonCollider2D)
             {
+                GameObject clickedObject = hit.collider.gameObject;
+                if (filledDict[clickedObject] == Color.white)
+                {
+                    filledNum += 1;
+                    gameData.AddSocialPoints(5);
+                    uiManager.UpdatePointsUI();
+                }
+                filledDict[clickedObject] = currentColor;
                 SpriteRenderer spriteRenderer = hit.collider.GetComponent<SpriteRenderer>();
                 if (spriteRenderer != null)
                 {
@@ -415,8 +436,9 @@ public class GMScript : MonoBehaviour
         shelldon.SetActive(false);
         personSpeaking.gameObject.SetActive(false);
         skipFish.gameObject.SetActive(false);
+        finishButton.gameObject.SetActive(true);
 
-        foreach(Button btn in buttons)
+        foreach (Button btn in buttons)
         {
             btn.gameObject.SetActive(true);
         }
@@ -426,9 +448,11 @@ public class GMScript : MonoBehaviour
             aTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagA)
             {
+                filledDict.Add(obj, Color.white);
                 obj.SetActive(true);
                 var image = obj.GetComponent<SpriteRenderer>();
                 image.color = new Color(1f, 1f, 1f, 0f);
+                numTiles = objectsWithTagA.Length;
             }
         }
 
@@ -437,9 +461,11 @@ public class GMScript : MonoBehaviour
             bTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagB)
             {
+                filledDict.Add(obj, Color.white);
                 obj.SetActive(true);
                 var image = obj.GetComponent<SpriteRenderer>();
                 image.color = new Color(1f, 1f, 1f, 0f);
+                numTiles = objectsWithTagB.Length;
             }
         }
 
@@ -448,9 +474,11 @@ public class GMScript : MonoBehaviour
             cTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagC)
             {
+                filledDict.Add(obj, Color.white);
                 obj.SetActive(true);
                 var image = obj.GetComponent<SpriteRenderer>();
                 image.color = new Color(1f, 1f, 1f, 0f);
+                numTiles = objectsWithTagC.Length;
             }
         }
     }

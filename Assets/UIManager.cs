@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdatePointsUI()
     {
-        academicPointsText.text = "Academic Points: " + gameData.academicPoints.ToString();
+        academicPointsText.text = "Academic Points: " + gameData.academicPoints.ToString(); 
         socialPointsText.text = "Social Points: " + gameData.socialPoints.ToString();
     }
 }
