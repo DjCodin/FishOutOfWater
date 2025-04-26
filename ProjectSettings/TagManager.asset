@@ -26,12 +26,15 @@ TagManager:
   - Day Two Opponent
   - Tic Tac Toe Game Manager
   - ClickSound
+  - Computer
+  - Person
   - A
   - ATiles
   - BTiles
   - B
   - C
   - CTiles
+  - tictactoe
   - SpeechBubble
   layers:
   - Default

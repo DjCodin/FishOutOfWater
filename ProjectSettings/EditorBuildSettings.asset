@@ -5,13 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/TicTacToe.unity
     guid: 61540dc89d8a7d1459530f1bbccdd5f8
+  - enabled: 1
+    path: Assets/Scenes/MathClass.unity
+    guid: 4524fbbdbd50341eaa9a0af9bcf89750
+  - enabled: 1
+    path: Assets/Scenes/isoTiles.unity
+    guid: 91e6e5a0b7c314d51b69ef0ee63a0db5
   m_configObjects: {}
