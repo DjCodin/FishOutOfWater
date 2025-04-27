@@ -47,7 +47,11 @@ TagManager:
 >>>>>>> eb43741 (added a recess map)
 =======
   - SpeechBubble
+<<<<<<< HEAD
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
+=======
+  - UIManager
+>>>>>>> e3815c5 (Finished tic tac toe and coloring)
   layers:
   - Default
   - TransparentFX
