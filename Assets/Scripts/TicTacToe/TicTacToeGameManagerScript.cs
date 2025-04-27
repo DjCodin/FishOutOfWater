@@ -60,7 +60,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     public float textDelay = .05f;
     public GameObject shelldon;
     public string dayOneDialogue1 = "I know you said you played Tic Tac Toe, but I will explain the rules again just in case you don’t remember.";
-    public string dayOneDialogue2 = "You will play as O and I will play as X. We will take turns placing our assigned symbols on a 3 by 3 board. You must get 3 in a row to win. Did you get that?";
+    public string dayOneDialogue2 = "One of us will play as O and the other X. We will take turns placing our assigned symbols on a 3 by 3 board. You must get 3 in a row to win. Did you get that?";
     public string dayOneDialogue3 = "Yeah, I get it. Let’s start now.";
     public string dayOneDialogue4 = "Ok, good luck to you.";
     public string dayTwoDialogue1 = "Hey Shelldon, since this is your second time playing with me, I won’t be going as easy on you. Think you can still do it?";
@@ -68,8 +68,16 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     public string dayThreeDialogue1 = "You are very experienced now, Shelldon, so I will put my all into playing against you in Tic Tac Toe. Good luck trying to beat me today.";
     public string dayThreeDialogue2 = "Don’t worry, I believe I can do it. Let’s play and see.";
     public bool lastDialogue = false;
+    public GameDataSO gameData;
+    public UIManager uiManager;
+    public bool awardPointsScene = false;
+    public string winningPerson = "";
+    public float timer4 = 0;
     void Start()
     {
+        infoText.gameObject.SetActive(false);
+        uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
+
         // Background without tic tac toe board
         background = GameObject.FindGameObjectWithTag("Background");
 
@@ -389,8 +397,9 @@ public class TicTacToeGameManagerScript : MonoBehaviour
         // Cutscene script cutscene done is set to false
         if (!cutsceneDone && dialogueDone)
         {
+            infoText.gameObject.SetActive(true);
             dialogueText.text = "";
-            infoText.text = "Your shape is";
+            infoText.text = "Your shape is:";
             timer += Time.deltaTime;
             // Waits for timer to be at least 2 seconds before showing the player whether they are X or O
             if (timer >= 2 && !instantiated)
@@ -461,6 +470,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
         }
         if (cutsceneDone && !gameOver)
         {
+            infoText.gameObject.SetActive(false);
             // Show the buttons after the cutscene finishes
             button1.gameObject.SetActive(true);
             button2.gameObject.SetActive(true);
@@ -526,7 +536,6 @@ public class TicTacToeGameManagerScript : MonoBehaviour
             button7.gameObject.SetActive(false);
             button8.gameObject.SetActive(false);
             button9.gameObject.SetActive(false);
-            infoText.gameObject.SetActive(true);
 
             // If the winner is X and the end scene is plapying this runs
             if(winner == "X" && endScene)
@@ -536,12 +545,16 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 {
                     winSound.GetComponent<AudioSource>().Play();
                     endSceneAudioPlayed = true;
+                    winningPerson = "You";
+                    gameData.AddSocialPoints(50);
                 }
                 // If the player is O, plays a losing sound
                 else if (!endSceneAudioPlayed)
                 {
                     loseSound.GetComponent<AudioSource>().Play();
                     endSceneAudioPlayed = true;
+                    winningPerson = "Leo";
+                    gameData.AddSocialPoints(-50);
                 }
                 timer += Time.deltaTime;
                 // Destroys all instantiated X and O objects once the timer is at least 4 seconds. Changes the background to the 
@@ -551,12 +564,15 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                     timer = 0;
                     board.SetActive(false);
                     background.SetActive(true);
-                    infoText.text = "X won!";
+                    
                     for (int i = 0; i < instantiatedImages.Count; i++)
                     {
                         Destroy(instantiatedImages[i]);
                     }
-                    endScene = false; 
+                    endScene = false;
+                    infoText.gameObject.SetActive(true);
+                    infoText.text = winningPerson + " won!";
+                    awardPointsScene = true;
                 }
             }
             // If it is a tie and the end scene is plapying this runs
@@ -575,6 +591,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 {
                     timer = 0;
                     board.SetActive(false);
+                    infoText.gameObject.SetActive(true);
                     infoText.text = "It was a tie!";
                     background.SetActive(true);
                     for (int i = 0; i < instantiatedImages.Count; i++)
@@ -582,6 +599,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                         Destroy(instantiatedImages[i]);
                     }
                     endScene = false;
+                    awardPointsScene = true;
                 }
             }
             // If O wins and the end scene is plapying this runs
@@ -593,12 +611,16 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 {
                     winSound.GetComponent<AudioSource>().Play();
                     endSceneAudioPlayed = true;
+                    winningPerson = "You";
+                    gameData.AddSocialPoints(50);
                 }
                 // If the player is X, plays a losing sound
                 else if (!endSceneAudioPlayed)
                 {
                     loseSound.GetComponent<AudioSource>().Play();
                     endSceneAudioPlayed = true;
+                    winningPerson = "Leo";
+                    gameData.AddSocialPoints(-50);
                 }
                 // Destroys all instantiated X and O objects once the timer is at least 4 seconds. Changes the background to the 
                 // board without the tic tac toe 
@@ -607,13 +629,25 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                     timer = 0;
                     board.SetActive(false);
                     background.SetActive(true);
-                    infoText.text = "O won!";
+                    infoText.gameObject.SetActive(true);
+                    infoText.text = winningPerson + " won!";
                     for (int i = 0; i < instantiatedImages.Count; i++)
                     {
                         Destroy(instantiatedImages[i]);
                     }
                     endScene = false;
+                    awardPointsScene = true;
                 }
+            }
+        }
+
+        if (awardPointsScene)
+        {
+            timer4 += Time.deltaTime;
+            uiManager.UpdatePointsUI();
+            if (timer4 >= 4f)
+            {
+                Debug.Log("Progress Check");
             }
         }
     }
@@ -909,6 +943,8 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 dialogueBox.SetActive(false);
                 shelldon.SetActive(false);
                 dialogueText.gameObject.SetActive(false);
+                talkingText.gameObject.SetActive(false);
+                infoText.gameObject.SetActive(true);
             }
         }
     }
