@@ -59,20 +59,21 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     public Button nextDialogue;
     public float textDelay = .05f;
     public GameObject shelldon;
-    public string dayOneDialogue1 = "I know you said you played Tic Tac Toe, but I will explain the rules again just in case you don’t remember.";
+    public string dayOneDialogue1 = "I know you said you played Tic Tac Toe, but I will explain the rules again just in case you donï¿½t remember.";
     public string dayOneDialogue2 = "One of us will play as O and the other X. We will take turns placing our assigned symbols on a 3 by 3 board. You must get 3 in a row to win. Did you get that?";
-    public string dayOneDialogue3 = "Yeah, I get it. Let’s start now.";
+    public string dayOneDialogue3 = "Yeah, I get it. Letï¿½s start now.";
     public string dayOneDialogue4 = "Ok, good luck to you.";
-    public string dayTwoDialogue1 = "Hey Shelldon, since this is your second time playing with me, I won’t be going as easy on you. Think you can still do it?";
+    public string dayTwoDialogue1 = "Hey Shelldon, since this is your second time playing with me, I wonï¿½t be going as easy on you. Think you can still do it?";
     public string dayTwoDialogue2 = "Of course, just see.";
     public string dayThreeDialogue1 = "You are very experienced now, Shelldon, so I will put my all into playing against you in Tic Tac Toe. Good luck trying to beat me today.";
-    public string dayThreeDialogue2 = "Don’t worry, I believe I can do it. Let’s play and see.";
+    public string dayThreeDialogue2 = "Donï¿½t worry, I believe I can do it. Letï¿½s play and see.";
     public bool lastDialogue = false;
     public GameDataSO gameData;
     public UIManager uiManager;
     public bool awardPointsScene = false;
     public string winningPerson = "";
     public float timer4 = 0;
+
     void Start()
     {
         infoText.gameObject.SetActive(false);
@@ -647,7 +648,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
             uiManager.UpdatePointsUI();
             if (timer4 >= 4f)
             {
-                Debug.Log("Progress Check");
+                SceneManager.LoadScene("ColorScene");
             }
         }
     }
