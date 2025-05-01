@@ -106,7 +106,16 @@ public class MathGame : MonoBehaviour
         currentLevel = level;
         score = 0;
         totalQuestions = 0;
-        timeRemaining = 60f;
+
+        if(level == 1){
+            timeRemaining = 30f;
+        }
+        if(level == 2){
+            timeRemaining = 50f;
+        }
+        if(level == 3){
+            timeRemaining = 60f;
+        }
         gameActive = true;
 
 

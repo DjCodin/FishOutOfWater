@@ -27,6 +27,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 107
 =======
   controlID: 28233
@@ -37,6 +38,9 @@ MonoBehaviour:
 =======
   controlID: 2579
 >>>>>>> 0d4a389 (Simple changes)
+=======
+  controlID: 613
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -57,8 +61,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 205
-    y: 111
+    x: 291
+    y: 115
     width: 676.5
     height: 402
 =======
@@ -212,6 +216,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 108
 =======
   controlID: 28234
@@ -222,6 +227,9 @@ MonoBehaviour:
 =======
   controlID: 2580
 >>>>>>> 0d4a389 (Simple changes)
+=======
+  controlID: 614
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,6 +258,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 109
 =======
   controlID: 28235
@@ -260,6 +269,9 @@ MonoBehaviour:
 =======
   controlID: 2581
 >>>>>>> 0d4a389 (Simple changes)
+=======
+  controlID: 615
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -280,12 +292,17 @@ MonoBehaviour:
 <<<<<<< HEAD
     width: 216
     height: 423
+<<<<<<< HEAD
 =======
     width: 290.4
     height: 456
 >>>>>>> ca597a6 (Day 1 of the coloring)
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -311,8 +328,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -11
-    y: 111
+    x: 75
+    y: 115
     width: 215
     height: 402
 =======
@@ -330,6 +347,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
       m_SelectedIDs: 00620000
       m_LastClickedID: 0
@@ -351,6 +369,11 @@ MonoBehaviour:
       m_LastClickedID: -3532
       m_ExpandedIDs: 3cf2ffff46f2ffffcaf2ffffcaf8ffff10fbffff
 >>>>>>> 0d4a389 (Simple changes)
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 3aeeffff5cf0ffffd4f4ffffa4f7ffff1ef8ffff6ef8ffff10fbffff
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -366,7 +389,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -429,8 +452,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 205
-    y: 111
+    x: 291
+    y: 115
     width: 676.5
     height: 402
 =======
@@ -709,6 +732,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 3.874968, y: 1.472744, z: -0.020314941}
     speed: 2
     m_Value: {x: 3.874968, y: 1.472744, z: -0.020314941}
@@ -727,6 +751,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 960, y: 540.00006, z: 0}
 >>>>>>> 0d4a389 (Simple changes)
+=======
+    m_Target: {x: 1096.0454, y: 599.5794, z: 5.9762273}
+    speed: 2
+    m_Value: {x: 1096.0454, y: 599.5794, z: 5.9762273}
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -780,6 +809,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 2.6313
     speed: 2
     m_Value: 2.6313
@@ -798,6 +828,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 1101.4536
 >>>>>>> 0d4a389 (Simple changes)
+=======
+    m_Target: 723.1662
+    speed: 2
+    m_Value: 723.1662
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -884,7 +919,7 @@ MonoBehaviour:
   - {fileID: 12}
   - {fileID: 13}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -905,8 +940,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -11
-    y: 534
+    x: 75
+    y: 538
     width: 893.5
     height: 274
 =======
@@ -934,6 +969,7 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes
 =======
     - Assets/Images
@@ -941,11 +977,15 @@ MonoBehaviour:
 =======
     - Assets
 >>>>>>> 0d4a389 (Simple changes)
+=======
+    - Assets/Scenes
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 54
   m_LastFolders:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   - Assets/Scenes
@@ -953,10 +993,15 @@ MonoBehaviour:
   - Assets
 >>>>>>> 0d4a389 (Simple changes)
   m_LastFoldersGridSize: -1
+=======
+  - Assets/Scenes
+  m_LastFoldersGridSize: 54
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
   m_LastProjectPath: /Users/dcherfil/Desktop/Dj_GameDev/FishOutOfWater
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 58.997192}
     m_SelectedIDs: a8610000
     m_LastClickedID: 25000
@@ -980,6 +1025,12 @@ MonoBehaviour:
     m_LastClickedID: 24760
     m_ExpandedIDs: 00000000a460000000ca9a3bffffff7f
 >>>>>>> ea4afb1 (Added dialogue for coloring)
+=======
+    scrollPos: {x: 0, y: 2}
+    m_SelectedIDs: 04620000
+    m_LastClickedID: 25092
+    m_ExpandedIDs: 00000000e261000000ca9a3bffffff7f
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1010,6 +1061,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a8610000
 =======
     m_ExpandedIDs: 000000006660000000ca9a3bffffff7f
@@ -1020,6 +1072,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000a861000000ca9a3bffffff7f
 >>>>>>> 0d4a389 (Simple changes)
+=======
+    m_ExpandedIDs: 00000000e261000000ca9a3bffffff7f
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1047,6 +1102,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 00620000
     m_LastClickedInstanceID: 25088
     m_HadKeyboardFocusLastEvent: 1
@@ -1055,6 +1111,11 @@ MonoBehaviour:
     m_LastClickedInstanceID: -3532
     m_HadKeyboardFocusLastEvent: 0
 >>>>>>> 0d4a389 (Simple changes)
+=======
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
     m_ExpandedInstanceIDs: c62300002e650000ca9000007cac000086ac000022960000b8040100
 =======
     m_SelectedInstanceIDs: d4600000
@@ -1102,7 +1163,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 54
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 --- !u!114 &12
@@ -1125,8 +1186,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 506
+    x: -11
+    y: 534
     width: 893.5
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1206,6 +1267,7 @@ MonoBehaviour:
     y: 0
     width: 405.5
     height: 718
+<<<<<<< HEAD
 =======
     x: 1173.6
     y: 0
@@ -1215,6 +1277,10 @@ MonoBehaviour:
 >>>>>>> ca597a6 (Day 1 of the coloring)
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> aedec4d (Just added the school bell and changed the math game times)
   m_ActualView: {fileID: 15}
 =======
   m_MinSize: {x: 275, y: 50}
@@ -1245,8 +1311,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 883.5
-    y: 111
+    x: 969.5
+    y: 115
     width: 404.5
     height: 697
 =======
@@ -1267,7 +1333,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 475.8
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
