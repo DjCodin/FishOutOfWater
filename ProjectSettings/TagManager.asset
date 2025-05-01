@@ -36,6 +36,7 @@ TagManager:
   - CTiles
   - tictactoe
   - SpeechBubble
+  - UIManager
   layers:
   - Default
   - TransparentFX

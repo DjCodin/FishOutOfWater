@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using UnityEngine.EventSystems;
 
 public class GMScript : MonoBehaviour
 {
@@ -62,9 +63,13 @@ public class GMScript : MonoBehaviour
     public int numTiles = 0;
     public AudioSource music;
     public Button finishButton;
+    public TMP_Text finishedButtonText;
+    public float areYouSureTimer = 6f;
+    bool areYouSure = false;
     // Start is called before the first frame update
     void Start()
-    { 
+    {
+        uiManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
         colorDict = new Dictionary<Button, Color>();
         buttons = new ArrayList();
         currentColor = Color.white;
@@ -133,9 +138,9 @@ public class GMScript : MonoBehaviour
     void Update()
     {
 
-        if (gameDaySO.GameDay == 0 &&!dialogueFinished)
+        if (gameDaySO.GameDay == 0 && !dialogueFinished)
         {
-            if(dialogueNum == 1)
+            if (dialogueNum == 1)
             {
                 timer += Time.deltaTime;
                 micah.SetActive(true);
@@ -314,7 +319,7 @@ public class GMScript : MonoBehaviour
                     lastDialogue = true;
                 }
             }
-            
+
         }
         if (gameDaySO.GameDay == 2 && !dialogueFinished)
         {
@@ -415,8 +420,33 @@ public class GMScript : MonoBehaviour
                 }
             }
         }
-    }
+        if (areYouSure && areYouSureTimer > 0)
+        {
+            areYouSureTimer -= Time.deltaTime;
+            finishedButtonText.text = "Are You Sure? (" + (int)areYouSureTimer + ")";
+            if (Input.GetMouseButtonDown(0) && IsPointerOverUIElement(finishButton.gameObject))
+            {
+                Debug.Log("Progress Check");
+            }
+        }
 
+        if (Input.GetMouseButtonDown(0) && !areYouSure)
+        {
+            // Check if the mouse is over the button
+            if (IsPointerOverUIElement(finishButton.gameObject))
+            {
+                finishedButtonText.text = "Are You Sure? (" + (int) areYouSureTimer + ")";
+                areYouSure = true;
+            }
+        }
+
+        
+        if (areYouSure && areYouSureTimer <= 0)
+        {
+            areYouSure = false;
+            finishedButtonText.text = "Finish Game";
+        }
+    }
     void HandleButtonClick(Button clickedButton)
     {
         currentColor = colorDict[clickedButton];
@@ -503,4 +533,21 @@ public class GMScript : MonoBehaviour
         }
     }
 
+    bool IsPointerOverUIElement(GameObject uiElement)
+    {
+        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        {
+            position = Input.mousePosition
+        };
+
+        var results = new System.Collections.Generic.List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        foreach (RaycastResult result in results)
+        {
+            if (result.gameObject == uiElement)
+                return true;
+        }
+        return false;
+    }
 }

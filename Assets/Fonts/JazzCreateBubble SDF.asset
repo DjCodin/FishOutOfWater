@@ -1812,6 +1812,10 @@ MonoBehaviour:
     m_Y: 0
     m_Width: 57
     m_Height: 64
+  - m_X: 326
+    m_Y: 0
+    m_Width: 69
+    m_Height: 64
   m_FreeGlyphRects:
   - m_X: 38
     m_Y: 85
