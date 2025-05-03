@@ -1783,6 +1783,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1688554088}
     - target: {fileID: 3638377114447210709, guid: a460f4eabf99042e680ef5f9baf3d2e7, type: 3}
+      propertyPath: promptQuestion
+      value: 
+      objectReference: {fileID: 493948774}
+    - target: {fileID: 3638377114447210709, guid: a460f4eabf99042e680ef5f9baf3d2e7, type: 3}
       propertyPath: dialogueTrigger
       value: 
       objectReference: {fileID: 549905777}
