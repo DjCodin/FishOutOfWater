@@ -83,7 +83,7 @@ public class MathGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("isoTiles");
+            SceneManager.LoadScene("MainScene");
         }
         
         if (gameActive)
@@ -252,6 +252,7 @@ public class MathGame : MonoBehaviour
         if (selectedAnswer == correctAnswer)
         {
             score++;
+
         }
         else{
             wrongAnswers++;
@@ -288,17 +289,17 @@ public class MathGame : MonoBehaviour
         scoreText.text = "Score: " + score + "/" + totalQuestions;
         if (currentLevel == 1 && score >= 5){
             level1Completed = true;
-            gameData.AddSocialPoints(5);
+            gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
         } 
         if (currentLevel == 2 && score >= 5){
             level2Completed = true;
-            gameData.AddSocialPoints(5);
+            gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
         }
         if (currentLevel == 3 && score >= 5){
             level3Completed = true;
-            gameData.AddSocialPoints(5);
+            gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
         }
         foreach (Button button in answerButtons)
