@@ -34,19 +34,19 @@ public class DialogueManager : MonoBehaviour
 
 	public void StartDialogue(Dialogue dialogue)
 	{
-		gameData.AddSocialPoints(5);
-		uiManager.UpdatePointsUI();
 		isDialogueActive = true;
 
 		dialogueBox.SetActive(isDialogueActive);
 
 		lines.Clear();
-
+		
 		foreach (DialogueLine dialogueLine in dialogue.dialogueLines)
 		{
+			Debug.Log("Helllo");
 			backGroundMusic.Stop();
 			dialogueMusic.Play();
 			lines.Enqueue(dialogueLine);
+			Debug.Log("yh");
 		}
 		
 		DisplayNextDialogueLine();
@@ -84,6 +84,8 @@ public class DialogueManager : MonoBehaviour
 
 	void EndDialogue()
 	{
+		gameData.AddSocialPoints(5);
+		uiManager.UpdatePointsUI();
 		backGroundMusic.Play();
 		dialogueMusic.Stop();
 		isDialogueActive = false;

@@ -1206,7 +1206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &957627841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2636,7 +2636,7 @@ MonoBehaviour:
       line: " I\u2019-- n-ver se-n you b-fore. Are y-u n-w?"
     - character:
         name: Shelldon
-        icon: {fileID: 21300000, guid: df503ea0d1a24443e88c736620b50830, type: 3}
+        icon: {fileID: 21300000, guid: a4cecbfd8e51c4b028abb7f42d8e60b0, type: 3}
       line: Yes, I new.
     - character:
         name: Micah
@@ -2644,7 +2644,7 @@ MonoBehaviour:
       line: "Oh we-l, I\u2019m Micah. Wh-t\u2019s y-urs?"
     - character:
         name: Shelldon
-        icon: {fileID: 21300000, guid: df503ea0d1a24443e88c736620b50830, type: 3}
+        icon: {fileID: 21300000, guid: a4cecbfd8e51c4b028abb7f42d8e60b0, type: 3}
       line: Uh oh, Shelldon!
     - character:
         name: Micah
@@ -2652,7 +2652,7 @@ MonoBehaviour:
       line: H-w Uniq-e. Whe-re did y-u mo-e fr-m?
     - character:
         name: Shelldon
-        icon: {fileID: 21300000, guid: df503ea0d1a24443e88c736620b50830, type: 3}
+        icon: {fileID: 21300000, guid: a4cecbfd8e51c4b028abb7f42d8e60b0, type: 3}
       line: (What uniq-e?) Oh yes. The ocean
     - character:
         name: Teacher
@@ -2672,7 +2672,7 @@ MonoBehaviour:
       line: Ye-h obvi-us-y. Wh-t else is lun-h for?
     - character:
         name: Shelldon
-        icon: {fileID: 21300000, guid: df503ea0d1a24443e88c736620b50830, type: 3}
+        icon: {fileID: 21300000, guid: a4cecbfd8e51c4b028abb7f42d8e60b0, type: 3}
       line: Ok, talk at food time.
   collidedIcon: 0
 --- !u!61 &1755628621
