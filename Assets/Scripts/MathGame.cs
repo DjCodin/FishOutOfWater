@@ -24,6 +24,7 @@ public class MathGame : MonoBehaviour
     private int wrongAnswers = 0;
     public GameDataSO gameData;
 	public UIManager uiManager;
+    public DialogueTrigger mathGameDone;
 
     private TextMeshProUGUI questionText;
     private TextMeshProUGUI scoreText;
@@ -36,8 +37,8 @@ public class MathGame : MonoBehaviour
     public int totalQuestions;
     private float timeRemaining = 60f;
     private bool gameActive = false;
-    private bool level1Completed = false;
-    private bool level2Completed = false;
+    private bool level1Completed = true;
+    private bool level2Completed = true;
     private bool level3Completed = false;
 
 
@@ -331,6 +332,7 @@ public class MathGame : MonoBehaviour
             level3Completed = true;
             gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
+            mathGameDone.updatingMathGame(true);
         }
         foreach (Button button in answerButtons)
         {
