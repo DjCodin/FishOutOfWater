@@ -39,12 +39,13 @@ public class DialogueManager : MonoBehaviour
 		dialogueBox.SetActive(isDialogueActive);
 
 		lines.Clear();
+
+		backGroundMusic.Stop();
+	    dialogueMusic.Play();
 		
 		foreach (DialogueLine dialogueLine in dialogue.dialogueLines)
 		{
 			Debug.Log("Helllo");
-			backGroundMusic.Stop();
-			dialogueMusic.Play();
 			lines.Enqueue(dialogueLine);
 			Debug.Log("yh");
 		}
@@ -68,7 +69,6 @@ public class DialogueManager : MonoBehaviour
 		characterName.text = currentLine.character.name;
 
 		StopAllCoroutines();
-		dialogueMusic.Play();
 		StartCoroutine(TypeSentence(currentLine));
 	}
 
