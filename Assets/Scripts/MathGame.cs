@@ -246,23 +246,53 @@ public class MathGame : MonoBehaviour
     }
 
 
+    IEnumerator ShowFeedbackAndNext(string message)
+    {
+        questionText.text = message;
+        yield return new WaitForSeconds(0.8f);
+        
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = true;
+        }
+
+        GenerateQuestion();
+    }
+
+    IEnumerator ShowFeedbackAndRestart(string message, float delay)
+    {
+        questionText.text = message;
+
+        // foreach (Button button in answerButtons)
+        // {
+        //     button.interactable = false;
+        // }
+
+        yield return new WaitForSeconds(delay);
+        StartLevel(currentLevel);
+    }
+
 
     void AnswerSelected(int selectedAnswer)
     {
+
         if (selectedAnswer == correctAnswer)
         {
             score++;
-
+            StartCoroutine(ShowFeedbackAndNext("Correct!"));
         }
-        else{
+        else
+        {
             wrongAnswers++;
-            if(wrongAnswers >= 3){
+            if (wrongAnswers >= 3)
+            {
                 RestartLevel();
                 return;
             }
+            StartCoroutine(ShowFeedbackAndNext("Wrong!"));
         }
-        GenerateQuestion();
     }
+
 
     void RestartLevel()
     {
