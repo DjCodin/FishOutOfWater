@@ -39,7 +39,7 @@ public class GMScript : MonoBehaviour
     public bool dialogueSoundPlayed = false;
     public bool speaking = false;
     public int i = 0;
-    public float textDelay = .05f;
+    public float textDelay = .005f;
     public bool lastDialogue = false;
     public GameObject[] objectsWithTagA;
     public GameObject aTile;
