@@ -24,6 +24,7 @@ public class MathGame : MonoBehaviour
     private int wrongAnswers = 0;
     public GameDataSO gameData;
 	public UIManager uiManager;
+    public DialogueTrigger mathGameDone;
 
     private TextMeshProUGUI questionText;
     private TextMeshProUGUI scoreText;
@@ -36,8 +37,8 @@ public class MathGame : MonoBehaviour
     public int totalQuestions;
     private float timeRemaining = 60f;
     private bool gameActive = false;
-    private bool level1Completed = false;
-    private bool level2Completed = false;
+    private bool level1Completed = true;
+    private bool level2Completed = true;
     private bool level3Completed = false;
 
 
@@ -83,7 +84,7 @@ public class MathGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("isoTiles");
+            SceneManager.LoadScene("MainScene");
         }
         
         if (gameActive)
@@ -246,22 +247,53 @@ public class MathGame : MonoBehaviour
     }
 
 
+    IEnumerator ShowFeedbackAndNext(string message)
+    {
+        questionText.text = message;
+        yield return new WaitForSeconds(0.8f);
+        
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = true;
+        }
+
+        GenerateQuestion();
+    }
+
+    IEnumerator ShowFeedbackAndRestart(string message, float delay)
+    {
+        questionText.text = message;
+
+        // foreach (Button button in answerButtons)
+        // {
+        //     button.interactable = false;
+        // }
+
+        yield return new WaitForSeconds(delay);
+        StartLevel(currentLevel);
+    }
+
 
     void AnswerSelected(int selectedAnswer)
     {
+
         if (selectedAnswer == correctAnswer)
         {
             score++;
+            StartCoroutine(ShowFeedbackAndNext("Correct!"));
         }
-        else{
+        else
+        {
             wrongAnswers++;
-            if(wrongAnswers >= 3){
+            if (wrongAnswers >= 3)
+            {
                 RestartLevel();
                 return;
             }
+            StartCoroutine(ShowFeedbackAndNext("Wrong!"));
         }
-        GenerateQuestion();
     }
+
 
     void RestartLevel()
     {
@@ -288,18 +320,19 @@ public class MathGame : MonoBehaviour
         scoreText.text = "Score: " + score + "/" + totalQuestions;
         if (currentLevel == 1 && score >= 5){
             level1Completed = true;
-            gameData.AddSocialPoints(5);
+            gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
         } 
         if (currentLevel == 2 && score >= 5){
             level2Completed = true;
-            gameData.AddSocialPoints(5);
+            gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
         }
         if (currentLevel == 3 && score >= 5){
             level3Completed = true;
-            gameData.AddSocialPoints(5);
+            gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
+            mathGameDone.updatingMathGame(true);
         }
         foreach (Button button in answerButtons)
         {

@@ -34,19 +34,20 @@ public class DialogueManager : MonoBehaviour
 
 	public void StartDialogue(Dialogue dialogue)
 	{
-		gameData.AddSocialPoints(5);
-		uiManager.UpdatePointsUI();
 		isDialogueActive = true;
 
 		dialogueBox.SetActive(isDialogueActive);
 
 		lines.Clear();
 
+		backGroundMusic.Stop();
+	    dialogueMusic.Play();
+		
 		foreach (DialogueLine dialogueLine in dialogue.dialogueLines)
 		{
-			backGroundMusic.Stop();
-			dialogueMusic.Play();
+			Debug.Log("Helllo");
 			lines.Enqueue(dialogueLine);
+			Debug.Log("yh");
 		}
 		
 		DisplayNextDialogueLine();
@@ -68,7 +69,6 @@ public class DialogueManager : MonoBehaviour
 		characterName.text = currentLine.character.name;
 
 		StopAllCoroutines();
-		dialogueMusic.Play();
 		StartCoroutine(TypeSentence(currentLine));
 	}
 
@@ -84,6 +84,8 @@ public class DialogueManager : MonoBehaviour
 
 	void EndDialogue()
 	{
+		gameData.AddSocialPoints(5);
+		uiManager.UpdatePointsUI();
 		backGroundMusic.Play();
 		dialogueMusic.Stop();
 		isDialogueActive = false;
