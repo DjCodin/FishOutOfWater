@@ -57,7 +57,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     public int i = 0;
     private bool dialogueSoundPlayed = false;
     public Button nextDialogue;
-    public float textDelay = .05f;
+    public float textDelay = .005f;
     public GameObject shelldon;
     public string dayOneDialogue1 = "I know you said you played Tic Tac Toe, but I will explain the rules again just in case you don�t remember.";
     public string dayOneDialogue2 = "One of us will play as O and the other X. We will take turns placing our assigned symbols on a 3 by 3 board. You must get 3 in a row to win. Did you get that?";
