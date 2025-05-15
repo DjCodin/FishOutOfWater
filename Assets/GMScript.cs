@@ -49,14 +49,14 @@ public class GMScript : MonoBehaviour
     public GameObject cTile;
     public string micahText = "Micah";
     public string shelldonText = "Shelldon";
-    public string dayOneDialogue1 = "Hello Shelldon, let me explain to you your assignment for today.Today your job is to color your drawing by coloring within the lines.";
+    public string dayOneDialogue1 = "Hello Shelldon, let me explain to you your assignment for today. Today your job is to color your drawing in accordance with the number it is assigned.";
     public string dayOneDialogue2 = "Each day, you will color in one of three sections of your drawing. By the third day, you will have a fully colored drawing. Does all of that make sense to you?";
-    public string dayOneDialogue3 = "Yes, I can�t wait to start.";
+    public string dayOneDialogue3 = "Yes, I can't wait to start.";
     public string dayOneDialogue4 = "Alright, I will leave you to it now.";
-    public string dayTwoDialogue1 = "You wonderfully finished coloring yesterday�s section of the drawing. Today, you will be painting a new section of the drawing. How does that sound?";
-    public string dayTwoDialogue2 = "It sounds good. I will make this section just as beautiful as yesterday�s section.";
+    public string dayTwoDialogue1 = "You wonderfully finished coloring yesterday's section of the drawing. Today, you will be painting a new section of the drawing. How does that sound?";
+    public string dayTwoDialogue2 = "It sounds good. I will make this section just as beautiful as yesterday's section.";
     public string dayThreeDialogue1 = "Shelldon, today you will work on coloring the last section of your drawing. After today, you will have a completed drawing, so work hard to finish it. You got this!";
-    public string dayThreeDialogue2 = "Ok, I can�t wait to see how this drawing turns out.";
+    public string dayThreeDialogue2 = "Ok, I can't wait to see how this drawing turns out.";
     public GameDataSO gameData;
     public UIManager uiManager;
     public Dictionary<GameObject, Color> filledDict  = new Dictionary<GameObject, Color>();
@@ -68,6 +68,7 @@ public class GMScript : MonoBehaviour
     public TMP_Text finishedButtonText;
     public float areYouSureTimer = 6f;
     bool areYouSure = false;
+    public AudioSource scribble;
     // Start is called before the first frame update
     void Start()
     {
@@ -418,7 +419,7 @@ public class GMScript : MonoBehaviour
                 if (spriteRenderer != null)
                 {
                     spriteRenderer.color = currentColor;
-                    GetComponent<AudioSource>().Play();
+                    scribble.Play();
                 }
             }
         }
