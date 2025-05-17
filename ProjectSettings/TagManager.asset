@@ -37,6 +37,7 @@ TagManager:
   - tictactoe
   - SpeechBubble
   - UIManager
+  - progressCheck
   layers:
   - Default
   - TransparentFX

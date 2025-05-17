@@ -428,8 +428,8 @@ public class GMScript : MonoBehaviour
             finishedButtonText.text = "Are You Sure? (" + (int)areYouSureTimer + ")";
             if (Input.GetMouseButtonDown(0) && IsPointerOverUIElement(finishButton.gameObject))
             {
-                Debug.Log("Progress Check");
-                SceneManager.LoadScene("progressCheck");
+                Debug.Log("Recess Map");
+                SceneManager.LoadScene("RecessMap");
             }
         }
 
@@ -448,7 +448,7 @@ public class GMScript : MonoBehaviour
         {
             areYouSure = false;
             finishedButtonText.text = "Finish Game";
-            SceneManager.LoadScene("progressCheck");
+            SceneManager.LoadScene("RecessMap");
         }
     }
     void HandleButtonClick(Button clickedButton)
