@@ -56,8 +56,8 @@ public class playerMovement :MonoBehaviour
 
         if(tictacInteract && Input.GetKeyDown(KeyCode.I)){
             computerPrompt.SetActive(true);
-            promptQuestion.text = "Do you want to start playing TicTacToe?";
-            yesButton.onClick.AddListener(() => {SceneManager.LoadScene("TicTacToe");});
+            promptQuestion.text = "Do you want to go to the progress check?";
+            yesButton.onClick.AddListener(() => {SceneManager.LoadScene("progressCheck");});
             noButton.onClick.AddListener(() => {computerPrompt.SetActive(false);});
         }
     }
@@ -69,7 +69,7 @@ public class playerMovement :MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Computer" || collision.tag == "Person" || collision.tag == "tictactoe")
+        if(collision.tag == "Computer" || collision.tag == "Person" || collision.tag == "progressCheck")
         {
             iconActive = true;
             Debug.Log("Touched");
@@ -79,10 +79,10 @@ public class playerMovement :MonoBehaviour
             compInteract = true;
             Debug.Log("comp Touched");
         }
-        if(collision.tag == "tictactoe")
+        if(collision.tag == "progressCheck")
         {
             tictacInteract = true;
-            Debug.Log("tictactoe Touched");
+            Debug.Log("progressCheck Touched");
         }
        
     }

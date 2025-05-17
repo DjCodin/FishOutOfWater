@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 [System.Serializable]
 public class DialogueCharacter
@@ -29,7 +27,6 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     public bool collidedIcon;
-    public Button doneButton;
 
     public void TriggerDialogue()
     {
@@ -52,7 +49,6 @@ public class DialogueTrigger : MonoBehaviour
 
     void Update()
     {
-        doneButton.onClick.AddListener(() => {TriggerDialogue();});
 
         if (Input.GetKeyDown(KeyCode.I) && collidedIcon)
         {

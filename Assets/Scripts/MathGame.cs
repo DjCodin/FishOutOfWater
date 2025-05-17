@@ -36,8 +36,8 @@ public class MathGame : MonoBehaviour
     public int totalQuestions;
     private float timeRemaining = 60f;
     private bool gameActive = false;
-    private bool level1Completed = true;
-    private bool level2Completed = true;
+    private bool level1Completed = false;
+    private bool level2Completed = false;
     private bool level3Completed = false;
 
 

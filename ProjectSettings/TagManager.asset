@@ -51,7 +51,11 @@ TagManager:
 >>>>>>> 7f30eb3 (Finished tic tac toe dialogue)
 =======
   - UIManager
+<<<<<<< HEAD
 >>>>>>> e3815c5 (Finished tic tac toe and coloring)
+=======
+  - progressCheck
+>>>>>>> 64b624f (Added a recess tilemap and redesigned the isotile scene)
   layers:
   - Default
   - TransparentFX
