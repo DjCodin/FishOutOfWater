@@ -17,6 +17,7 @@ EditorUserSettings:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 020856515503585959595e27427b5b44141548292f7e24347a2f186be3b1313e
 =======
       value: 5500015255510a03540a542347270e44434e4d797c2e77322f2a1e37e6b53260
@@ -213,9 +214,14 @@ EditorUserSettings:
 >>>>>>> 6222f5d (a)
       flags: 0
     RecentlyUsedSceneGuid-8:
+=======
+      value: 5208500204020c59545e5f7443270d44471641727e7071677b28496bb1b06468
+      flags: 0
+    RecentlyUsedSceneGuid-1:
+>>>>>>> 40f962a (Changed text speed)
       value: 5500015255510a03540a542347270e44434e4d797c2e77322f2a1e37e6b53260
       flags: 0
-    RecentlyUsedSceneGuid-9:
+    RecentlyUsedSceneGuid-2:
       value: 5252565f07575a5f585f547545265b4445164e7c2a2b76357a7e1e61b7b66761
       flags: 0
     vcSharedLogLevel:

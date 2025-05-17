@@ -40,6 +40,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 107
 =======
   controlID: 28233
@@ -89,6 +90,9 @@ MonoBehaviour:
 =======
   controlID: 4211
 >>>>>>> 6222f5d (a)
+=======
+  controlID: 1760
+>>>>>>> 40f962a (Changed text speed)
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -116,6 +120,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -798,6 +803,10 @@ MonoBehaviour:
 =======
     x: 245.8
     y: 19
+=======
+    x: 244.8
+    y: 73.6
+>>>>>>> 40f962a (Changed text speed)
     width: 878.00006
     height: 441.4
 >>>>>>> 6222f5d (a)
@@ -841,7 +850,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -931,6 +940,7 @@ MonoBehaviour:
   vertical: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 10048
 =======
   controlID: 2617
@@ -938,6 +948,9 @@ MonoBehaviour:
 =======
   controlID: 4212
 >>>>>>> 6222f5d (a)
+=======
+  controlID: 1761
+>>>>>>> 40f962a (Changed text speed)
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -978,8 +991,12 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 4213
 >>>>>>> 6222f5d (a)
+=======
+  controlID: 1762
+>>>>>>> 40f962a (Changed text speed)
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1060,6 +1077,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: ae610000
       m_LastClickedID: 0
       m_ExpandedIDs: c8ceffffa8d1ffff32d4ffffc2d8ffff12d9ffffd6d9ffff4cdaffffa8dcffff78deffffcadefffff4e0fffffee0ffff04e1ffff98e2ffff52e3ffffd8e3ffffe2e3ffffe8e3ffff38e5ffff44e5ffff12e7ffffb4ebfffff6ebffffeeecfffff8ecffff3eedffff30efffff3aefffff3cefffff80efffff36f2ffff32f5ffff92f6ffff9cf6ffffa2f6ffffb2f7ffffccf7ffff16f8ffff62f8ffff66f8ffff70f8ffff72f8ffff76f8ffffa4f8ffffbef8ffffe2f8ffff0ef9ffff50f9ffff8af9ffffcaf9ffff08fbffff10fbffff78600000f4600000e666000060670000f4670000f49e0000ccaf0000eaaf000022b1000040b1000020b600002cb600007eb60000a4b60000beb6000014bc0000a0bc0000aabc000026bd000042bd00007cbd00002ec5000080c50000a6c50000
@@ -1073,6 +1091,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: 3af5ffff42f6ffff0efbffff
 >>>>>>> 6222f5d (a)
+=======
+      m_SelectedIDs: 3caa0000
+      m_LastClickedID: 43580
+      m_ExpandedIDs: d8ecffff94f3ffff66f8ffff0efbffff
+>>>>>>> 40f962a (Changed text speed)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1653,6 +1676,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 3.874968, y: 1.472744, z: -0.020314941}
     speed: 2
     m_Value: {x: 3.874968, y: 1.472744, z: -0.020314941}
@@ -1731,6 +1755,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 861.74365, y: 708.90063, z: 92.02341}
 >>>>>>> 6222f5d (a)
+=======
+    m_Target: {x: 3.5941434, y: 0.16201237, z: 33.55556}
+    speed: 2
+    m_Value: {x: 3.5941434, y: 0.16201237, z: 33.55556}
+>>>>>>> 40f962a (Changed text speed)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1781,6 +1810,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1874,6 +1904,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 547.3822
 >>>>>>> 6222f5d (a)
+=======
+    m_Target: 4.973049
+    speed: 2
+    m_Value: 4.973049
+>>>>>>> 40f962a (Changed text speed)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2184,9 +2219,14 @@ MonoBehaviour:
     y: 462.4
     width: 1124.8
     height: 308.4
+<<<<<<< HEAD
   m_MinSize: {x: 230, y: 250}
   m_MaxSize: {x: 10000, y: 10000}
 >>>>>>> 6222f5d (a)
+=======
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+>>>>>>> 40f962a (Changed text speed)
   m_ActualView: {fileID: 11}
 =======
   m_MinSize: {x: 101, y: 121}
@@ -2335,6 +2375,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes
 =======
     - Assets/Images
@@ -2369,11 +2410,15 @@ MonoBehaviour:
 =======
     - Assets/SFX
 >>>>>>> 6222f5d (a)
+=======
+    - Assets/Scenes
+>>>>>>> 40f962a (Changed text speed)
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 54
   m_LastFolders:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2419,6 +2464,9 @@ MonoBehaviour:
   m_LastProjectPath: /Users/dcherfil/Desktop/Dj_GameDev/FishOutOfWater
 =======
   - Assets/SFX
+=======
+  - Assets/Scenes
+>>>>>>> 40f962a (Changed text speed)
   m_LastFoldersGridSize: 54
   m_LastProjectPath: C:\Users\evere\FishOutOfWater
 >>>>>>> 6222f5d (a)
@@ -2477,6 +2525,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: d4620000
     m_LastClickedID: 25300
@@ -2539,6 +2588,12 @@ MonoBehaviour:
     m_LastClickedID: 25340
     m_ExpandedIDs: 00000000da62000000ca9a3bffffff7f
 >>>>>>> 6222f5d (a)
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 04630000
+    m_LastClickedID: 25348
+    m_ExpandedIDs: 00000000de62000000ca9a3bffffff7f
+>>>>>>> 40f962a (Changed text speed)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2570,6 +2625,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2627,6 +2683,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000da62000000ca9a3bffffff7f
 >>>>>>> 6222f5d (a)
+=======
+    m_ExpandedIDs: 00000000de62000000ca9a3bffffff7f
+>>>>>>> 40f962a (Changed text speed)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2651,6 +2710,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2731,6 +2791,10 @@ MonoBehaviour:
 =======
     m_SelectedInstanceIDs: 829a0000
     m_LastClickedInstanceID: 39554
+=======
+    m_SelectedInstanceIDs: 3caa0000
+    m_LastClickedInstanceID: 43580
+>>>>>>> 40f962a (Changed text speed)
     m_HadKeyboardFocusLastEvent: 0
 >>>>>>> 6222f5d (a)
     m_ExpandedInstanceIDs: c62300002e650000ca9000007cac000086ac000022960000b8040100
@@ -3127,8 +3191,8 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 39554
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 594
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -3187,8 +3251,8 @@ MonoBehaviour:
     y: 0
     width: 411.19995
     height: 770.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
