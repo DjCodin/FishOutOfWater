@@ -4583,7 +4583,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 267651948}
   i: 0
   nextDialogue: {fileID: 569787708}
-  textDelay: 0.05
+  textDelay: 0.01
   shelldon: {fileID: 1049851214}
   dayOneDialogue1: "I know you said you played Tic Tac Toe, but I will explain the
     rules again just in case you don\u2019t remember."

@@ -7759,7 +7759,7 @@ MonoBehaviour:
   dialogueSoundPlayed: 0
   speaking: 0
   i: 0
-  textDelay: 0.05
+  textDelay: 0.01
   lastDialogue: 0
   objectsWithTagA: []
   aTile: {fileID: 0}
