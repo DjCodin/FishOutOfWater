@@ -1525,6 +1525,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322946713}
   m_CullTransparentMesh: 1
+--- !u!114 &345945747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 462812891456276368, guid: 342faf3de58d14f0caf5facac2956554, type: 3}
+  m_PrefabInstance: {fileID: 2098179815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &362299742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,6 +1979,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &483739782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 462812890405052807, guid: 342faf3de58d14f0caf5facac2956554, type: 3}
+  m_PrefabInstance: {fileID: 2098179815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &545941349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2370,6 +2392,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661213961}
   m_CullTransparentMesh: 1
+--- !u!114 &674840329 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 462812891649713923, guid: 342faf3de58d14f0caf5facac2956554, type: 3}
+  m_PrefabInstance: {fileID: 2098179815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &720222121
 GameObject:
   m_ObjectHideFlags: 0
@@ -6239,10 +6272,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: e47e903121211423a89125da0d816fae, type: 2}
   uiManager: {fileID: 990458532}
-  characterIcon: {fileID: 1280041757}
-  characterName: {fileID: 926612389}
-  dialogueArea: {fileID: 1855934884}
-  dialogueBox: {fileID: 885483154}
+  characterIcon: {fileID: 483739782}
+  characterName: {fileID: 674840329}
+  dialogueArea: {fileID: 345945747}
+  dialogueBox: {fileID: 1847313566}
   dialogueMusic: {fileID: 128601233}
   backGroundMusic: {fileID: 855477242}
   isDialogueActive: 0
@@ -6969,6 +7002,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837353525}
   m_CullTransparentMesh: 1
+--- !u!1 &1847313566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 462812890847952319, guid: 342faf3de58d14f0caf5facac2956554, type: 3}
+  m_PrefabInstance: {fileID: 2098179815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1855934882
 GameObject:
   m_ObjectHideFlags: 0

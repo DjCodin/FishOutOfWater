@@ -24,7 +24,6 @@ public class MathGame : MonoBehaviour
     private int wrongAnswers = 0;
     public GameDataSO gameData;
 	public UIManager uiManager;
-    public DialogueTrigger mathGameDone;
 
     private TextMeshProUGUI questionText;
     private TextMeshProUGUI scoreText;
@@ -332,7 +331,6 @@ public class MathGame : MonoBehaviour
             level3Completed = true;
             gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
-            mathGameDone.updatingMathGame(true);
         }
         foreach (Button button in answerButtons)
         {
