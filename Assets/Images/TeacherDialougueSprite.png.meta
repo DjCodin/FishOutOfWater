@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: fe0c9fff29f144e14ad5cea4f4197fc1
+=======
+guid: 9edaf4bc8f985bd429b6f0fe389e5db7
+>>>>>>> 653c0a4 (Changed Micah to Teacher)
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,6 +105,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
   - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
@@ -125,6 +130,8 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+>>>>>>> 653c0a4 (Changed Micah to Teacher)
   spriteSheet:
     serializedVersion: 2
     sprites: []

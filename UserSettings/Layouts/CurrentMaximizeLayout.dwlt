@@ -41,6 +41,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 107
 =======
   controlID: 28233
@@ -93,6 +94,9 @@ MonoBehaviour:
 =======
   controlID: 1760
 >>>>>>> 40f962a (Changed text speed)
+=======
+  controlID: 91
+>>>>>>> 653c0a4 (Changed Micah to Teacher)
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -848,7 +852,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -941,6 +945,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 10048
 =======
   controlID: 2617
@@ -951,6 +956,9 @@ MonoBehaviour:
 =======
   controlID: 1761
 >>>>>>> 40f962a (Changed text speed)
+=======
+  controlID: 92
+>>>>>>> 653c0a4 (Changed Micah to Teacher)
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -992,11 +1000,15 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 4213
 >>>>>>> 6222f5d (a)
 =======
   controlID: 1762
 >>>>>>> 40f962a (Changed text speed)
+=======
+  controlID: 65
+>>>>>>> 653c0a4 (Changed Micah to Teacher)
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1078,6 +1090,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: ae610000
       m_LastClickedID: 0
       m_ExpandedIDs: c8ceffffa8d1ffff32d4ffffc2d8ffff12d9ffffd6d9ffff4cdaffffa8dcffff78deffffcadefffff4e0fffffee0ffff04e1ffff98e2ffff52e3ffffd8e3ffffe2e3ffffe8e3ffff38e5ffff44e5ffff12e7ffffb4ebfffff6ebffffeeecfffff8ecffff3eedffff30efffff3aefffff3cefffff80efffff36f2ffff32f5ffff92f6ffff9cf6ffffa2f6ffffb2f7ffffccf7ffff16f8ffff62f8ffff66f8ffff70f8ffff72f8ffff76f8ffffa4f8ffffbef8ffffe2f8ffff0ef9ffff50f9ffff8af9ffffcaf9ffff08fbffff10fbffff78600000f4600000e666000060670000f4670000f49e0000ccaf0000eaaf000022b1000040b1000020b600002cb600007eb60000a4b60000beb6000014bc0000a0bc0000aabc000026bd000042bd00007cbd00002ec5000080c50000a6c50000
@@ -1096,6 +1109,11 @@ MonoBehaviour:
       m_LastClickedID: 43580
       m_ExpandedIDs: d8ecffff94f3ffff66f8ffff0efbffff
 >>>>>>> 40f962a (Changed text speed)
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: b6f9ffff0efbffff
+>>>>>>> 653c0a4 (Changed Micah to Teacher)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1146,9 +1164,14 @@ MonoBehaviour:
 =======
     width: 880.00006
     height: 462.4
+<<<<<<< HEAD
 >>>>>>> 6222f5d (a)
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> 653c0a4 (Changed Micah to Teacher)
   m_ActualView: {fileID: 2}
   m_Panes:
 <<<<<<< HEAD
@@ -2220,6 +2243,7 @@ MonoBehaviour:
     width: 1124.8
     height: 308.4
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 230, y: 250}
   m_MaxSize: {x: 10000, y: 10000}
 >>>>>>> 6222f5d (a)
@@ -2236,6 +2260,10 @@ MonoBehaviour:
 =======
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
+=======
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+>>>>>>> 653c0a4 (Changed Micah to Teacher)
   m_ActualView: {fileID: 11}
 >>>>>>> 575806c (tried to implement feedback)
 =======
@@ -2590,8 +2618,8 @@ MonoBehaviour:
 >>>>>>> 6222f5d (a)
 =======
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 04630000
-    m_LastClickedID: 25348
+    m_SelectedIDs: fe620000
+    m_LastClickedID: 25342
     m_ExpandedIDs: 00000000de62000000ca9a3bffffff7f
 >>>>>>> 40f962a (Changed text speed)
     m_RenameOverlay:
@@ -2625,6 +2653,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2686,6 +2715,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000de62000000ca9a3bffffff7f
 >>>>>>> 40f962a (Changed text speed)
+=======
+    m_ExpandedIDs: 00000000de620000
+>>>>>>> 653c0a4 (Changed Micah to Teacher)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2710,6 +2742,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2797,6 +2830,11 @@ MonoBehaviour:
 >>>>>>> 40f962a (Changed text speed)
     m_HadKeyboardFocusLastEvent: 0
 >>>>>>> 6222f5d (a)
+=======
+    m_SelectedInstanceIDs: 54630000
+    m_LastClickedInstanceID: 25428
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> 653c0a4 (Changed Micah to Teacher)
     m_ExpandedInstanceIDs: c62300002e650000ca9000007cac000086ac000022960000b8040100
 >>>>>>> 115243d (Trying to fix math game dialogue scene)
 =======
@@ -3191,8 +3229,8 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 594
+  m_LastInspectedObjectInstanceID: 25428
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

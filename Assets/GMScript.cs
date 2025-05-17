@@ -47,7 +47,7 @@ public class GMScript : MonoBehaviour
     public GameObject bTile;
     public GameObject[] objectsWithTagC;
     public GameObject cTile;
-    public string micahText = "Micah";
+    public string micahText = "Teacher";
     public string shelldonText = "Shelldon";
     public string dayOneDialogue1 = "Hello Shelldon, let me explain to you your assignment for today. Today your job is to color your drawing in accordance with the number it is assigned.";
     public string dayOneDialogue2 = "Each day, you will color in one of three sections of your drawing. By the third day, you will have a fully colored drawing. Does all of that make sense to you?";
