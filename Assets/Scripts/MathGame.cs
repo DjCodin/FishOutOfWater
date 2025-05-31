@@ -55,6 +55,15 @@ public class MathGame : MonoBehaviour
         {
             answerButtons[i] = answerObjects[i]?.GetComponent<Button>();
         }
+        if(gameData._gameDay >= 2){
+            level2Button.interactable = true;
+            level2Button.onClick.AddListener(() => {  if (gameData._gameDay == 2) StartLevel(2); });
+                
+        }
+        if(gameData._gameDay == 3){
+            level3Button.interactable = true;
+            level3Button.onClick.AddListener(() => { if (gameData._gameDay == 3) StartLevel(3); });
+        }
 
 
         level1Button.onClick.AddListener(() => StartLevel(1));
@@ -62,12 +71,12 @@ public class MathGame : MonoBehaviour
             gameScreen.SetActive(false);
             mainGameScreen.SetActive(true);
 
-            if(level1Completed && gameData._gameDay == 2){
+            if(gameData._gameDay == 2){
                 level2Button.interactable = true;
-                level2Button.onClick.AddListener(() => {  if (level1Completed) StartLevel(2); });
+                level2Button.onClick.AddListener(() => {  if (gameData._gameDay == 2) StartLevel(2); });
                 
             }
-            if(level2Completed && gameData._gameDay == 3){
+            if(gameData._gameDay == 3){
                 level3Button.interactable = true;
                 level3Button.onClick.AddListener(() => { if (level2Completed) StartLevel(3); });
             }
@@ -332,24 +341,28 @@ public class MathGame : MonoBehaviour
             level1Completed = true;
             gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
-            SchoolBellSound();
-            while(currentLevel == 1 && score >= 5 && timer4 !== 4f){
-                timer4 += Time.deltaTime;
-            }
-            if (timer4 >= 4f)
-            {
-                changinScene.ticTakToe();
-            }
         } 
+        if(level1Completed){
+            SchoolBellSound();
+            changinScene.ticTakToe();
+        }
         if (currentLevel == 2 && score >= 5){
             level2Completed = true;
             gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
         }
+        if(level2Completed){
+            SchoolBellSound();
+            changinScene.ticTakToe();
+        }
         if (currentLevel == 3 && score >= 5){
             level3Completed = true;
             gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
+        }
+        if(level3Completed){
+            SchoolBellSound();
+            changinScene.ticTakToe();
         }
         foreach (Button button in answerButtons)
         {

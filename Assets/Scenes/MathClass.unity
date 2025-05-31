@@ -7177,5 +7177,7 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: e47e903121211423a89125da0d816fae, type: 2}
   uiManager: {fileID: 990458532}
   changinScene: {fileID: 69079417}
+  schoolBell: {fileID: 197120359}
   score: 0
   totalQuestions: 0
+  timer4: 0
