@@ -627,8 +627,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289040105
-  m_fontColor: {r: 0.9150943, g: 0.555963, b: 0.6481724, a: 1}
+    rgba: 4281099426
+  m_fontColor: {r: 0.63529414, g: 0.3921569, b: 0.17254902, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2565,7 +2565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 319, y: 75.515}
+  m_AnchoredPosition: {x: 316, y: 80}
   m_SizeDelta: {x: 4, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &561676388
@@ -2588,7 +2588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9edaf4bc8f985bd429b6f0fe389e5db7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52067c6b0dc00a2469a85fac456b7328, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3552,7 +3552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 337, y: 101}
+  m_AnchoredPosition: {x: 326, y: 59}
   m_SizeDelta: {x: 4, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623145192
@@ -3575,7 +3575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8e99b51e405df2044abac37a888be82c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4cecbfd8e51c4b028abb7f42d8e60b0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7771,7 +7771,7 @@ MonoBehaviour:
   bTile: {fileID: 0}
   objectsWithTagC: []
   cTile: {fileID: 0}
-  micahText: Micah
+  micahText: Teacher
   shelldonText: Shelldon
   dayOneDialogue1: 'Hello Shelldon, let me explain to you your assignment for today.
     Today your job is to color your drawing in accordance with the number it is assigned.
@@ -9515,7 +9515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6021366078231642159, guid: 7ec99df28793447b9a1391db7dca1db1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -49.135
+      value: -49.13501
       objectReference: {fileID: 0}
     - target: {fileID: 6021366078971751322, guid: 7ec99df28793447b9a1391db7dca1db1, type: 3}
       propertyPath: m_fontSize
@@ -9692,6 +9692,14 @@ PrefabInstance:
     - target: {fileID: 6021366079134468350, guid: 7ec99df28793447b9a1391db7dca1db1, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021366079233810783, guid: 7ec99df28793447b9a1391db7dca1db1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6021366079233810783, guid: 7ec99df28793447b9a1391db7dca1db1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 567
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec99df28793447b9a1391db7dca1db1, type: 3}

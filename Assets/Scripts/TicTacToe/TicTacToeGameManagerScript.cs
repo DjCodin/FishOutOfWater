@@ -145,7 +145,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     {
 
         // dialogue done is false at start
-        if (gameDaySO.GameDay == 0 && !dialogueDone)
+        if (gameDaySO.GameDay == 1 && !dialogueDone)
         {
             dialogueBox.SetActive(true);
             if (dialogueNum == 1)
@@ -268,7 +268,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
             }
 
         }
-        if (gameDaySO.GameDay == 1 && !dialogueDone)
+        if (gameDaySO.GameDay == 2 && !dialogueDone)
         {
             if (dialogueNum == 1)
             {
@@ -330,7 +330,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 }
             }
         }
-        if (gameDaySO.GameDay == 2 && !dialogueDone)
+        if (gameDaySO.GameDay == 3 && !dialogueDone)
         {
             if (dialogueNum == 1)
             {
@@ -510,11 +510,11 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                     button.interactable = false;
                 }
                 // Calls the day 1 opponent 
-                if (gameDaySO.GameDay == 0)
+                if (gameDaySO.GameDay == 1)
                 {
                     dayOneOpponentTurn();
                 }
-                else if (gameDaySO.GameDay == 1 || gameDaySO.GameDay == 2)
+                else if (gameDaySO.GameDay == 2 || gameDaySO.GameDay == 3)
                 {
                     dayTwoOpponentScript.dayTwoOpponentTurn();
                 }
