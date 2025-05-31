@@ -24,10 +24,12 @@ public class MathGame : MonoBehaviour
     private int wrongAnswers = 0;
     public GameDataSO gameData;
 	public UIManager uiManager;
+    public SceneChanges changinScene;
 
     private TextMeshProUGUI questionText;
     private TextMeshProUGUI scoreText;
     private TextMeshProUGUI timerText;
+    public AudioSource schoolBell;
 
     
     private int correctAnswer;
@@ -39,6 +41,7 @@ public class MathGame : MonoBehaviour
     private bool level1Completed = false;
     private bool level2Completed = false;
     private bool level3Completed = false;
+    public float timer4 = 0;
 
 
     void Start()
@@ -59,12 +62,12 @@ public class MathGame : MonoBehaviour
             gameScreen.SetActive(false);
             mainGameScreen.SetActive(true);
 
-            if(level1Completed){
+            if(level1Completed && gameData._gameDay == 2){
                 level2Button.interactable = true;
                 level2Button.onClick.AddListener(() => {  if (level1Completed) StartLevel(2); });
                 
             }
-            if(level2Completed){
+            if(level2Completed && gameData._gameDay == 3){
                 level3Button.interactable = true;
                 level3Button.onClick.AddListener(() => { if (level2Completed) StartLevel(3); });
             }
@@ -311,7 +314,15 @@ public class MathGame : MonoBehaviour
         StartLevel(currentLevel);
     }
 
+    IEnumerator generalDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+    }
 
+    void SchoolBellSound(){
+        schoolBell.Play();
+        Debug.Log("started");
+    }
 
     void GameOver()
     {
@@ -321,6 +332,14 @@ public class MathGame : MonoBehaviour
             level1Completed = true;
             gameData.AddAcademicPoints(5);
 		    uiManager.UpdatePointsUI();
+            SchoolBellSound();
+            while(currentLevel == 1 && score >= 5 && timer4 !== 4f){
+                timer4 += Time.deltaTime;
+            }
+            if (timer4 >= 4f)
+            {
+                changinScene.ticTakToe();
+            }
         } 
         if (currentLevel == 2 && score >= 5){
             level2Completed = true;
