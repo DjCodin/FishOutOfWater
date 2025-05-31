@@ -12,6 +12,10 @@ public class GameDataSO : ScriptableObject
     public int socialPoints;
     public static List<string> shellJournalContent = new List<string>();
 
+    void Start()
+    {
+        _gameDay = 1;
+    }
     public int GameDay
     {
         get { return _gameDay; }
