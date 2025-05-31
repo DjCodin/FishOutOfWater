@@ -45,9 +45,7 @@ public class DialogueManager : MonoBehaviour
 		
 		foreach (DialogueLine dialogueLine in dialogue.dialogueLines)
 		{
-			Debug.Log("Helllo");
 			lines.Enqueue(dialogueLine);
-			Debug.Log("yh");
 		}
 		
 		DisplayNextDialogueLine();

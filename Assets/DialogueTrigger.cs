@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [System.Serializable]
 public class DialogueCharacter
 {
@@ -26,7 +27,6 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     public bool collidedIcon;
-    public bool mathGameDone = false;
 
     public void TriggerDialogue()
     {
@@ -46,16 +46,10 @@ public class DialogueTrigger : MonoBehaviour
         Debug.Log("Not Touched");
     }
 
-    public void updatingMathGame(bool status){
-        mathGameDone = status;
-    }
 
     void Update()
     {
-         if(mathGameDone){
-            TriggerDialogue();
-        }
-        
+
         if (Input.GetKeyDown(KeyCode.I) && collidedIcon)
         {
             TriggerDialogue();
