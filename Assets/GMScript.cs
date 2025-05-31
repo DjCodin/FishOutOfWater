@@ -141,7 +141,7 @@ public class GMScript : MonoBehaviour
     void Update()
     {
 
-        if (gameDaySO.GameDay == 0 && !dialogueFinished)
+        if (gameDaySO.GameDay == 1 && !dialogueFinished)
         {
             if (dialogueNum == 1)
             {
@@ -207,6 +207,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(false);
                 shelldon.SetActive(true);
                 personSpeaking.text = shelldonText;
+                personSpeaking.color = new Color(140f / 255f, 189f / 255f, 225f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -236,6 +237,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(true);
                 shelldon.SetActive(false);
                 personSpeaking.text = micahText;
+                personSpeaking.color = new Color(162f / 255f, 100f / 255f, 44f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -261,7 +263,7 @@ public class GMScript : MonoBehaviour
                 }
             }
         }
-        if (gameDaySO.GameDay == 1 && !dialogueFinished)
+        if (gameDaySO.GameDay == 2 && !dialogueFinished)
         {
             if (dialogueNum == 1)
             {
@@ -269,6 +271,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(true);
                 shelldon.SetActive(false);
                 personSpeaking.text = micahText;
+                personSpeaking.color = new Color(162f / 255f, 100f / 255f, 44f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -298,6 +301,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(false);
                 shelldon.SetActive(true);
                 personSpeaking.text = shelldonText;
+                personSpeaking.color = new Color(140f / 255f, 189f / 255f, 225f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -324,7 +328,7 @@ public class GMScript : MonoBehaviour
             }
 
         }
-        if (gameDaySO.GameDay == 2 && !dialogueFinished)
+        if (gameDaySO.GameDay == 3 && !dialogueFinished)
         {
             if (dialogueNum == 1)
             {
@@ -332,6 +336,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(true);
                 shelldon.SetActive(false);
                 personSpeaking.text = micahText;
+                personSpeaking.color = new Color(162f / 255f, 100f / 255f, 44f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -361,6 +366,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(false);
                 shelldon.SetActive(true);
                 personSpeaking.text = shelldonText;
+                personSpeaking.color = new Color(140f / 255f, 189f / 255f, 225f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -478,7 +484,7 @@ public class GMScript : MonoBehaviour
             btn.gameObject.SetActive(true);
         }
 
-        if (gameDaySO.GameDay == 0)
+        if (gameDaySO.GameDay == 1)
         {
             aTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagA)
@@ -491,7 +497,7 @@ public class GMScript : MonoBehaviour
             }
         }
 
-        if (gameDaySO.GameDay == 1)
+        if (gameDaySO.GameDay == 2)
         {
             bTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagB)
@@ -504,7 +510,7 @@ public class GMScript : MonoBehaviour
             }
         }
 
-        if (gameDaySO.GameDay == 2)
+        if (gameDaySO.GameDay == 3)
         {
             cTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagC)

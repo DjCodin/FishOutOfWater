@@ -42,6 +42,7 @@ public class MathGame : MonoBehaviour
     private bool level2Completed = false;
     private bool level3Completed = false;
     public float timer4 = 0;
+    
 
 
     void Start()
@@ -64,8 +65,6 @@ public class MathGame : MonoBehaviour
             level3Button.interactable = true;
             level3Button.onClick.AddListener(() => { if (gameData._gameDay == 3) StartLevel(3); });
         }
-
-
         level1Button.onClick.AddListener(() => StartLevel(1));
         goBackButton.onClick.AddListener(() => {
             gameScreen.SetActive(false);
@@ -97,6 +96,7 @@ public class MathGame : MonoBehaviour
         {
             SceneManager.LoadScene("MainScene");
         }
+
         
         if (gameActive)
         {
