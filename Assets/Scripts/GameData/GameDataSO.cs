@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameDataSO : ScriptableObject
 {
     [SerializeField]
-    private int _gameDay;
+    public int _gameDay = 1;
 
     public int academicPoints;
     public int socialPoints;
@@ -32,5 +32,10 @@ public class GameDataSO : ScriptableObject
     {
         academicPoints = 0;
         socialPoints = 0;
+    }
+
+    public void nextDay(){
+        _gameDay ++;
+
     }
 }
