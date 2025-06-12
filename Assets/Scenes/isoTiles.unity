@@ -5181,6 +5181,10 @@ PrefabInstance:
       value: UIManager
       objectReference: {fileID: 0}
     - target: {fileID: 3008025144061021725, guid: b44fea091fc2f4a9280336005f0d2c12, type: 3}
+      propertyPath: dayText
+      value: 
+      objectReference: {fileID: 6021366078777568470}
+    - target: {fileID: 3008025144061021725, guid: b44fea091fc2f4a9280336005f0d2c12, type: 3}
       propertyPath: socialPointsText
       value: 
       objectReference: {fileID: 1737108731}
@@ -5287,3 +5291,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ec99df28793447b9a1391db7dca1db1, type: 3}
+--- !u!114 &6021366078777568470 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 162674266397798379, guid: 7ec99df28793447b9a1391db7dca1db1, type: 3}
+  m_PrefabInstance: {fileID: 6021366078777568469}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
