@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a60173a64258b49a5633b0b7d8a25f, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  _gameDay: 3
+  _gameDay: 1
   academicPoints: 20
-  socialPoints: 882
+  socialPoints: 887

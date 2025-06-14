@@ -3321,7 +3321,7 @@ MonoBehaviour:
       line: (What uniq-e?) Oh yes. The ocean
     - character:
         name: Teacher
-        icon: {fileID: 21300000, guid: fe0c9fff29f144e14ad5cea4f4197fc1, type: 3}
+        icon: {fileID: 21300000, guid: 52067c6b0dc00a2469a85fac456b7328, type: 3}
       line: "Clas-, let\u2019s beg-n"
     - character:
         name: Micah
@@ -5087,7 +5087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c1c0749c4ef91472bbe379d99263470f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f1169ce82e04472b8e830f8b28cdca8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
