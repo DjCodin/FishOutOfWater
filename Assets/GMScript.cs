@@ -39,7 +39,7 @@ public class GMScript : MonoBehaviour
     public bool dialogueSoundPlayed = false;
     public bool speaking = false;
     public int i = 0;
-    public float textDelay = .05f;
+    public float textDelay = .005f;
     public bool lastDialogue = false;
     public GameObject[] objectsWithTagA;
     public GameObject aTile;
@@ -47,16 +47,16 @@ public class GMScript : MonoBehaviour
     public GameObject bTile;
     public GameObject[] objectsWithTagC;
     public GameObject cTile;
-    public string micahText = "Micah";
+    public string micahText = "Teacher";
     public string shelldonText = "Shelldon";
-    public string dayOneDialogue1 = "Hello Shelldon, let me explain to you your assignment for today.Today your job is to color your drawing by coloring within the lines.";
+    public string dayOneDialogue1 = "Hello Shelldon, let me explain to you your assignment for today. Today your job is to color your drawing in accordance with the number it is assigned.";
     public string dayOneDialogue2 = "Each day, you will color in one of three sections of your drawing. By the third day, you will have a fully colored drawing. Does all of that make sense to you?";
-    public string dayOneDialogue3 = "Yes, I can�t wait to start.";
+    public string dayOneDialogue3 = "Yes, I can't wait to start.";
     public string dayOneDialogue4 = "Alright, I will leave you to it now.";
-    public string dayTwoDialogue1 = "You wonderfully finished coloring yesterday�s section of the drawing. Today, you will be painting a new section of the drawing. How does that sound?";
-    public string dayTwoDialogue2 = "It sounds good. I will make this section just as beautiful as yesterday�s section.";
+    public string dayTwoDialogue1 = "You wonderfully finished coloring yesterday's section of the drawing. Today, you will be painting a new section of the drawing. How does that sound?";
+    public string dayTwoDialogue2 = "It sounds good. I will make this section just as beautiful as yesterday's section.";
     public string dayThreeDialogue1 = "Shelldon, today you will work on coloring the last section of your drawing. After today, you will have a completed drawing, so work hard to finish it. You got this!";
-    public string dayThreeDialogue2 = "Ok, I can�t wait to see how this drawing turns out.";
+    public string dayThreeDialogue2 = "Ok, I can't wait to see how this drawing turns out.";
     public GameDataSO gameData;
     public UIManager uiManager;
     public Dictionary<GameObject, Color> filledDict  = new Dictionary<GameObject, Color>();
@@ -68,6 +68,7 @@ public class GMScript : MonoBehaviour
     public TMP_Text finishedButtonText;
     public float areYouSureTimer = 6f;
     bool areYouSure = false;
+    public AudioSource scribble;
     // Start is called before the first frame update
     void Start()
     {
@@ -140,7 +141,7 @@ public class GMScript : MonoBehaviour
     void Update()
     {
 
-        if (gameDaySO.GameDay == 0 && !dialogueFinished)
+        if (gameDaySO.GameDay == 1 && !dialogueFinished)
         {
             if (dialogueNum == 1)
             {
@@ -206,6 +207,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(false);
                 shelldon.SetActive(true);
                 personSpeaking.text = shelldonText;
+                personSpeaking.color = new Color(140f / 255f, 189f / 255f, 225f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -235,6 +237,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(true);
                 shelldon.SetActive(false);
                 personSpeaking.text = micahText;
+                personSpeaking.color = new Color(162f / 255f, 100f / 255f, 44f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -260,7 +263,7 @@ public class GMScript : MonoBehaviour
                 }
             }
         }
-        if (gameDaySO.GameDay == 1 && !dialogueFinished)
+        if (gameDaySO.GameDay == 2 && !dialogueFinished)
         {
             if (dialogueNum == 1)
             {
@@ -268,6 +271,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(true);
                 shelldon.SetActive(false);
                 personSpeaking.text = micahText;
+                personSpeaking.color = new Color(162f / 255f, 100f / 255f, 44f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -297,6 +301,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(false);
                 shelldon.SetActive(true);
                 personSpeaking.text = shelldonText;
+                personSpeaking.color = new Color(140f / 255f, 189f / 255f, 225f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -323,7 +328,7 @@ public class GMScript : MonoBehaviour
             }
 
         }
-        if (gameDaySO.GameDay == 2 && !dialogueFinished)
+        if (gameDaySO.GameDay == 3 && !dialogueFinished)
         {
             if (dialogueNum == 1)
             {
@@ -331,6 +336,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(true);
                 shelldon.SetActive(false);
                 personSpeaking.text = micahText;
+                personSpeaking.color = new Color(162f / 255f, 100f / 255f, 44f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -360,6 +366,7 @@ public class GMScript : MonoBehaviour
                 micah.SetActive(false);
                 shelldon.SetActive(true);
                 personSpeaking.text = shelldonText;
+                personSpeaking.color = new Color(140f / 255f, 189f / 255f, 225f / 255f, 1f);
                 if (!dialogueSoundPlayed)
                 {
                     dialogueSound.Play();
@@ -418,7 +425,7 @@ public class GMScript : MonoBehaviour
                 if (spriteRenderer != null)
                 {
                     spriteRenderer.color = currentColor;
-                    GetComponent<AudioSource>().Play();
+                    scribble.Play();
                 }
             }
         }
@@ -477,7 +484,7 @@ public class GMScript : MonoBehaviour
             btn.gameObject.SetActive(true);
         }
 
-        if (gameDaySO.GameDay == 0)
+        if (gameDaySO.GameDay == 1)
         {
             aTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagA)
@@ -490,7 +497,7 @@ public class GMScript : MonoBehaviour
             }
         }
 
-        if (gameDaySO.GameDay == 1)
+        if (gameDaySO.GameDay == 2)
         {
             bTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagB)
@@ -503,7 +510,7 @@ public class GMScript : MonoBehaviour
             }
         }
 
-        if (gameDaySO.GameDay == 2)
+        if (gameDaySO.GameDay == 3)
         {
             cTile.SetActive(true);
             foreach (GameObject obj in objectsWithTagC)

@@ -57,7 +57,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     public int i = 0;
     private bool dialogueSoundPlayed = false;
     public Button nextDialogue;
-    public float textDelay = .05f;
+    public float textDelay = .005f;
     public GameObject shelldon;
     public string dayOneDialogue1 = "I know you said you played Tic Tac Toe, but I will explain the rules again just in case you don�t remember.";
     public string dayOneDialogue2 = "One of us will play as O and the other X. We will take turns placing our assigned symbols on a 3 by 3 board. You must get 3 in a row to win. Did you get that?";
@@ -145,7 +145,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
     {
 
         // dialogue done is false at start
-        if (gameDaySO.GameDay == 0 && !dialogueDone)
+        if (gameDaySO.GameDay == 1 && !dialogueDone)
         {
             dialogueBox.SetActive(true);
             if (dialogueNum == 1)
@@ -268,7 +268,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
             }
 
         }
-        if (gameDaySO.GameDay == 1 && !dialogueDone)
+        if (gameDaySO.GameDay == 2 && !dialogueDone)
         {
             if (dialogueNum == 1)
             {
@@ -330,7 +330,7 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                 }
             }
         }
-        if (gameDaySO.GameDay == 2 && !dialogueDone)
+        if (gameDaySO.GameDay == 3 && !dialogueDone)
         {
             if (dialogueNum == 1)
             {
@@ -510,11 +510,11 @@ public class TicTacToeGameManagerScript : MonoBehaviour
                     button.interactable = false;
                 }
                 // Calls the day 1 opponent 
-                if (gameDaySO.GameDay == 0)
+                if (gameDaySO.GameDay == 1)
                 {
                     dayOneOpponentTurn();
                 }
-                else if (gameDaySO.GameDay == 1 || gameDaySO.GameDay == 2)
+                else if (gameDaySO.GameDay == 2 || gameDaySO.GameDay == 3)
                 {
                     dayTwoOpponentScript.dayTwoOpponentTurn();
                 }
