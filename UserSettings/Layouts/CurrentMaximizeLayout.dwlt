@@ -43,6 +43,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 107
 =======
   controlID: 28233
@@ -101,6 +102,9 @@ MonoBehaviour:
 =======
   controlID: 950
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+  controlID: 950
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -109,6 +113,7 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1359,6 +1364,8 @@ MonoBehaviour:
 >>>>>>> 32085d2 (Going through the days and changed the interaction button)
 =======
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
   m_EditorHideFlags: 0
   m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -1431,7 +1438,10 @@ MonoBehaviour:
     y: 124
     width: 676.5
     height: 458
+<<<<<<< HEAD
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1716,6 +1726,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 3.874968, y: 1.472744, z: -0.020314941}
     speed: 2
     m_Value: {x: 3.874968, y: 1.472744, z: -0.020314941}
@@ -1804,6 +1815,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 1.2736098, y: 0.24284828, z: -0.051550012}
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+    m_Target: {x: 1.2736098, y: 0.24284828, z: -0.051550012}
+    speed: 2
+    m_Value: {x: 1.2736098, y: 0.24284828, z: -0.051550012}
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1854,6 +1870,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1959,6 +1976,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 3.4127967
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+    m_Target: 3.4127967
+    speed: 2
+    m_Value: 3.4127967
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2385,6 +2407,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 0
     width: 216
     height: 509
@@ -2711,15 +2734,23 @@ MonoBehaviour:
 =======
     y: 479
     width: 894.5
+=======
+    y: 479
+    width: 894.5
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
     height: 239
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
+<<<<<<< HEAD
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Selected: 0
   m_LastSelected: 1
@@ -2728,6 +2759,10 @@ MonoBehaviour:
   m_Selected: 1
   m_LastSelected: 0
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+  m_Selected: 1
+  m_LastSelected: 0
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
 --- !u!114 &12
 =======
 --- !u!114 &11
@@ -2804,7 +2839,10 @@ MonoBehaviour:
     y: 543
     width: 893.5
     height: 278
+<<<<<<< HEAD
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2953,6 +2991,7 @@ MonoBehaviour:
   m_FolderTreeState:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3034,10 +3073,13 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
     scrollPos: {x: 0, y: 14}
     m_SelectedIDs: de620000
     m_LastClickedID: 25310
     m_ExpandedIDs: 00000000b462000000ca9a3b
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 7d966ef (Just added buttons showing the player how to move)
 =======
@@ -3059,6 +3101,8 @@ MonoBehaviour:
 >>>>>>> 40f962a (Changed text speed)
 =======
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3090,6 +3134,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3159,6 +3204,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000b462000000ca9a3b
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+    m_ExpandedIDs: 00000000b462000000ca9a3b
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3202,12 +3250,17 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 00620000
     m_LastClickedInstanceID: 25088
 =======
     m_SelectedInstanceIDs: fe620000
     m_LastClickedInstanceID: 25342
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+    m_SelectedInstanceIDs: fe620000
+    m_LastClickedInstanceID: 25342
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
     m_HadKeyboardFocusLastEvent: 1
 =======
     m_SelectedInstanceIDs: 34f2ffff
@@ -3468,7 +3521,10 @@ MonoBehaviour:
     y: 603
     width: 893.5
     height: 218
+<<<<<<< HEAD
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3553,6 +3609,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     x: 1173.6
     y: 0
@@ -3611,6 +3668,10 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
 >>>>>>> f8bb884 (Revert "Going through the days and changed the interaction button")
+=======
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
   m_ActualView: {fileID: 16}
 >>>>>>> f3bea0f (trying to implement days)
   m_Panes:
