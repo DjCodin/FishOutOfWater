@@ -27,6 +27,7 @@ TagManager:
   - Tic Tac Toe Game Manager
   - ClickSound
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Computer
   - Person
 =======
@@ -35,10 +36,17 @@ TagManager:
 <<<<<<< HEAD
 >>>>>>> ca597a6 (Day 1 of the coloring)
 =======
+=======
+  - Computer
+  - Person
+  - A
+  - ATiles
+>>>>>>> origin/Everett_Branch
   - BTiles
   - B
   - C
   - CTiles
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 34ef8dc (Coloring)
@@ -56,6 +64,12 @@ TagManager:
 =======
   - progressCheck
 >>>>>>> 64b624f (Added a recess tilemap and redesigned the isotile scene)
+=======
+  - tictactoe
+  - SpeechBubble
+  - UIManager
+  - progressCheck
+>>>>>>> origin/Everett_Branch
   layers:
   - Default
   - TransparentFX

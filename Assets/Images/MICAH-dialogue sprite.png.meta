@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: f38c96be720b34148990833d95d60e31
 =======
 guid: c0ceebba8fd80ab4d813824eea8de480
 >>>>>>> ea4afb1 (Added dialogue for coloring)
+=======
+guid: f38c96be720b34148990833d95d60e31
+>>>>>>> origin/Everett_Branch
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,6 +110,9 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Everett_Branch
   - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
@@ -130,8 +137,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
 =======
 >>>>>>> ea4afb1 (Added dialogue for coloring)
+=======
+>>>>>>> origin/Everett_Branch
   spriteSheet:
     serializedVersion: 2
     sprites: []

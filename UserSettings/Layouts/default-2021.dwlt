@@ -40,12 +40,16 @@ MonoBehaviour:
     width: 1536
     height: 820.8
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Hierarchy
 >>>>>>> e3815c5 (Finished tic tac toe and coloring)
   m_RootView: {fileID: 2}
 =======
 <<<<<<< Updated upstream
   m_Title: Project
+=======
+  m_Title: Inspector
+>>>>>>> origin/Everett_Branch
   m_RootView: {fileID: 6}
 =======
   m_Title: Game
@@ -218,6 +222,9 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Everett_Branch
   controlID: 57
 --- !u!114 &3
 =======
@@ -1007,6 +1014,7 @@ MonoBehaviour:
     width: 1173.6
     height: 770.8
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 403, y: 321}
   m_MaxSize: {x: 8096, y: 12117}
 =======
@@ -1695,6 +1703,12 @@ MonoBehaviour:
 =======
   controlID: 16
 >>>>>>> 7241c7b (Updated stuff)
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 16
+>>>>>>> origin/Everett_Branch
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1824,11 +1838,15 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 60
 >>>>>>> d07fb1f (5)
 =======
   controlID: 17
 >>>>>>> 7241c7b (Updated stuff)
+=======
+  controlID: 17
+>>>>>>> origin/Everett_Branch
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1839,6 +1857,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1856,6 +1875,9 @@ MonoBehaviour:
 =======
   m_Name: SceneView
 >>>>>>> 7241c7b (Updated stuff)
+=======
+  m_Name: SceneView
+>>>>>>> origin/Everett_Branch
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -2071,6 +2093,7 @@ MonoBehaviour:
   m_LastSelected: 1
 =======
     x: 0
+<<<<<<< HEAD
     y: 554.5
     width: 997.5
     height: 304.5
@@ -2165,6 +2188,11 @@ MonoBehaviour:
     width: 1171.8
     height: 293.8
 >>>>>>> 7241c7b (Updated stuff)
+=======
+    y: 529.60004
+    width: 1171.8
+    height: 293.8
+>>>>>>> origin/Everett_Branch
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2455,7 +2483,10 @@ MonoBehaviour:
     y: 73.6
     width: 289.4
     height: 435
+<<<<<<< HEAD
 >>>>>>> 7241c7b (Updated stuff)
+=======
+>>>>>>> origin/Everett_Branch
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2464,6 +2495,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2482,6 +2514,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: d8ecffff94f3ffff66f8ffff0efbffff
 >>>>>>> 653c0a4 (Changed Micah to Teacher)
+=======
+      m_SelectedIDs: ceba0000
+      m_LastClickedID: 47822
+      m_ExpandedIDs: 6cb7ffff58b8ffff2ec6ffff0edcffffe6f1fffff0f1fffff6f1ffff38f8ffff76f8ffffeef8ffffccfaffffe4650000666b000084ab0000
+>>>>>>> origin/Everett_Branch
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2497,7 +2534,11 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
+<<<<<<< HEAD
         m_ClientGUIView: {fileID: 8}
+=======
+        m_ClientGUIView: {fileID: 4}
+>>>>>>> origin/Everett_Branch
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -3932,6 +3973,7 @@ MonoBehaviour:
     y: 73.6
     width: 880.4
     height: 435
+<<<<<<< HEAD
 >>>>>>> 7241c7b (Updated stuff)
 =======
     height: 398
@@ -3939,6 +3981,8 @@ MonoBehaviour:
 =======
     height: 398
 >>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
+=======
+>>>>>>> origin/Everett_Branch
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -4245,6 +4289,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 1005.1518, y: 585.47595, z: -15.81697}
     speed: 2
     m_Value: {x: 1005.1518, y: 585.47595, z: -15.81697}
@@ -4359,6 +4404,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 2095.1946, y: 363.276, z: -9.043973}
 >>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
+=======
+    m_Target: {x: 497.70874, y: 101.67836, z: -3.3077922}
+    speed: 2
+    m_Value: {x: 497.70874, y: 101.67836, z: -3.3077922}
+>>>>>>> origin/Everett_Branch
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -4426,6 +4476,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4561,6 +4612,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 1012.91315
 >>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
+=======
+    m_Target: 183.84242
+    speed: 2
+    m_Value: 183.84242
+>>>>>>> origin/Everett_Branch
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -4753,16 +4809,22 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 236
     y: 124
     width: 676.5
     height: 398
 =======
+=======
+>>>>>>> origin/Everett_Branch
     x: 290.4
     y: 73.6
     width: 880.4
     height: 435
+<<<<<<< HEAD
 >>>>>>> 7241c7b (Updated stuff)
+=======
+>>>>>>> origin/Everett_Branch
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -4777,6 +4839,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4831,6 +4894,12 @@ MonoBehaviour:
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
 >>>>>>> 32085d2 (Going through the days and changed the interaction button)
+=======
+  m_TargetSize: {x: 880.4, y: 414}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+>>>>>>> origin/Everett_Branch
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
@@ -4846,6 +4915,7 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5191,6 +5261,12 @@ MonoBehaviour:
     m_HBaseRangeMax: 480
     m_VBaseRangeMin: -270
     m_VBaseRangeMax: 270
+=======
+    m_HBaseRangeMin: -352.16
+    m_HBaseRangeMax: 352.16
+    m_VBaseRangeMin: -165.6
+    m_VBaseRangeMax: 165.6
+>>>>>>> origin/Everett_Branch
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -5199,7 +5275,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -5208,16 +5284,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
       width: 676.5
       height: 377
     m_Scale: {x: 0.69814813, y: 0.69814813}
     m_Translation: {x: 338.25, y: 188.5}
+=======
+      width: 880.4
+      height: 414
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 440.2, y: 207}
+>>>>>>> origin/Everett_Branch
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -484.49603
       y: -270
       width: 968.99207
@@ -5225,6 +5309,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.69814813
   m_LastWindowPixelSize: {x: 1353, y: 796}
+=======
+      x: -440.2
+      y: -207
+      width: 880.4
+      height: 414
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1100.5, y: 543.75}
+>>>>>>> origin/Everett_Branch
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -6200,6 +6293,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6271,10 +6365,13 @@ MonoBehaviour:
     height: 288.2
 >>>>>>> d07fb1f (5)
 =======
+=======
+>>>>>>> origin/Everett_Branch
     x: 0
     y: 529.60004
     width: 1171.8
     height: 293.8
+<<<<<<< HEAD
 >>>>>>> 7241c7b (Updated stuff)
 =======
     height: 278
@@ -6285,6 +6382,8 @@ MonoBehaviour:
     width: 893.5
     height: 278
 >>>>>>> 8bd1229 (Revert "Going through the days and changed the interaction button")
+=======
+>>>>>>> origin/Everett_Branch
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
